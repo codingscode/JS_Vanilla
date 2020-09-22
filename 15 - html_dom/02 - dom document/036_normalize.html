@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>normalize</title>
+        <style>
+            #aplicar {
+                font-size: 20px;
+                color: red;
+            }
+
+        </style>
+        
+    </head>
+
+    <body onload="normalizarPara()" >
+            <p id="demo">Clique no botao para adicionar texto ao document, clique em outro botao para normalizar o document.</p>
+            <button onclick="adicionarTextNode()">Adicionar um Text Node</button>
+            <button onclick="normalizarPara()">Normalizar o Document</button>
+            <p>O document possui <span id="aplicar">1</span> child node(s).</p>
+            
+            <script>
+                    function adicionarTextNode() {
+                        var x = document.createTextNode(' Clique novamente.')
+                        var y = document.body
+                        y.appendChild(x)
+                        var k = document.getElementById('aplicar')
+                        k.innerHTML = y.childNodes.length
+                    }
+                    
+                    function normalizarPara() {
+                        document.normalize()
+                        var x = document.body
+                        var span_aplicar = document.getElementById('aplicar')
+                        span_aplicar.innerHTML = x.childNodes.length
+                    }
+            </script>
+                            
+    </body>
+</html>

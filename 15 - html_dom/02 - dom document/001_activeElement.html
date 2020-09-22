@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>activeElement</title>
+    </head>
+
+    <body onclick="minhaFuncao()">
+        <!-- The activeElement property returns the currently focused element in the document.
+        Note: This property is read-only.
+        Tip: To give focus to an element, use the element.focus() method.
+        Tip: To find out if the document has focus, use the document.hasFocus() method. -->
+        
+        <p>Clique em qualquer lugar no document para mostrar o elemento ativo.</p>
+        <input type="text" value="Um campo de entrada">
+        <button>Um botao</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.activeElement.tagName
+                document.getElementById('demo').innerHTML = x
+
+                console.log(`clicado no elemento: ${x}`)
+                console.log(document.activeElement)
+            }
+        </script>
+
+    </body>
+</html>

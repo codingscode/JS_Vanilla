@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>images</title>
+    </head>
+
+    <body>
+        
+        <img src="./computer.jpg" alt="cmputer" width="150" height="113">
+        <img src="./satelite.jpg" alt="satelite" width="152" height="128">
+        <img src="./books.png" alt="livros" width="100" height="100">
+        
+        <p>Clique no botao para adiciona uma borda preta pontiada na 1ª imagem no document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.images[0]
+                x.style.border = '10px dotted black'
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+
+        <style>
+            
+           
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The getElementsByClassName() method returns a collection of an element's child elements with the specified class
+             name, as a NodeList object.
+        The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.
+        sintaxe: element.getElementsByClassName(classname) -->
+                          
+          <ul class="exemplo">
+            <li class="filho">Chá</li>
+            <li class="filho">Gelatina</li>
+          </ul>
+          
+          <p>Clique no botão para alterar o texto do 1º item da lista (indice 0).</p>
+          <button onclick="minhaF()">Testar</button>
+          
+          
+          <script>
+                function minhaF() {
+                    var lista = document.getElementsByClassName('exemplo')[0]
+                    lista.getElementsByClassName('filho')[0].innerHTML = 'Mamão'
+                }
+          </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createEvent</title>
+
+        <style>
+            div {
+                padding:40px;
+                margin:30px;
+                background-color: darkgreen;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- creates an event object. The event can be of any legal event type, and must be initialized before use.
+          sintaxe: document.createEvent(type), valores possiveis -> AnimationEvent, ClipboardEvent, DragEvent, FocusEvent, 
+           HashChangeEvent, InputEvent, KeyboardEvent, MouseEvent, PageTransitionEvent, PopStateEvent, ProgressEvent,
+           StorageEvent, TouchEvent, TransitionEvent, UiEvent, WheelEvent          -->
+        
+            <h1>O método createEvent</h1>
+            <p>O método createEvent te permite simular qualquer evento.</p>
+            <p>Neste exemplo, o div verde terá uma nova estrela cada vez que você mousar sobre ele:</p>
+            <div onmouseover="this.innerHTML += '*';" id="meuDiv">*</div>         <br>
+            <button onclick="minhaFuncao(event)">Simular mouse sobre</button>
+        
+            <script>
+                function minhaFuncao(event) {
+                    var x = document.createEvent('MouseEvent')
+                    x.initMouseEvent('mouseover', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
+                    
+                    document.getElementById('meuDiv').dispatchEvent(x)
+                }
+            </script>
+
+    </body>
+</html>

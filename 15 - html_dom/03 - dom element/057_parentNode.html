@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>parentNode</title>
+
+        <style>
+                       
+        </style>
+    </head>
+
+    <body >
+       <!--  The parentNode property returns the parent node of the specified node, as a Node object.
+        Note: In HTML, the document itself is the parent node of the HTML element, HEAD and BODY are child nodes of the 
+        HTML element. -->
+
+        <p>Lista Exemplo:</p>
+
+        <ul>
+          <li id="minhaLI">Chá</li>
+          <li>Gelatina</li>
+        </ul>
+        
+        <p>Clique no botão para acessar o nome node do node ascendente do elemento li na lista.</p>
+        <button onclick="minhaf()">Teste</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaf() {
+                var x = document.getElementById('minhaLI').parentNode.nodeName
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.getElementById('minhaLI').parentNode)
+                console.log(document.getElementById('minhaLI').parentNode.nodeName)
+            }
+        </script>
+
+    </body>
+</html>

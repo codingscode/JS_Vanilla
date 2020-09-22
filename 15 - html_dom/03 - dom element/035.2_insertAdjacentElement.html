@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertAdjacentElement</title>
+
+        <style>
+            span {
+                color: lightgreen;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body >
+        <!--  -->
+
+        <h1>Método HTML DOM insertAdjacentElement()</h1>
+        <p>Este metodo insere um elemento específico, para antes de uma posição especificada.</p>
+        
+        
+        <h2 id="meuH2">Meu Cabeçalho</h2>
+        <span >Meu span</span>
+
+        <p>Clique no botão para inserir o span verde antes do Cabeçalho:</p>
+        <button onclick="minhaF()">Mover span</button>
+        
+        <script>
+            function minhaF() {
+                var s = document.getElementsByTagName('span')[0]
+                var h = document.getElementById('meuH2')
+                h.insertAdjacentElement('beforebegin', s)
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeChild</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <ul id="minhaLista"><li>Chá</li><li>Gelatina</li><li>Água</li></ul>
+
+        <p>Clique no botão para ver se o elemento ul possui algum child nodes. Se sim, remove seu 1º descendente node (indice 0).</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <script>
+            console.log(document.getElementById('minhaLista').hasChildNodes())
+
+            function minhaf() {
+                var lista = document.getElementById('minhaLista')
+                
+                if (lista.hasChildNodes()) {
+                    lista.removeChild(lista.childNodes[0])
+                }
+            }
+        </script>
+              
+    </body>
+</html>

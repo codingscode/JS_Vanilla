@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>setAttributeNode</title>
+
+        <style>
+                .democlass {
+                    color: rgb(89, 190, 30);
+                }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            The setAttributeNode() method adds the specified attribute node to an element.
+            If the specified attribute already exists, this method replaces it.
+            The return value of this method is an Attr object. For more information, see The HTML DOM Attribute Object.
+            See also the setAttribute() method.
+            Tip: Use the removeAttributeNode() method to remove an attribute node from an element.
+            sintaxe:  element.setAttributeNode(attributenode)
+         -->
+         <h1>Olá Mundo</h1>
+         <p>Clique no botão para setar o atributo node class do cabeçalho acima.</p>
+         
+         <button onclick="minhaF()">Testar</button>
+         
+         <script>
+                function minhaF() {
+                    var atributo = document.createAttribute('class')
+                    atributo.value = 'democlass'
+                    var elemento = document.getElementsByTagName('H1')[0]
+                    elemento.setAttributeNode(atributo) 
+                }
+         </script>
+         
+    </body>
+</html>

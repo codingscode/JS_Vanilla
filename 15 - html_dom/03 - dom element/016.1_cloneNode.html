@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cloneNode</title>
+
+        <style>
+            
+            div {
+                border:1px solid rgb(11, 131, 11);
+                background-color:rgb(167, 250, 171);
+                padding-left: 10px;
+                margin-top: 10px;
+            }
+
+            .p1 {
+                color:red;
+            }
+
+            .p2 {
+                color:green;
+            } 
+
+            .p3 {
+                color:blue;
+            }
+        </style>
+    </head>
+
+    <body >
+       
+          <div>
+                <p class="p1">Um elemento p</p>
+                <p class="p2">Um elemento p</p>
+                <p class="p3">Um elemento p</p>
+          </div>
+          
+          <p>Clique no botão para copiar o elemento div acima, incluindo todos seus atributos e elementos descendentes, e apenssá-lo ao document.</p>
+          <button onclick="minhaF()">Testar</button>
+          
+          <script>
+                function minhaF() {
+                    var elemento = document.getElementsByTagName('div')[0]
+                    var clone = elemento.cloneNode(true)
+                    document.body.appendChild(clone)
+                }
+          </script>
+                  
+    </body>
+</html>

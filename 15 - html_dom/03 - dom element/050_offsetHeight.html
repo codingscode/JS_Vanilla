@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>offsetHeight</title>
+
+        <style>
+            #meuDIV {
+                height: 250px;
+                width: 400px;
+                padding: 14px;
+                margin: 12px;
+                border: 7px solid rgb(8, 122, 24);
+                background-color: rgb(202, 250, 174);
+            }
+        </style>
+    </head>
+
+    <body >
+        
+       <!--  The offsetHeight property returns the viewable height of an element in pixels, including padding, border and scrollbar,
+         but not the margin.
+        The reason why the "viewable" word is specified, is because if the element's content is taller than the actual height 
+        of the element, this property will only return the height that is visible (See "More Examples").
+        sintaxe: element.offsetHeight -->
+        <p>Clique no botão para acessar a altura e largura do div, incluindo padding e border (usando ambos offsetHeight e 
+            offsetWidth).</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDIV">
+          <b>Informação sobre este div:</b><br>
+          Height: 250px<br>
+          Width: 400px<br>
+          padding: 14px<br>
+          margin: 12px<br>
+          border: 7px<br>
+          <p id="demo"></p>
+        </div>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('meuDIV')
+                var texto = `Height incluindo padding e border:  ${elemento.offsetHeight} px<br>`
+                texto += `Width incluindo padding e border:  ${elemento.offsetWidth} px`
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+
+    </body>
+</html>

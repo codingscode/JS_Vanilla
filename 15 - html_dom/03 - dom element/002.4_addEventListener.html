@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+    </head>
+
+    <body>
+    
+            <p>Este exemplo demonstra como passar valores de parametros quando se usa o método addEventListener.</p>
+            <p>Clique no botão para efetuar um cálculo.</p>
+            <button id="meuBotao">Testar</button>
+            
+            <p id="demo"></p>
+            
+            <script>
+                var p1 = 5
+                var p2 = 7
+                
+                document.getElementById('meuBotao').addEventListener('click', function() {
+                    minhaFuncao(p1, p2)
+                })
+                
+                function minhaFuncao(a, b) {
+                    var resultado = a * b
+                    document.getElementById('demo').innerHTML = resultado
+                }
+            </script>
+    
+    </body>
+</html>

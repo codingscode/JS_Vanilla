@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertBefore</title>
+
+        <style>
+            span {
+                color: lightgreen;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <ul id="minhaLista1"><li>Chá</li><li>Gelatina</li></ul>
+        <ul id="minhaLista2"><li>Água</li><li>Cacau</li></ul>
+        <p>Clique no botão para mover um item de uma lista para outra</p>
+        
+        <button onclick="minhaF()">Testar</button>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('minhaLista2').lastChild
+                var lista = document.getElementById('minhaLista1')
+                lista.insertBefore(elemento, lista.childNodes[0])
+            }
+        </script>
+
+    </body>
+</html>

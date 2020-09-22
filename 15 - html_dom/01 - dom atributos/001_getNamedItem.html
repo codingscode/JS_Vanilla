@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getNamedItem</title>
+    </head>
+
+    <body>
+        <!-- sintax: namednodemap.getNamedItem(nodename) -->
+        <p>Clique no botão para acessar o valor do atributo onclick do button element</p>
+
+        <button onclick="minhaFuncao()">Teste o</button>
+
+        <p id="demo"></p>
+
+        <script >
+                function minhaFuncao() {
+                    var a = document.getElementsByTagName('BUTTON')[0]
+                    var x = a.attributes.getNamedItem('onclick').value  
+                    document.getElementById('demo').innerHTML = x
+
+                    console.log(document.getElementsByTagName('BUTTON')[0].attributes.getNamedItem('onclick').value)
+                }
+        </script>
+        <!-- The getNamedItem() method returns the attribute node with the specified name from a NamedNodeMap object.
+          Parameter	Type	Description
+          nodename	String	Required. The name of the node in the namedNodeMap you want to return -->
+
+    </body>
+</html>

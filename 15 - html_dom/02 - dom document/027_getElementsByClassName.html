@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+    </head>
+
+    <body>
+
+        <div class="exemplo"> 1º elemento div com classe "exemplo".</div>
+        <div class="exemplo">2º elemento div com classe "exemplo".</div>
+        <p>Clique no botao para alterar o texto do 1º elemento div com classe "exemplo" (index 0).</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByClassName('exemplo')
+                x[0].innerHTML = 'Olá mundo!'
+
+                console.log(document.getElementsByClassName('exemplo'))
+                console.log(document.getElementsByClassName('exemplo')[0])
+            }
+        </script>      
+    </body>
+</html>

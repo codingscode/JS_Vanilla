@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>className</title>
+
+        <style>
+            .meuestilo {
+                width: 300px;
+                height: 50px;
+                text-align: center;
+                background-color: coral;
+                color: white;
+                margin-bottom: 10px;
+                padding-top: 10px;
+            }
+
+            button {
+                margin-top: 8px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Neste exemplo, nós primeiro procuramos pelo elemento no document com id "meuDiv". Então, se este elemento possui classe de "meuestilo" - alterar sua fonte de tamanho.</p>
+        <div id="meuDiv" class="meuestilo">Eu sou um elemento div</div>
+        <button onclick="minhaF()">Teste</button>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('meuDiv')
+                
+                if (elemento.className === 'meuestilo') { 
+                    elemento.style.fontSize = '30px'
+                }
+            }
+        </script>
+        
+    </body>
+</html>

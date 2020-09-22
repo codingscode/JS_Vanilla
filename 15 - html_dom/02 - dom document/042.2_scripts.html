@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>scripts</title>
+        <style>
+           
+        </style>
+        
+    </head>
+
+    <body >
+        
+            <script>
+                document.write('Olá mundo!')
+            </script>
+            
+            <p>Clique no botão para acessar os conteudos do elemento script com id "meuScript".</p>
+            
+            <button onclick="minhaFunc()">Testar</button>
+            
+            <p id="demo"></p>
+            
+            <script id="meuScript">
+                function minhaFunc() {
+                    var x = document.scripts.namedItem('meuScript').text
+                    document.getElementById('demo').innerHTML = x
+                }
+            </script>
+    </body>
+</html>

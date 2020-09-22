@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeChild</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+          <ul id="minhaLista">
+            <li id="minhaLI">Chá</li>
+          </ul>
+          
+          <p>Clique um botão para remover o elemento li da ul. Clique no outro botão para inserir o elemento li removido na ul.</p>
+          
+          <button onclick="removerLi()">Remover li</button>
+          <button onclick="inserirLi()">Inserir li</button>
+          
+          <script>
+                var item = document.getElementById('minhaLI')
+                
+                function removerLi() {
+                    item.parentNode.removeChild(item)
+                }
+                
+                function inserirLi() {
+                    var lista = document.getElementById('minhaLista')
+                    lista.appendChild(item)
+                }
+          </script>
+              
+    </body>
+</html>

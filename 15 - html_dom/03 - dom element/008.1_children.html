@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>children</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para encontrar quantos descendentes o elemento div abaixo possui.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDiv">
+          <p>1º elemento p (indice 0)</p>
+          <p>1º elemento p (indice 1)</p>
+        </div>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var c = document.getElementById('meuDiv').children.length
+                document.getElementById('demo').innerHTML = c
+            }
+        </script>
+        
+    </body>
+</html>

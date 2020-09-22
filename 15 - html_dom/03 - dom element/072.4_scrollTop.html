@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollTop</title>
+
+        <style>
+            body {
+                height: 2000px;
+                width: 2000px;
+            }
+
+            button {
+                position: fixed;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            
+         -->
+         <p>Clique no botão para rolar os conteudos do body.</p>
+
+         <p><strong>Dica:</strong> Clique no botão quantas vezes para rolar a mesma quantidade cada vez.</p>
+         
+         <button onclick="minhaf()">Rolar conteudos do body</button><br><br>
+         
+         <script>
+                function minhaf() {
+                    var body = document.body // For Safari
+                    var html = document.documentElement // Chrome, Firefox, IE and Opera places the overflow at the html level, unless else is specified. Therefore, we use the documentElement property for these browsers
+                    body.scrollLeft += 30
+                    body.scrollTop += 10
+                    html.scrollLeft += 30
+                    html.scrollTop += 10
+                }
+         </script>  
+
+    </body>
+</html>

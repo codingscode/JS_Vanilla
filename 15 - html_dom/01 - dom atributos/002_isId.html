@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>isId</title>
+    </head>
+
+    <body>
+        <!-- The isId property returns true if the attribute is of type ID, otherwise it returns false.
+        This property is read-only.
+        sintaxe -> attribute.isId -->
+
+        <p id="demo">
+            Clique no botao para encontrar se o primeiro atributo no elemento P é um atributo id
+            <p >oi</p>
+        </p>
+        <button onclick="minhaFuncao()">Teste o</button>
+        
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementById("demo")
+                x.innerHTML = x.attributes[0].isId
+                //x.innerHTML = x.attributes[0].name === 'id'
+                
+                console.log('1:', x)
+                console.log('2:', x.innerHTML)
+                console.log('3:', x.attributes)
+                console.log('4:', x.attributes[0])
+                console.log('5:', x.attributes.id)
+                
+            }
+         
+        </script>
+        <p><strong>Nota:</strong> A propriedade isId nao é suportada em alguns dos maiores browsers.</p>
+
+    </body>
+</html>

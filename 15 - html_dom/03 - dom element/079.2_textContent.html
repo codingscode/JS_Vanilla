@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>textContent</title>
+
+        <style>
+                
+        </style>
+    </head>
+
+    <body > 
+        
+        <!-- 
+            
+         -->
+          <ul id="minhaLista">
+                <li>Chá</li>
+                <li>Gelatina</li>
+          </ul>
+          
+          <p>Clique no botão para acessar o conteudo de texto do elemento ul.</p>
+          
+          <button onclick="minhaf()">Testar</button>
+          
+          <p><strong>Note:</strong> Conteudo textual inclui o texto de todos nodes descendentes também.</p>
+          
+          <p id="demo"></p>
+          
+          <script>
+                function minhaf() {
+                    var conteudo = document.getElementById('minhaLista').textContent
+                    document.getElementById('demo').innerHTML = conteudo
+                }
+          </script>
+                          
+    </body>
+</html>

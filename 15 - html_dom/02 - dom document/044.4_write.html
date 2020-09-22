@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>write</title>
+        <style>
+           
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para abrir uma nova janela chamada "Janela de Mensagem" com algum texto.</p>
+        
+        <button onclick="minhaFunc()">Testar</button>
+        
+        <script>
+            function minhaFunc() {
+                var minhajanela = window.open('', 'Janela de Mensagem', 'width=200,height=100')
+                minhajanela.document.write('<p>Isto é "Janela de Mensagem". Eu tenho 200px de largura e 100px de altura!</p>')
+            }
+        </script>
+    </body>
+</html>

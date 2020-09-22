@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>className</title>
+
+        <style>
+            .meuestilo {
+                width: 300px;
+                height: 100px;
+                background-color: coral;
+                text-align: center;
+                font-size: 25px;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            button {
+                margin-top: 8px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para mostrar o valor do atributo classe do elemento div abaixo.</p>
+        <div id="meuDiv" class="meuestilo">Eu sou um elemento div com classe "meusestilo"</div>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementsByClassName('meuestilo')[0].className
+                var y = document.getElementById('meuDiv').className
+                document.getElementById('demo').innerHTML = `Usando getElementsByClassName: ${x} <br> Usando getElementById: ${y}`
+                
+            }
+        </script>
+
+    </body>
+</html>

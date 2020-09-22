@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+
+        <div class="exemplo">Um elemento div com classe "exemplo"</div>
+        <div class="exemplo">Um outro elemento div com classe "exemplo"</div>
+        <p class="exemplo">Um elemento p com classe "exemplo"</p>
+        <p>Clique no botao para encontrar quantos elementos com classe "exemplo" há neste document.</p>
+        
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo">resultado aqui</p>
+        
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByClassName('exemplo')
+                document.getElementById('demo').innerHTML = x.length
+
+                console.log(x)
+            }
+        </script>    
+      
+    </body>
+</html>

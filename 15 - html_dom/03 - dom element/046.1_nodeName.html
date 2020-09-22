@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nodeName</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 15px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para acessar o nome node do elemento body.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.body.nodeName
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.getElementsByTagName('p')[1].nodeName)
+            }
+        </script>
+
+    </body>
+</html>

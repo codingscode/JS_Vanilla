@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createAttribute</title>
+
+    </head>
+
+    <body>
+
+        <a id="minhaAnchor">Um Link: Ir para http://www.comix.com.br/</a>
+        <p>Clique no botao para criar um atributo "class" com o valor "http://www.comix.com.br" e insira o ao elemento acima.</p>
+        <button onclick="myFunction()">Testar</button>
+
+        <script>
+            function myFunction() {
+                var ancora = document.getElementById('minhaAnchor')
+                var atributo = document.createAttribute('href')
+                atributo.value = 'http://www.comix.com.br'
+                ancora.setAttributeNode(atributo)
+            }
+        </script>
+    </body>
+</html>

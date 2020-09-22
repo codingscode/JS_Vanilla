@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>appendChild</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+       
+        <p>Clique no botão para criar um elemento p com algum texto, e apenssá-lo ao body do document.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.createElement('p')
+                var texto = document.createTextNode('Isto é um parágrafo.')
+                elemento.appendChild(texto)
+                document.body.appendChild(elemento)
+            }
+        </script>
+        
+    </body>
+</html>

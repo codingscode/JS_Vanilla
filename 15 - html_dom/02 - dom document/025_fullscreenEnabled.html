@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>fullscreenEnabled</title>
+
+        <style>
+            video {
+                height: 450px;
+                width: 380px;
+            }
+        </style>
+    </head>
+
+    <body >
+               
+            <h2>Tela inteira com JavaScript</h2>
+            <p>Clique no botao para abrir o video em modo tela inteira.</p>
+            <button onclick="abrirTelaInteira();">Abrir video em modo tela inteira</button><br>
+            
+            <video  controls id="meuvideo">
+                <source src="C:/Pib/nicevideos/boxe_old.mp4" type="video/mp4" >
+                
+                Your browser does not support the video tag.
+            </video>
+
+            <script>
+                /* Get the element you want displayed in fullscreen */ 
+                var elemento = document.getElementById('meuvideo')
+
+                /* Function to open fullscreen mode */
+                function abrirTelaInteira() {
+                    /* If fullscreen mode is available, show the element in fullscreen */
+                    if (
+                        document.fullscreenEnabled || /* Standard syntax */
+                        document.webkitFullscreenEnabled || /* Chrome, Safari & Opera */
+                        document.mozFullScreenEnabled || /* Firefox */
+                        document.msFullscreenEnabled /* IE/Edge */ ) {
+                    
+                        /* Show the element in fullscreen */
+                        elemento.webkitRequestFullscreen()
+                        if (elemento.requestFullscreen) {
+                            elemento.requestFullscreen() /* Standard syntax */
+                        }
+                        else if (elemento.mozRequestFullScreen) { /* Firefox */
+                            elemento.mozRequestFullScreen()
+                        } 
+                        else if (elemento.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                            elemento.webkitRequestFullscreen()
+                        }
+                        else if (elemento.msRequestFullscreen) { /* IE/Edge */
+                            elemento.msRequestFullscreen()
+                        }
+                        
+                    }
+                }
+            </script>
+
+    </body>
+</html>

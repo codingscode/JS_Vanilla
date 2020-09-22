@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>blur</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+        
+             <!-- blur 
+                The onblur event occurs when an object loses focus.
+                The onblur event is most often used with form validation code (e.g. when the user leaves a form field).
+                Tip: The onblur event is the opposite of the onfocus event.
+                Tip: The onblur event is similar to the onfocusout event. The main difference is that the onblur event does not 
+                bubble. Therefore, if you want to find out whether an element or its child loses focus, you could use the 
+                onfocusout event. However, you can achieve this by using the optional useCapture parameter of the 
+                addEventListener() method for the onblur event.
+                                -->
+                <p>Este exemplo demonstra como assinalar um evento "onblur" a um elemento input.</p>
+                <p>Escreva algo no campo field, e então clique fora do campo para perder o foco(blur).</p>
+                                
+                <input type="text" onblur="minhaF()">
+                                
+                <script>
+                    function minhaF() {
+                        alert('Input field lost focus.')
+                    }
+                </script>
+                                   
+    </body>
+</html>

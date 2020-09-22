@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>className</title>
+
+        <style>
+            .meuestilo {
+                background-color: rgb(148, 212, 111);
+                padding: 30px;
+                color: white;
+                font-weight: bolder;
+            }
+
+            .meuestilo2 {
+                background-color: rgb(238, 165, 138);
+                padding: 50px;
+                color: white;
+                font-weight: bolder;
+            }
+
+            button {
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão mpultiplas vezes para alternar entre 2 nomes de classes para div.</p>
+        <button onclick="minhaF()">Testar</button>
+        <div id="meuDiv" class="meuestilo">Eu sou um elemento div</div>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('meuDiv')
+                if (elemento.className === 'meuestilo') {
+                    elemento.className = 'meuestilo2'
+                }
+                else {
+                    elemento.className = 'meuestilo'
+                }
+            }
+        </script>
+        
+    </body>
+</html>

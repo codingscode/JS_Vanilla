@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>title</title>
+
+        <style>
+                
+        </style>
+    </head>
+
+    <body > 
+        
+        <!-- 
+            The title property sets or returns the value of the title attribute of an element.
+            The title attribute specifies extra information about an element.
+            The information is most often shown as a tooltip text when the mouse moves over the element.
+            sintaxe:   Return the title property:    HTMLElementObject.title
+                       Set the title property:       HTMLElementObject.title = text
+         -->
+         <p>Clique no botão para mostrar o title do elemento abbr abaixo.</p>
+
+         <p><abbr id="meuAbbr" title="World Health Organization">WHO</abbr> foi fundado em 1948.</p>
+         
+         <button onclick="minhaF()">Testar</button>
+         
+         <p id="demo"></p>
+         
+         <script>
+                function minhaF() {
+                    var valor_titulo = document.getElementById('meuAbbr').title
+                    document.getElementById('demo').innerHTML = valor_titulo
+                }
+         </script>
+                          
+    </body>
+</html>

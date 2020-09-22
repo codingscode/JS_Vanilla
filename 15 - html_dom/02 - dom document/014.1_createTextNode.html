@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createTextNode</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para criar um elemento h1 com algum texto.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var h1el = document.createElement('h1')
+                var texto = document.createTextNode('Olá Mundo!')
+                h1el.appendChild(texto)
+                document.body.appendChild(h1el)
+            }
+        </script>
+        
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByTagName</title>
+
+        <style>
+            
+            #meuDIV {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            } 
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+                <h3>Um elemento h3 dentro de div.</h3>
+                <p>Elemento p dentro de div.</p>
+                <span>Um elemento span dentro de div.</span>
+                <h2>Um elemento h2 dentro de div.</h2>
+                <div>Um elemento div dentro de div.</div>
+                <p>Outro elemento p dentro de div.</p>
+          </div>
+          
+          <p>Clique no botão para adicionar um cor de fundo ao 4º elemento dentro do elemento div.</p>
+          <button onclick="minhaF()">Testar</button>
+          
+          <script>
+                function minhaF() {
+                    var elemento = document.getElementById('meuDIV')
+                    elemento.getElementsByTagName('*')[3].style.backgroundColor = 'lightgreen'
+                }
+          </script>
+
+    </body>
+</html>

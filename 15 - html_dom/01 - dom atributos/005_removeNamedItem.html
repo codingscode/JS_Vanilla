@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeNamedItem</title>
+
+        <style>
+                        
+        </style>
+    </head>
+
+    <body>
+        <!-- The removeNamedItem() method removes the node with the specified name in a NamedNodeMap object. -->
+        <input type="button" value="OK">
+
+        <p>Clique no botao abaixo para remover o atributo type do elemento input acima.</p>
+
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <p><strong>Nota:</strong> Quando remover o atributo type de um elemento input, o elemento será do tipo <em>text</em>, 
+            como valor padrão.</p>
+        
+        <script>
+            function minhaFuncao() {
+                var botao = document.getElementsByTagName('input')[0]
+                botao.attributes.removeNamedItem('type')
+            }
+        </script>
+
+    </body>
+</html>

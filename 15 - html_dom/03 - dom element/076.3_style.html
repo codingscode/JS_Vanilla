@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>style</title>
+
+        <style>
+                /* body {
+                    background-color: rgb(111, 189, 48); 
+                    color: rgb(252, 252, 252);
+                    font-size: 25px;
+                }  */
+               
+        </style>
+    </head>
+
+    <body > 
+        
+        <!-- 
+            
+         -->
+         <p id="meuP" style="border-top: 15px solid rgb(72, 219, 109);">Clique no botão para acessar o valor da minha border do topo.</p>
+
+         <button onclick="minhaf()">Testar</button>
+         
+         <p id="demo"></p>
+         
+         <script>
+                function minhaf() {
+                    var elemento = document.getElementById('meuP').style.borderTop
+                    document.getElementById('demo').innerHTML = elemento 
+                }
+         </script>
+                  
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createElement</title>
+
+        
+    </head>
+
+    <body>
+        
+        <p>Cique no botao para criar um elemento p com algum texto.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        
+        <script>
+            function minhaFuncao() {
+                var paragrafo = document.createElement('p')
+                paragrafo.innerText = 'Isto é um paragrafo.'
+                document.body.appendChild(paragrafo)
+            }
+        </script>
+            
+    </body>
+</html>

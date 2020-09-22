@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>setAttribute</title>
+
+        <style>
+                        
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            
+         -->
+         <a id="minhaAncora" href="https://www.google.com" target="_blank">Ir para google.com</a>.
+
+         <p>Clique no botão para encontrar se o elemento possui um atributo "target". Se então, altere o valor do 
+             atributo target para "_self_" invés de "_blank_".</p>
+                  
+         <p>Tente clicar no link antes e depois de você ter clicado no botão.</p>
+         
+         <button id="meuBtn" onclick="minhaf()">Testar</button>
+         
+         <script>
+                function minhaf() {
+                    var elemento = document.getElementById('minhaAncora')
+                    
+                    if (elemento.hasAttribute('target')) {
+                        elemento.setAttribute('target', '_self')
+                    }
+                }
+         </script>
+         
+    </body>
+</html>

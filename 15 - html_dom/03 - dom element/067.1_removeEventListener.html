@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeEventListener</title>
+
+        <style>
+            #meuDIV {
+                background-color: coral;
+                border: 1px solid;
+                padding: 50px;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">Este elemento div possui um onmousemove event handler que mostra um número aleatório cada vez que 
+              você move seu mouse dentro deste campo laranja.
+            <p>Clique no botão para remover o event handler do div.</p>
+            <button onclick="removerTratador()" id="meuBotao">Testar</button>
+          </div>
+                    
+          <p id="demo"></p>
+          
+          <script>
+               
+                var elemento = document.getElementById('meuDIV')
+                console.log(Boolean(elemento.addEventListener))
+                console.log(elemento.addEventListener)
+                
+                if (elemento.addEventListener) {
+                    elemento.addEventListener('mousemove', minhaf)
+                }
+                else if (elemento.attachEvent) {
+                    elemento.attachEvent('onmousemove', minhaf)
+                }
+
+                function minhaf() {
+                    document.getElementById('demo').innerHTML = Math.random()
+                }
+
+                console.log(Boolean(elemento.removeEventListener))
+                console.log(elemento.removeEventListener)
+
+                function removerTratador() {
+                    if (elemento.removeEventListener) {
+                        elemento.removeEventListener('mousemove', minhaf)
+                    }
+                    else if (elemento.detachEvent) {
+                        elemento.detachEvent('onmousemove', minhaf)
+                    }
+                }
+          </script>
+      
+    </body>
+</html>

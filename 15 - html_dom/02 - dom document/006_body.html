@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>body</title>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para alterar a cor de fundo do document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                document.body.style.backgroundColor = 'lightgreen'
+
+                console.log(document.body)
+                console.log(document.body.style)
+            }
+        </script>
+        
+    </body>
+</html>

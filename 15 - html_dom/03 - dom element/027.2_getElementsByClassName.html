@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+
+        <style>
+            
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+                <p class="filho">1º elemento p com classe "filho" no div (indice 0).</p>
+                <p class="filho">2º elemento p com classe "filho" no div (indice 1).</p>
+                <p class="filho">3º elemento p com classe "filho" no div (indice 2).</p>
+          </div>
+          
+          <p>Clique no botão para encontrar quantos elementos com classe "filho" há dentro do elemento div.</p>
+          <button onclick="minhaF()">Testar</button>
+          
+          <p id="demo"></p>
+          
+          <script>
+                function minhaF() {
+                    var x = document.getElementById('meuDIV').getElementsByClassName('filho')
+                    document.getElementById('demo').innerHTML = x.length
+                }
+          </script>
+    </body>
+</html>

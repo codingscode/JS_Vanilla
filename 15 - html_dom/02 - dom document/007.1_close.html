@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>close</title>
+
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para abrir uma saída stream em uma nova janela, adicionar algum texto, então fechar a saída stream.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var janela = window.open()
+                janela.document.open()
+                janela.document.write('<h1>Olá Mundo!</h1>')
+                janela.document.write('<h1>texto em baixo!</h1>')
+                janela.document.close()
+
+                console.log(window)
+                
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>setAttributeNode</title>
+
+        <style>
+                .democlass {
+                    color: rgb(89, 190, 30);
+                }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            
+         -->
+         <a id="minhaAncora">Um Link: Ir para google.com</a>
+         <p>Clique no botão para criar um atributo "class" com o valor "www.google.com" e inseri-lo ao elemento acima</p>
+         
+         <button onclick="minhaF()">Testar</button>
+         
+         <script>
+                function minhaF() {
+                    var ancora = document.getElementById('minhaAncora')
+                    var atributo = document.createAttribute('href')
+                    atributo.value = 'https://www.google.com'
+                    ancora.setAttributeNode(atributo)
+                }
+         </script>
+         
+    </body>
+</html>

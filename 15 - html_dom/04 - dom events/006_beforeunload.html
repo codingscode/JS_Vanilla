@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>beforeunload</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body onbeforeunload="return minhaF()">
+        
+             <!-- beforeunload 
+                The onbeforeunload event occurs when the document is about to be unloaded.
+                This event allows you to display a message in a confirmation dialog box to inform the user whether he/she wants to 
+                stay or leave the current page.
+                The default message that appears in the confirmation box, is different in different browsers. However, the standard
+                 message is something like "Are you sure you want to leave this page?". This message cannot be removed.
+                However, you can write a custom message together with the default message. See the first example on this page. 
+                 Note: This only works in Internet Explorer.
+                Note: If the onbeforeunload event is not assigned to the <body> element, you must assign/attach the event on the 
+                    window object, and use the returnValue property to create a custom message (see syntax examples below).
+                                -->
+            <p>Recarregue esta página, ou clique no link abaixo para invocar o evento onbeforeunload</p>
+
+            <a href="https://www.google.com">Clique aqui para ir para google.com</a>
+                      
+            <script>
+                function minhaF() {
+                    console.log('algo')
+                    return 'Escreva algo inteligente aqui...'
+                }
+            </script>
+                  
+                 
+    </body>
+</html>

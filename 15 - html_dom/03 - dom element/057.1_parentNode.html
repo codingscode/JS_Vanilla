@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>parentNode</title>
+
+        <style>
+            div {
+                box-sizing: border-box;
+                padding: 16px;
+                width: 100%;
+                background-color: rgb(109, 241, 126);
+                color: #fff;
+            }
+            .botaofechar {
+                float: right;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+            .botaofechar:hover {
+                color: #000;
+            }
+           
+        </style>
+    </head>
+
+    <body >
+       
+          <div>
+            <span onclick="this.parentNode.style.display = 'none';" class="botaofechar">&times;</span>
+            <p>Para fechar este conteiner, clique sobre o simbolo x a direita.</p>
+          </div>
+
+    </body>
+</html>

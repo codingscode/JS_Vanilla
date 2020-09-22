@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollIntoView</title>
+
+        <style>
+                #meuDIV {
+                    height: 250px;
+                    width: 250px;
+                    overflow: auto;
+                    background: green;
+                    margin-top: 10px;
+                }
+
+                #conteudo {
+                    margin:500px;
+                    height: 800px;
+                    width: 2000px;
+                    background-color: coral;
+                }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+               The scrollIntoView() method scrolls the specified element into the visible area of the browser window.
+               sintaxe: element.scrollIntoView(alignTo)     
+        -->
+                <p>Clique no botão para rolar para o topo do elemento com id "conteudo".</p>
+
+                <button onclick="minhaf()">Scroll</button>
+                
+                <div id="meuDIV">
+                    <div id="conteudo">
+                        Algum texto dentro de um elemento.
+                    </div>
+                </div>
+                
+                <script>
+                    function minhaf() {
+                        var elemento = document.getElementById('conteudo')
+                        elemento.scrollIntoView()
+                    }
+                </script>
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>attributes</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <!-- sintaxe: node.attributes -->
+        <p>Clique no botão para ver quantos atributos o elemento botão possui.</p>
+        <button id="meuBotao" onclick="minhaF()">Testar</button>
+        <p>O resultado deve ser 2 (o id do elemento button e atributo onclick).</p>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuBotao').attributes.length
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.getElementById('meuBotao').attributes)
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>accessKey</title>
+    </head>
+
+    <body>
+        
+        <a id="identificador" accesskey="w" href="http://www.guiadosquadrinhos.com/">Guia dos quadrinhos</a>
+
+        <p>Clique no botão para acessar o accessKey do link.</p>
+        
+        <button onclick="minhaFunc()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaFunc() {
+                var x = document.getElementById('identificador').accessKey
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+    </body>
+</html>

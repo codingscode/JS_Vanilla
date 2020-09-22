@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>compareDocumentPosition</title>
+
+        <style>
+            
+        
+        </style>
+    </head>
+
+    <body >
+       
+        <p id="p1">Isto é um parágrafo</p>
+        <p id="p2">Isto é outro parágrafo</p>
+        <p>Clique no botão para comparar a posição dos 2 paragrafos.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p>
+            <strong>Possiveis valores de retorno:</strong><br>
+            1: Os 2 nodes não pertencem ao mesmo document.<br>
+            2: p1 é posicionado depois de p2.<br>
+            4: p1 é posicionado antes de p2.<br>
+            8: p1 é posicionado dentro p2.<br>
+            16: p2 é posicionado dentro de p1.<br>
+            32: Os 2 nodes tem nenhuma relação, ou eles são dois atributos no mesmo elemento.
+        </p>
+        
+        <p><strong>Note:</strong> O valor retornado poderia também ser uma combinação de valores. I.e. o valor de retorno 20
+             significa que p2 está dentro de p1 (16) e p1 está posicionado antes de p2 (4).</p>
+                
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var p1 = document.getElementById('p1').lastChild
+                var p2 = document.getElementById('p2').lastChild
+                var x = p1.compareDocumentPosition(p2)
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+                  
+    </body>
+</html>

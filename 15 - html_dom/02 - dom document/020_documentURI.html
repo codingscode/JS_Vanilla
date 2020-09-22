@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>documentURI</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <!-- Sintaxe: Return the documentURI property -> document.documentURI
+               Set the documentURI property -> document.documentURI = locationURI -->
+        
+        <p>Clique no botao para mostrar a localização deste document</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.documentURI
+                document.getElementById("demo").innerHTML = x
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientHeight</title>
+
+        <style>
+            #meuDiv {
+                height: 250px;
+                width: 400px;
+                padding: 18px;
+                margin: 16px;
+                border: 7px solid rgb(64, 145, 27);
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+
+    <body >
+        <!-- The clientHeight property returns the viewable height of an element in pixels, including padding, but not the 
+            border, scrollbar or margin.
+           The reason why the "viewable" word is specified, is because if the element's content is taller than the actual 
+           height of the element, this property will only return the height that is visible (See "More Examples").
+           sintaxe: element.clientHeight
+         -->
+        <p>Clique no botão para acessar a altura e largura do div, incluindo padding (usando ambos clientHeight e clientWidth).</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDiv">
+            <b>Informação sobre este div:</b><br>
+            Height: 250px<br>
+            Width: 400px<br>
+            padding: 18px<br>
+            margin: 16px<br>
+            border: 7px<br>
+            <p id="demo"></p>
+        </div>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('meuDiv')
+                var texto = `Altura incluindo padding ${elemento.clientHeight}px <br>`
+                texto += `Largura incluindo padding: ${elemento.clientWidth}px`
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+        
+    </body>
+</html>

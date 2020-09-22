@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>images</title>
+    </head>
+
+    <body>
+        
+        <img src="./computer.jpg" alt="cmputer" width="150" height="113">
+        <img src="./satelite.jpg" alt="satelite" width="152" height="128">
+        <img src="./books.png" alt="livros" width="42" height="42">
+        <p>Clique no botao para mostrar o numero de imagens no document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.images.length
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.images)
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>click</title>
+        <style>
+                    .botaodescida {
+                        background-color: #4CAF50;
+                        color: white;
+                        padding: 16px;
+                        font-size: 16px;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .botaodescida:hover, .botaodescida:focus {
+                        background-color: #3e8e41;
+                    }
+
+                    .descida {
+                        position: relative;
+                        display: inline-block;
+                    }
+
+                    .descida-conteudo {
+                        display: none;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 160px;
+                        overflow: auto;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    }
+
+                    .descida-conteudo a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+
+                    .descida-conteudo a:hover {
+                        background-color: #f1f1f1;
+                    }
+
+                    .mostrar {
+                        display:block;
+                    }
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- click 
+                
+             -->
+             <h2>Clickable Dropdown</h2>
+             <p>Click on the button to open the descida menu.</p>
+             
+             <div class="descida">
+                    <button id="meuBotao" class="botaodescida">Dropdown</button>
+                    <div id="minhaDescida" class="descida-conteudo">
+                        <a href="#home">Inicio</a>
+                        <a href="#about">Sobre</a>
+                        <a href="#contact">Contato</a>
+                    </div>
+             </div>
+             
+             <script>
+                    // Get the button, and when the user clicks on it, execute minhaF
+                    document.getElementById('meuBotao').onclick = function() { minhaF() }
+                    
+                    /* minhaF toggles between adding and removing the show class, which is used to hide and show the descida content */
+                    function minhaF() {
+                        document.getElementById('minhaDescida').classList.toggle('mostrar')
+                    }
+             </script>
+                                           
+    </body>
+</html>

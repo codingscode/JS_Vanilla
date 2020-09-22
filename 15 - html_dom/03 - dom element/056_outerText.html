@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>outerText</title>
+
+        <style>
+            
+           
+        </style>
+    </head>
+
+    <body >
+        <!-- The outerText property sets or returns the text content of the specified node.
+        This property is similar to the inner innerText property, in fact getting the outerText returns the same result as 
+        getting the innerText property.
+        There are an important difference when setting an element's outerText, because the element itself is removed.
+        Tip: also check out the outerHTML property.
+           sintaxe:  Return the text content of a node:  node.outerText
+                     Set the text content of a node (replacing the entire node):  node.outerText = text
+          -->
+        <h1>Set outerText</h1>
+        <p>Quando setar o outerText, o elemento inteiro fica substituído.</p>
+        <p>Clique no botão para alterar (e remover) o elemento h1:</p>
+        
+        <button onclick="minhaf()">Alterar Cabeçalho</button>
+        
+        <script>
+                function minhaf() {
+                    var x = document.getElementsByTagName('h1')[0]
+                    x.outerText = 'Alterou Conteudo!'
+                }
+        </script>
+
+    </body>
+</html>

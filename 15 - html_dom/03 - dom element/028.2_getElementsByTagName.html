@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByTagName</title>
+
+        <style>
+            
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            } 
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+            <p>Um elemento p dentro de div.</p>
+            <p>Outro elemento p dentro de div.</p>
+            <p>Um 3º elemento p dentro de div.</p>
+          </div>
+          
+          <p>Clique no botão para adicionar a cor de fundo ao 2º elemento p dentro do elemento div.</p>
+          <button onclick="minhaF()">Testar</button>
+          
+          <p id="demo"></p>
+          
+          <script>
+            function minhaF() {
+                var elemento = document.getElementById('meuDIV')
+                elemento.getElementsByTagName('P')[1].style.backgroundColor = 'lightgreen'
+            }
+          </script>
+
+    </body>
+</html>

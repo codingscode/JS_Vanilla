@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>drag</title>
+        <style>
+            .soltaralvo {
+                float: left; 
+                width: 100px; 
+                height: 35px;
+                margin: 15px;
+                padding: 10px;
+                border: 1px solid #aaaaaa;
+                background-color: lightgreen;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- drag 
+           The ondrag event occurs when an element or text selection is being dragged.
+           Drag and drop is a very common feature in HTML5. It is when you "grab" an object and drag it to a different location. For more information, see our HTML Tutorial on HTML5 Drag and Drop.
+           Note: To make an element draggable, use the global HTML5 draggable attribute.
+           Tip: Links and images are draggable by default, and do not need the draggable attribute.
+            There are many events that are used, and can occur, in the different stages of a drag and drop operation:
+            Events fired on the draggable target (the source element):
+            ondragstart - occurs when the user starts to drag an element
+            ondrag - occurs when an element is being dragged
+            ondragend - occurs when the user has finished dragging the element
+            Events fired on the drop target:
+            ondragenter - occurs when the dragged element enters the drop target
+            ondragover - occurs when the dragged element is over the drop target
+            ondragleave - occurs when the dragged element leaves the drop target
+            ondrop - occurs when the dragged element is dropped on the drop target
+            Note: While dragging an element, the ondrag event fires every 350 milliseconds.
+             -->
+
+             <p>Arrastar o elemento p ida e volta entre os dois retangulos:</p>
+
+             <div class="soltaralvo" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+               <p ondragstart="iniciarArraste(event)" ondrag="arrastando(event)" draggable="true" id="dragtarget">Arraste me!</p>
+             </div>
+             
+             <div class="soltaralvo" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+             
+             <p id="demo" style="clear:both;"></p>
+             
+             <script>
+                    function iniciarArraste(evento) {
+                        evento.dataTransfer.setData('Text', evento.target.id)
+                    }
+                    
+                    function arrastando(evento) {
+                        document.getElementById('demo').innerHTML = 'O elemento p está sendo arrastado'
+                    }
+                    
+                    function permitirSoltar(evento) {
+                        evento.preventDefault()
+                    }
+                    
+                    function soltar(evento) {
+                        evento.preventDefault()
+                        var data = evento.dataTransfer.getData('Text')
+                        evento.target.appendChild(document.getElementById(data))
+                        document.getElementById('demo').innerHTML = 'O elemento p foi arrastado'
+                    }
+             </script>
+                                           
+    </body>
+</html>

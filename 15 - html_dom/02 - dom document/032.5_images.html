@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>images</title>
+    </head>
+
+    <body>
+        
+        <img src="./computer.jpg" alt="cmputer" width="150" height="113">
+        <img src="./satelite.jpg" alt="satelite" width="152" height="128">
+        <img src="./books.png" alt="livros" width="100" height="100">
+        
+        <p>Clique no botao para mostrar a URL de cada elemento img no document.</p>
+        <button type="button" onclick="minhaFunc()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFunc() {
+                var x = document.images
+                var texto = ''
+                
+                for (var i = 0; i < x.length; i++) {
+                    texto +=  '---->' + x[i].src + '<br>'
+                }
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+        
+    </body>
+</html>

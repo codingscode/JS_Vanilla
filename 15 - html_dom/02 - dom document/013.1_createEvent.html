@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createEvent</title>
+
+        <style>
+            .aplicacao {
+                padding:15px;
+                margin:30px;
+                background-color: darkgreen;
+                width:180px;
+                color: white;
+                font-size: larger;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="aplicacao">
+            <div id="fora"></div>
+            <input type="text">
+        </div>
+        
+        <script>
+            document.body.onclick = function(){
+                e = arguments[0]
+                var dt = e.target
+                var stag = dt.tagName.toLowerCase()
+                document.getElementById("fora").innerHTML = stag
+
+                console.log('1:', e)
+                console.log('2:', dt)
+                console.log('3:', stag)
+                
+            }
+
+            var simularClique = function(){
+                var evt = document.createEvent("MouseEvents")
+                evt.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null)
+                document.body.dispatchEvent(evt)
+
+                console.log('4:', evt)
+            }
+
+            simularClique() 
+        </script>
+
+    </body>
+</html>

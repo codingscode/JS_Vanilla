@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>hasFocus</title>
+    </head>
+
+    <body>
+        
+        <p>Clique em qualquer lugar no document (o frame certo) para ter focus. Se você clicar fora do document, isto 
+              perderá focus.</p>
+        <p id="demo"></p>
+
+        <script>
+            setInterval('minhaFuncao()', 1)
+
+            function minhaFuncao() {
+                var x = document.getElementById('demo')
+                
+                if (document.hasFocus()) {
+                    x.innerHTML = 'O document tem focus.'
+                }
+                else {
+                    x.innerHTML = 'O document não tem focus.'
+                }
+            }
+            // clicar na barra de endereços ou no console direito
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelectorAll</title>
+
+        <style>
+            #meuDIV {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }            
+           
+        </style>
+    </head>
+
+    <body >
+            
+      <div id="meuDIV">
+        <h2 class="exemplo">Um cabeçalho com classe "exemplo" no div</h2>
+        <p class="exemplo">Um parágrafo com classe "exemplo" no div.</p> 
+        <p>This is a p element in div.</p>
+        <p>This is also a p element in div.</p>
+      </div>
+      
+      <p>Clique no botão para adicionar uma cor de fundo ao 1º elemento no div com classe "exemplo" (indice 0).</p>
+      <button onclick="minhaf()">Testar</button>
+      
+      <script>
+            function minhaf() {
+                var elementos = document.getElementById('meuDIV').querySelectorAll('.exemplo')
+                elementos[0].style.backgroundColor = 'lightgreen'
+
+                var elementos2 = document.getElementById('meuDIV').querySelectorAll('p')
+                elementos2[2].style.backgroundColor = 'purple'
+                elementos2[2].style.color = 'white'
+            }
+      </script>
+      
+    </body>
+</html>

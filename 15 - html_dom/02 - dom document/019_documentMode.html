@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>documentMode</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        This document is displayed in IE <span id="demo"></span> mode
+
+        <p><b>Note:</b> The documentMode property is only supported in Internet Explorer, from IE8+</p>
+        <p><b>Note:</b> If no !DOCTYPE is specified, IE8 renders the page in IE5 mode!</p>
+
+        <script>
+            var x = document.documentMode
+            document.getElementById("demo").innerHTML = x
+        </script>
+
+    </body>
+</html>

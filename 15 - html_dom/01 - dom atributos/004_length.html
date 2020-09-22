@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>length e name</title>
+
+        <style>
+            .exemplo {
+                color: red;
+                padding: 5px;
+                width: 150px;
+                font-size: 15px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <!-- The length property returns the number of nodes in a NamedNodeMap object.
+        A Node object's attributes is an example of a NamedNodeMap object.
+        This property is read-only.
+        namednodemap.length  -->
+
+        <p>Clique no botao para ver quantos atributos o elemento botao possui:</p>
+
+        <button onclick="minhaFuncao()" class="exemplo">Testar</button>
+        
+        <p>O resultado deve ser 2 (o elemento botão 'onclick' e o atributo 'class').</p>
+        
+        <p id="demo">quantidade atributos:  , nomes: </p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByTagName("BUTTON")[0].attributes.length
+
+                var atrib1 = document.getElementsByTagName("BUTTON")[0].attributes[0].name
+                var atrib2 = document.getElementsByTagName("BUTTON")[0].attributes[1].name
+                
+                document.getElementById("demo").innerHTML = `quantidade atributos: ${x}, nomes: ${atrib1}, ${atrib2}`
+            }
+        </script>
+
+    </body>
+</html>

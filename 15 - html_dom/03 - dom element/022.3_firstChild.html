@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>firstChild</title>
+
+        <style>
+            
+            div {
+                border: 1px solid black;
+                margin: 15px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para acessar o texto do 1º descendente node do elemento select.</p>
+         <!-- só funciona assim -->
+        <select id="meuSelect" size="4"><option>Audi</option><option>BMW</option><option>Saab</option><option>Volvo</option></select><br><br>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuSelect').firstChild.text
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.getElementById('meuSelect').firstChild)
+                console.log(document.getElementById('meuSelect').firstChild.text)
+                console.log(document.getElementById('meuSelect').firstChild.value)
+            }
+        </script>
+        
+                          
+    </body>
+</html>

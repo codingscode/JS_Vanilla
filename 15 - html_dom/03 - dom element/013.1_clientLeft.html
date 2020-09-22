@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientLeft</title>
+
+        <style>
+            
+            #meuDiv {
+                height: 250px;
+                width: 400px;
+                padding: 12px;
+                margin: 15px;
+                border-left: 10px solid rgb(31, 131, 6);
+                background-color: lightgreen;
+                direction: rtl;
+                overflow: scroll;
+            }
+        </style>
+    </head>
+
+    <body >
+       
+        <p>Clique no botão para acessar o width da border esquerda do div, em pixels.</p>
+        <button onclick="minhaF()">Testar</button>
+
+        <div id="meuDiv">
+            A direção do texto deste div é  right-to-left.<br>
+            E possui uma barra de rolagem!
+            <p id="demo"></p>
+        </div>
+
+        <script>
+            function minhaF() {
+                var esquerdo = document.getElementById('meuDiv').clientLeft
+                document.getElementById('demo').innerHTML = `Width da border esquerda: ${esquerdo}px`
+            }
+        </script>
+        
+    </body>
+</html>

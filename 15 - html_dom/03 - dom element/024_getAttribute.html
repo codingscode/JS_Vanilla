@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getAttribute</title>
+
+        <style>
+            
+            .democlass {
+                color: rgb(137, 255, 162);
+            }
+        </style>
+    </head>
+
+    <body >
+        <!-- The getAttribute() method returns the value of the attribute with the specified name, of an element.
+        Tip: Use the getAttributeNode() method if you want to return the attribute as an Attr object. 
+           sintaxe:  element.getAttribute(attributename)     -->
+        <h1 class="democlass">Olá Mundo</h1>
+        <p>Clique no botão para mostrar o valor do atributo classe do elemento h1.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementsByTagName('H1')[0].getAttribute('class') 
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.getElementsByTagName('H1')[0].getAttribute('class'))
+                console.log(document.getElementsByTagName('H1')[0].attributes[0])
+                console.log(document.getElementsByTagName('H1')[0].attributes[0].value)
+            }
+        </script>         
+                          
+    </body>
+</html>

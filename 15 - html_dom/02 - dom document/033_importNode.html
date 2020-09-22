@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>importNode</title>
+        <style>
+            iframe {
+                height: 380px;
+                width: 800px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- testar no live server -->
+        <iframe src="./032.5_images.html" ></iframe>
+
+        <p>Clique no botao "testar" para acessar e mostrar o valor do 1º elemento p no iframe (outro documento).</p>
+        
+        <button onclick="minhaFunc()">Testar</button>
+
+        <script>
+            function minhaFunc() {
+                var frame = document.getElementsByTagName('iframe')[0]
+                var h = frame.contentWindow.document.getElementsByTagName('p')[0]
+                var x = document.importNode(h, true)
+                document.body.appendChild(x)
+            }
+        </script>
+        
+    </body>
+</html>

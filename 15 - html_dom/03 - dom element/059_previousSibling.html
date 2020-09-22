@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>previousSibling</title>
+
+        <style>
+            
+           
+        </style>
+    </head>
+
+    <body >
+        <!-- node.previousSibling -->
+        <p>Lista Exemplo:</p>
+        <ul><li id="item1">Chá (1º li)</li><li id="item2">Gelatina (2º li)</li></ul>
+        <p>Clique no botão para acessar o conteudo HTML do irmão prévio do 2º item lista.</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <p><strong>Note:</strong> Espaço em branco dentro de elementos é considerado como texto, e texto é considerado como nodes.</p>
+        <p>Se você adicionar espaço em branco entre os 2 elementos li, o resultado será "undefined".</p>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaf() {
+                var conteudo = document.getElementById('item2').previousSibling.innerHTML 
+                document.getElementById('demo').innerHTML = conteudo
+            }
+        </script>
+ 
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>querySelector</title>
+        <style>
+            a[target] {
+                background-color: rgb(172, 255, 172);
+            }
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <p>O seletor CSS a[target] certifica que todos os links com atributo 'target' tem um fundo verde :</p>
+        
+        <a href="https://www.w3schools.com">w3schools.com</a>
+        <a href="http://www.disney.com" target="_blank">disney.com</a>
+        <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+        <p>Clique no botão para adicionar uma borda roxo ao 1º link que tem um atributo target.</p>
+        <button onclick="minhaFunc()">Testar</button>
+
+        <script>
+            function minhaFunc() {
+                document.querySelector('a[target]').style.border = '5px solid purple'
+            }
+        </script>
+
+    </body>
+</html>

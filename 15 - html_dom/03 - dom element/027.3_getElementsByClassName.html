@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+
+        <style>
+            
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+          <div class="exemplo">
+            <p class="descendente">Elemento p com classe "descendente" no 1º div com classe "exemplo". O indice do p é 0, 
+                e o indice do div é 0.</p>
+          </div>
+          
+          
+          <div class="exemplo">
+            <p class="descendente cor">1º Elemento p com classe "descendente" e "cor" no 2º div com classe "exemplo".
+                O indice do p é 0, e o indice do div é 0
+            </p>
+            <p class="descendente cor">2º Elemento p com classe "descendente" e "cor" no 2º div com classe "exemplo".
+                O indice do p é 1, e o indice do div é 1.
+            </p>
+          </div>
+                    
+          <div class="exemplo">
+            <p class="descendente cor">1º Elemento p com classe "descendente" e "cor" no 3º div com classe "exemplo". 
+                O indice de p é 0, e o indice do div é 2.</p>
+            <p class="descendente cor">2º Elemento p com classe "descendente" e "cor" no 3º div com classe "exemplo". 
+                O indice de p é 1, e o indice do div é 2.</p>
+          </div>
+                    
+          <p>Clique no botão para alterar a cor de fundo do 1º elemento p com classes "descendente" e "cor" dentro do 2º
+              elemento div com classe "exemplo" .</p>
+          
+          <button onclick="minhaF()">Testar</button>
+          
+          <script>
+                function minhaF() {
+                    var elemento2 = document.getElementsByClassName('exemplo')[1]
+                    elemento2.getElementsByClassName('descendente cor')[0].style.backgroundColor = 'lightgreen'
+                }
+          </script>
+
+    </body>
+</html>

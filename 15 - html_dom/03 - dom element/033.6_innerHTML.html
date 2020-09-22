@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>innerHTML</title>
+
+        <style>
+            
+            button {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <a id="minhaAncora" href="http://www.google.com">Google</a><br>
+        <button onclick="minhaF()">Alterar link</button>
+         
+        <script>
+            function minhaF() {
+                document.getElementById('minhaAncora').innerHTML = 'Vue Org'
+                document.getElementById('minhaAncora').href = 'https://vuejs.org/'
+                document.getElementById('minhaAncora').target = '_blank'
+            }
+        </script>
+
+    </body>
+</html>

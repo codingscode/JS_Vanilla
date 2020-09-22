@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelectorAll</title>
+
+        <style>
+            #meuDIV {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }            
+           
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+            <h2>Um cabeçalho no div</h2>
+            <p>Um elemento p no div.</p>
+            <p>Outro elemento p no div.</p>
+            <p>Um elemento p com classe "exemplo" no div.</p>
+          </div>
+          
+          <p>Clique no botão para adicionar uma cor de fundo para todos os elementos p dentro de div.</p>
+          
+          <button onclick="minhaf()">Testar</button>
+          
+          <script>
+                function minhaf() {
+                    var elementos = document.getElementById('meuDIV').querySelectorAll('p')
+                    
+                    for (var i = 0; i < elementos.length; i++) {
+                        elementos[i].style.backgroundColor = 'lightgreen'
+                    }
+                }
+          </script>
+          
+    </body>
+</html>

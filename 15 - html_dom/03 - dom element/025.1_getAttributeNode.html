@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getAttributeNode</title>
+
+        <style>
+            
+            
+        </style>
+    </head>
+
+    <body >
+        
+        Leia sobre o <a id="minhaAncora" href="./borboleta.jpg" target="_blank">Attr object</a>.
+        <p>Clique no botão para mostrar o valor do atributo target nde do link acima.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('minhaAncora')
+                var atributo = elemento.getAttributeNode('target').value
+                document.getElementById('demo').innerHTML = atributo
+            }
+        </script>
+                          
+    </body>
+</html>

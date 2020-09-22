@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>id</title>
+
+        <style>
+            
+
+        </style>
+    </head>
+
+    <body >
+        
+        <p><a id="minhaAncora" href="https://www.google.com/">google</a></p>
+        <p>Clique no botão para alterar o valor do atributo "id" do link acima para "novoid".</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            var antes = document.getElementById('minhaAncora').id
+
+            function minhaF() {
+                var depois = document.getElementById('minhaAncora').id 
+                depois = 'novoid'
+                document.getElementById('demo').innerHTML = `O id do link foi alterado de '${antes}' para '${depois}'.`
+            }
+        </script>
+
+    </body>
+</html>

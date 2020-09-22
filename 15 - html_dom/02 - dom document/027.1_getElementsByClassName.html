@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding: 6px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+          <div class="exemplo">
+            <p>Elemento p no 1º div com classe "exemplo". Indice do div é 0.</p>
+          </div>
+          
+          <div class="exemplo cor">
+            <p>Elemento p no 1º div com classe "exemplo cor". Indice do div é 0.</p>
+          </div>
+          
+          <div class="exemplo cor">
+            <p>Elemento p no 2º div com classe "exemplo cor". Indice do div é 1.</p>
+          </div>
+          
+          <p>Clique no botao para alterar a cor de fundo do 1º elemento div com classes "exemplo" e "cor".</p>
+          
+          <button onclick="minhaFuncao()">Testar</button>
+          
+          <script>
+                function minhaFuncao() {
+                    var x = document.getElementsByClassName('exemplo cor')
+                    x[0].style.backgroundColor = 'orange'
+                    x[0].style.color = 'white'
+                }
+          </script>
+    </body>
+</html>

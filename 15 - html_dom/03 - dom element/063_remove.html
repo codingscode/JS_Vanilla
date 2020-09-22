@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>remove</title>
+
+        <style>
+           span {
+               color: rgb(189, 127, 11);
+           }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            The remove() method removes the specified element from the DOM.
+            sintaxe:  node.remove()
+         -->
+         <h1>O método remove()</h1>
+         <p>O método remove() remove o elemento do DOM.</p>
+         <p id="demo">Clique no botão, e este paragrafo será removido do DOM.</p>
+         
+         <button onclick="minhaf()">Remover paragrafo</button>
+         
+         <script>
+                function minhaf() {
+                    var meuobjeto = document.getElementById('demo')
+                    meuobjeto.remove()
+                }
+         </script>
+      
+    </body>
+</html>

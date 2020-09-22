@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>parentElement</title>
+
+        <style>
+            
+           div {
+                box-sizing: border-box;
+                padding: 16px;
+                width: 100%;
+                background-color: rgb(122, 240, 122);
+                color: #fff;
+           }
+           
+           .botaofechar {
+                float: right;
+                font-size: 30px;
+                font-weight: bold;
+                cursor: pointer;
+           }
+           
+           .botaofechar:hover {
+                color: #000;
+           }
+        </style>
+    </head>
+
+    <body >
+        
+          <div>
+            <span onclick="minhaF()" class="botaofechar">&times;</span>
+            <p>Para fechar este conteiner, clique sobre o simbolo x a direita .</p>
+          </div>
+ 
+          <script>
+               function minhaF() {
+                    var elemento = document.getElementsByTagName('span')[0]
+                    elemento.parentElement.style.display = 'none'
+               }
+          </script>
+    </body>
+</html>

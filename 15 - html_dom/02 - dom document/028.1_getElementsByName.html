@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByName</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+
+        Gatos: <input name="animal" type="checkbox" value="Gatos">
+        Cachorros: <input name="animal" type="checkbox" value="Cachorros">
+
+        <p>Clique no botao para encontrar quantos elementos há no document que possuiem um nome atributo com o valor "animal".</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByName('animal').length
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+
+      
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelector</title>
+
+        <style>
+            a[target] {
+                background-color: rgb(179, 255, 169);
+            }
+
+            #meuDIV {
+                border: 1px solid black;
+            }
+           
+        </style>
+    </head>
+
+    <body >
+        
+        <p>O seletor CSS a[target] certifica que todos os links com atributo target ficam com fundo verde:</p>
+        
+        <div id="meuDIV">
+          3 links dentro de div:
+          <a href="https://www.google.com">google.com</a>
+          <a href="http://www.disney.com" target="_blank">disney.com</a>
+          <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+        </div>
+        
+        <p>Clique no botão para adicionar uma borda laranja ao 1º link que possui atributo target dentro do elemento div.</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <script>
+            function minhaf() {
+                var elemento = document.getElementById('meuDIV')
+                elemento.querySelector('a[target]').style.border = '6px solid orange'
+            }
+        </script>          
+ 
+    </body>
+</html>

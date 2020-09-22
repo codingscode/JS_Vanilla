@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+
+        <style>
+            div {
+                background-color: lightgreen;
+                border: 1px solid;
+                padding: 50px;
+            }
+
+            p {
+                border: 2px solid blue;
+            }
+        </style>
+    </head>
+
+    <body>
+    
+        <p>Este exemplo demonstra a diferença entre bubbling e capturing ao adicionar event listeners.</p>
+        
+        <div id="meudiv">
+          <p id="meuP">Clique neste paragrafo, Eu sou Bubbling.</p>
+        </div><br>
+        
+        <div id="meudiv2">
+          <p id="meuP2">Clique neste paragrafo, Eu sou Capturing.</p>
+        </div>
+        
+        <script>
+            document.getElementById('meuP').addEventListener('click', function() {
+                alert('Você clicou no elemento p!')
+            }, false)
+            
+            document.getElementById('meudiv').addEventListener('click', function() {
+                alert('Você clicou no elemento div!')
+            }, false)
+            
+            document.getElementById('meuP2').addEventListener('click', function() {
+                alert('Você clicou no elemento p!')
+            }, true)
+            
+            document.getElementById('meudiv2').addEventListener('click', function() {
+                alert('Você clicou no elemento div!')
+            }, true)
+        </script>
+        
+    </body>
+</html>

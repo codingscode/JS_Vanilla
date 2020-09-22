@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>id</title>
+
+        <style>
+            
+            .meuestilo {
+                width: 300px;
+                height: 50px;
+                text-align: center;
+                background-color: coral;
+                color: white;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Neste exemplo, nós procuramos pelo 1º elemento div no document. Então, se o elemento div possui um id de "meuDIV"
+            - altere seu fonte size.</p>
+        <div id="meuDIV" class="meuestilo">Eu sou um elemento div</div>
+        <button onclick="minhaF()">Testar</button>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementsByTagName('DIV')[0]
+                
+                if (x.id === 'meuDIV') { 
+                    x.style.fontSize = '30px'
+                }
+            }
+        </script>
+
+    </body>
+</html>

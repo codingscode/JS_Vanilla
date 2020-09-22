@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>className</title>
+
+        <style>
+            .meuestilo {
+                width: 300px;
+                height: 50px;
+                background-color: coral;
+                color: white;
+                margin-bottom: 10px;
+                padding-left: 10px;
+            }
+
+            .novoNomeClasse {
+                width: 400px;
+                height: 100px;
+                background-color: lightblue;
+                text-align: center;
+                font-size: 25px;
+                color: navy;
+                margin-bottom: 10px;
+            }
+
+            button {
+                margin-top: 8px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para alterar o valor do atributo classe do div para "novoNomeClasse".</p>
+        <div id="meuDiv" class="meuestilo">Eu sou um elemento div</div>
+        <button onclick="minhaF()">Testar</button>
+        
+        <script>
+            console.log(document.getElementById('meuDiv').className)
+
+            function minhaF() {
+                document.getElementById('meuDiv').className = 'novoNomeClasse' //sobrescreve
+
+                console.log(document.getElementById('meuDiv').className)
+            }
+        </script>
+        
+    </body>
+</html>

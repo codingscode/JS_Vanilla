@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Este exemplo demonstra como passar valores de parametros quando se usa método addEventListener.</p>
+                    
+        <p>Clique em qualquer lugar no document para realizar um cálculo.</p>
+            
+        <p id="demo">aqui muda.</p>
+            
+        <script>
+            var p1 = 5
+            var p2 = 7
+            
+            document.addEventListener('click', function() {
+                minhaFuncao(p1, p2)
+            })
+            
+            function minhaFuncao(a, b) {
+                var resultado = a * b
+                document.getElementById('demo').innerHTML = resultado
+            }
+        </script>
+        
+    </body>
+</html>

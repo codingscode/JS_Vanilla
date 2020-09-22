@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelectorAll</title>
+
+        <style>
+           
+           a[target] {
+                background-color: rgb(201, 253, 171);
+           }            
+           
+        </style>
+    </head>
+
+    <body >
+        
+        <p>O seletor CSS a[target] certifica que todos os links com atributo target ficam com fundo verde:</p>
+        
+        <div id="meuDIV">
+          <a href="https://www.google.com">google.com</a>
+          <a href="http://www.disney.com" target="_blank">disney.com</a>
+          <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+        </div>
+        
+        <p>Clique no botão para adicionar borda laranja a todos os links no div que possuem um atributo target.</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <script>
+            function minhaf() {
+                var elementos = document.getElementById('meuDIV').querySelectorAll('a[target]')
+                
+                for (var i = 0; i < elementos.length; i++) {
+                    elementos[i].style.border = '10px solid orange'
+                }
+            }
+        </script>
+    
+      
+    </body>
+</html>

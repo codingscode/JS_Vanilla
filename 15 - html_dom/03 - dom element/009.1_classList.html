@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            .meuestilo {
+                width: 500px;
+                height: 50px;
+                padding: 15px;
+                border: 1px solid black;
+            }
+
+            .outraClasse {
+                background-color: coral;
+                color: white;
+            }
+
+            .terceiraClasse {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 25px;
+            }
+
+            button {
+                margin-bottom: 9px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para adicionar multiplas classes ao div.</p>
+        <button onclick="minhaF()">Testar</button>
+       
+        <div id="meuDiv">Eu sou um elemento div</div>
+
+        <script>
+            function minhaF() {
+                console.log(document.getElementById('meuDiv').classList)
+                
+                document.getElementById('meuDiv').classList.add('meuestilo', 'outraClasse', 'terceiraClasse')
+
+                console.log(document.getElementById('meuDiv').classList)
+            }
+        </script>
+    </body>
+</html>

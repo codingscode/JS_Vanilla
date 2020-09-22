@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>designMode</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <h1>Propriedade Document designMode</h1>
+        <p>A propriedade designMode estabelece se o document é editável ou não.</p>
+        <p>Clique no botao para ver acessar o valor da propriedade designMode:</p>
+        <button onclick="minhaFuncao()">Acessar o designMode</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.designMode
+                document.getElementById("demo").innerHTML = x
+            }
+        </script>
+
+    </body>
+</html>

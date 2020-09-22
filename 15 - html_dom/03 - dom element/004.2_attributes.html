@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>attributes</title>
+
+        <style>
+            img {
+                height: 113px;
+                width: 150px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <img id="minhaImagem" alt="Terra" src="../02 - dom document/terra.jpg" >
+        <p>Clique no botão para ver quantos atributos o elemento imagem possui.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p>O resultado deve ser 3 (os atributos id, alt, src do elemento img).</p>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('minhaImagem').attributes.length
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+        
+    </body>
+</html>

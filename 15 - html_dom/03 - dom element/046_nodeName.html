@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nodeName</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 15px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The nodeName property returns the name of the specified node.
+             If the node is an element node, the nodeName property will return the tag name.
+             If the node is an attribute node, the nodeName property will return the name of the attribute.
+             For other node types, the nodeName property will return different names for different node types.
+             Tip: You can also use the tagName property to return the tag name of an element. The difference is that tagName
+              only return tag names, while nodeName returns the name of all nodes (tags, attributes, text, comments).
+             sintaxe: node.nodeName -->
+             <p id="meuP">Clique no botão para acessar o nome node deste elemento.</p>
+             <button onclick="minhaF()">Testar</button>
+             <p id="demo"></p>
+             
+             <script>
+                function minhaF() {
+                    var meu_node = document.getElementById('meuP').nodeName
+                    document.getElementById('demo').innerHTML = meu_node
+
+                    console.log(meu_node)
+                    console.log(document.getElementById('meuP').tagName)
+                    console.log(document.body.nodeName)
+                }
+             </script>
+             
+    </body>
+</html>

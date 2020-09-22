@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>specified</title>
+
+        <style>
+                             
+        </style>
+    </head>
+
+    <body>
+        <h1 id="aqui" class="">Clique no botao para encontrar se o botao tem um atributo onclick specified.</h1>
+        
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var botao = document.getElementsByTagName('button')[0]
+                var x = botao.getAttributeNode('onclick').specified
+
+                var doh1 = document.getElementsByTagName('h1')[0].getAttributeNode('class').specified
+                //var doh1 = document.getElementById('aqui').attributes[0].specified
+                           
+                document.getElementById('demo').innerHTML = `${x} | ${doh1}`
+
+                console.log(doh1)
+            }
+        </script>
+                
+    </body>
+</html>

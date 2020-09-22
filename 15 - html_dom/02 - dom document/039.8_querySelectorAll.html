@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>querySelectorAll</title>
+        <style>
+           span {
+               color: white;
+               padding: 4px;
+               background-color: black;
+           }
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <h1>Um elemento h1</h1>
+        <h2>Um elemento h2</h2>
+        <div>Um elemento div</div><br>
+        <div>Outro elemento div</div>
+        <p>Um elemento p</p>
+        <p>Um elemento p com um elemento <span >span</span> dentro.</p>
+        <p>Clique no botão para setar a cor de fundo de todos os elementos h2, div e span.</p>
+        <button onclick="minhaFunc()">Testar</button>
+        
+        <script>
+            function minhaFunc() {
+                var x = document.querySelectorAll('h2, div, span')
+        
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.backgroundColor = 'rgb(71, 182, 71)'
+                    x[i].style.color = 'white'
+                }
+
+                console.log(x)
+            }
+        </script>
+
+    </body>
+</html>

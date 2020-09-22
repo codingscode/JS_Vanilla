@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>replaceChild</title>
+
+        <style>
+
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The replaceChild() method replaces a child node with a new node.
+        The new node could be an existing node in the document, or you can create a new node.
+        Tip: Use the removeChild() method to remove a child node from an element. -->
+        <ul id="minhaLista"><li>Chá</li><li>Gelatina</li><li>Biscoito</li></ul>
+
+        <p>Clique no botão para substituir o 1º item_1 na lista.</p>
+        
+        <button onclick="minhaf()">Testar</button>
+        
+        <p>Primeiro crie um novo text node chamado Água. <br>Então substitua o 1º descendente node do 1º item da lista,
+            com o recente text node criado.</p>
+        
+        <p><strong>Note:</strong> Este exemplo substitui somente o text node "Chá" com com o text node "Água", não o elemento
+            li inteiro, o qual também seria uma alternativa quando substituindo nodes.</p>
+                
+        <script>
+            function minhaf() {
+                var textonode = document.createTextNode('Água')
+                console.log(document.getElementById('minhaLista').childNodes)
+                var item_1 = document.getElementById('minhaLista').childNodes[0]
+                console.log(item_1.childNodes)
+                console.log(item_1.childNodes[0])
+                item_1.replaceChild(textonode, item_1.childNodes[0])
+            }
+        </script>
+      
+    </body>
+</html>

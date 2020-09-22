@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>innerText</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <h3>Diferenças entre innerText, innerHTML e textContent.</h3>
+        <p id="demo">   Este elemento tem espaçamento extra   e contem <span>um elemento span</span>.</p>
+        <button onclick="acessarInnerText()">Acessar innerText</button>
+        <button onclick="acessarHTML()">Acessar innerHTML</button>
+        <button onclick="acessarTextContent()">Acessar textContent</button>
+        
+        
+        <p id="mostrar"></p>
+        
+        <script>
+            function acessarInnerText() {
+                alert(document.getElementById('demo').innerText)
+                document.getElementById('mostrar').innerHTML = document.getElementById('demo').innerText  
+            }
+            
+            function acessarHTML() {
+                alert(document.getElementById('demo').innerHTML)
+                document.getElementById('mostrar').innerHTML = document.getElementById('demo').innerHTML
+            }
+            
+            function acessarTextContent() {
+                alert(document.getElementById('demo').textContent)
+                document.getElementById('mostrar').innerHTML = document.getElementById('demo').textContent
+            }
+        </script>
+
+    </body>
+</html>

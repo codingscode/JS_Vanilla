@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollTop</title>
+
+        <style>
+                .deslizarparaCima {
+                    animation-name: deslizarparaCima;
+                    -webkit-animation-name: deslizarparaCima;
+                    animation-duration: 1.5s;
+                    -webkit-animation-duration: 1.5s;
+                    visibility: visible;
+                }
+
+                @keyframes deslizarparaCima {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: translateY(70%);
+                    } 
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: translateY(0%);
+                    }
+                }
+
+                /* @-webkit-keyframes deslizarparaCima {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: translateY(70%);
+                    } 
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: translateY(0%);
+                    }
+                } */
+
+                body {
+                    height:1500px;
+                }
+
+                .col-1 {
+                    float:left
+                }
+                
+                .col-2 {
+                    float:left;
+                    padding-left:25px;
+                }
+
+                img {
+                    width:180px;
+                    height:100px;
+                    visibility:hidden;
+                }
+
+                hr {
+                    margin-top:400px;
+                }
+        </style>
+    </head>
+
+    <body >
+        
+                <p>Role para baixo esta página.</p>
+                <p>Quando você ter rolado 350px do topo, uma imagem deslizará dentro.</p>
+                
+                <hr>
+                <div class="col-1">
+                    <img id="minhaImg" src="./borboleta.jpg" width="304" height="228">
+                </div> 
+                
+                <div class="col-2">
+                    Apenas algum texto..
+                </div>
+                
+                <script>
+                    window.onscroll = function() {
+                        minhaf()
+                    }
+                    
+                    function minhaf() {
+                        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+                            document.getElementById('minhaImg').className = 'deslizarparaCima'
+                        }
+                    }
+                </script>
+
+    </body>
+</html>

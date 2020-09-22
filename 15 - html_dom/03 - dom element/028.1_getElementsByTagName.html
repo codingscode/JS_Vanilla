@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByTagName</title>
+
+        <style>
+            
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            } 
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+            <p>Um elemento p dentro de div.</p>
+            <p>Outro elemento p dentro de div.</p>
+            <p>Um 3º elemento p dentro de div.</p>
+          </div>
+          
+          <p>Clique no botão para encontrar quantos elementos p há dentro do elemento div.</p>
+          <button onclick="minhaF()">Testar</button>
+          
+          <p id="demo"></p>
+          
+          <script>
+            function minhaF() {
+                var x = document.getElementById('meuDIV').getElementsByTagName('P')
+                document.getElementById('demo').innerHTML = x.length
+
+                console.log(document.getElementById('meuDIV').getElementsByTagName('P').length)
+                console.log(document.getElementsByTagName('P').length)
+            }
+          </script>
+
+    </body>
+</html>

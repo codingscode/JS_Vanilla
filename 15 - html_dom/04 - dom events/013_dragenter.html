@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>dragenter</title>
+        <style>
+            .soltaralvo {
+                float: left; 
+                width: 100px; 
+                height: 35px;
+                margin: 15px;
+                padding: 10px;
+                border: 1px solid #aaaaaa;
+                background-color: lightgreen;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- dragenter 
+            The ondragenter event occurs when a draggable element or text selection enters a valid drop target.
+            The ondragenter and ondragleave events can help the user to understand that a draggable element is about to enter or leave a drop target. This can be done by, for example, setting a background color when the draggable element enters the drop target, and removing the color when the element is moved out of the target.
+            Drag and drop is a very common feature in HTML5. It is when you "grab" an object and drag it to a different location. For more information, see our HTML Tutorial on HTML5 Drag and Drop.
+             -->
+             <p>Arraste o elemento p ida e volta entre os dois retangulos:</p>
+
+             <div class="soltaralvo" ondrop="soltar(event)" ondragenter="entrarArraste(event)" ondragleave="deixarArraste(event)" ondragover="permitirArrastar(event)">
+               <p ondragstart="iniciarArraste(event)" draggable="true" id="dragtarget">Arraste me!</p>
+             </div>
+             
+             <div class="soltaralvo" ondragenter="entrarArraste(event)" ondragleave="deixarArraste(event)" ondrop="soltar(event)" ondragover="permitirArrastar(event)"></div>
+            
+             <p id="demo" style="clear:both;"></p>
+             
+             <script>
+                    function iniciarArraste(evento) {
+                        evento.dataTransfer.setData('Text', evento.target.id)
+                    }
+                    
+                    function entrarArraste(evento) {
+                        if ( evento.target.className == 'soltaralvo' ) {
+                            document.getElementById('demo').innerHTML = 'Entrou na zona de soltar'
+                            evento.target.style.border = '3px dotted red'
+                        }
+                    }
+                    
+                    function deixarArraste(evento) {
+                        if ( evento.target.className == 'soltaralvo' ) {
+                            document.getElementById('demo').innerHTML = 'Deixou a zona de soltar'
+                            evento.target.style.border = ''
+                        }
+                    }
+                    
+                    function permitirArrastar(evento) {
+                        evento.preventDefault()
+                    }
+                    
+                    function soltar(evento) {
+                        evento.preventDefault()
+                        var data = evento.dataTransfer.getData('Text')
+                        evento.target.appendChild(document.getElementById(data))
+                    }
+             </script>
+             
+    </body>
+</html>

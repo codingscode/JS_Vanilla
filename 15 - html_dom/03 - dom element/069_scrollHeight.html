@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollHeight</title>
+
+        <style>
+            #meuDIV {
+                margin-top: 10px;
+                height: 250px;
+                width: 250px;
+                overflow: auto;
+            }
+
+            #conteudo {
+                height: 800px;
+                width: 2000px;
+                padding: 10px;
+                background-color: coral;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            The scrollHeight property returns the entire height of an element in pixels, including padding, but not the 
+            border, scrollbar or margin.
+            Tip: Use the scrollWidth property to return the entire width of an element.
+            The scrollWidth and scrollHeight properties return the entire height and width of an element, including the 
+            height and width that is not viewable (because of overflow).
+             sintaxe:   element.scrollHeight    -->
+          <p>Clique no botão para acessar o height inteiro (verticalmente) e largura inteira (horizontalmente) do 
+              elemento div com id "conteudo".</p>
+          
+          <button onclick="minhaf()">Testar</button>
+          
+          <div id="meuDIV">
+            <div id="conteudo">Algum conteudo..</div>
+          </div>
+          
+          <p id="demo"></p>
+          
+          <script>
+                function minhaf() {
+                    var elemento = document.getElementById('conteudo')
+                    var y = elemento.scrollHeight
+                    var x = elemento.scrollWidth
+                    document.getElementById ('demo').innerHTML = `Height: ${y}px<br>Width: ${x}px`
+                }
+          </script>
+
+    </body>
+</html>

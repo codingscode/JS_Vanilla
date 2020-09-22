@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>lastModified</title>
+        
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para mostrar a data e momento que este document foi modificado.</p>
+        <button onclick="minhaFunc()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFunc() {
+                var x = document.lastModified
+                document.getElementById('demo').innerHTML = x
+
+                console.log(x)
+            }
+        </script>
+        
+    </body>
+</html>

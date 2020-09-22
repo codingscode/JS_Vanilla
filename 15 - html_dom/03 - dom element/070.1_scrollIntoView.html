@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollIntoView</title>
+
+        <style>
+                #meuDIV {
+                    height: 250px;
+                    width: 250px;
+                    overflow: auto;
+                    background: green;
+                    margin-top: 10px;
+                }
+
+                #conteudo {
+                    margin:500px;
+                    height: 800px;
+                    width: 2000px;
+                    background-color: coral;
+                    position: relative;
+                }
+
+                .classe1 {
+                    position:absolute;
+                    top:0;
+                }
+
+                .classe2 {
+                    position:absolute;
+                    bottom:0;
+                }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+                 
+        -->
+                <p>Clique no botão para rolar para o topo ou para o fundo do elemento com id "conteudo".</p>
+
+                <button onclick="rolarParaTopo()">Rolar para o topo do elemento</button>
+                <button onclick="rolarParaFundo()">Rolar para o fundo do elemento</button>
+                
+                <div id="meuDIV">
+                    <div id="conteudo">
+                        <div class="classe1">Algum texto no topo</div>
+                        <div class="classe2">Algum texto no fundo</div>
+                    </div>
+                </div>
+                
+                <script>
+                        var elemento = document.getElementById('conteudo')
+                        
+                        function rolarParaTopo() {
+                            elemento.scrollIntoView(true) // Topo
+                        }
+                        
+                        function rolarParaFundo() {
+                            elemento.scrollIntoView(false) // Fundo
+                        }
+                </script>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollLeft</title>
+
+        <style>
+            #meuDIV {
+                height: 250px;
+                width: 250px;
+                overflow: auto;
+            }
+
+            #conteudo {
+                height: 800px;
+                width: 2000px;
+                background-color: coral;
+            }    
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+               The scrollLeft property sets or returns the number of pixels an element's content is scrolled horizontally.
+               Tip: Use the scrollTop property to set or return the number of pixels an element's content is scrolled 
+               vertically.
+               Tip: To add scrollbars to an element, use the CSS overflow property.
+               sintaxe:     Return the scrollLeft property:   element.scrollLeft
+                            Set the scrollLeft property:    element.scrollLeft = pixels      -->
+        <p>Role dentro do elemento div para mostrar o  número de pixels o conteudo do div é rolado horizontalmente
+            e verticalmente.</p>
+
+        <div id="meuDIV" onscroll="minhaf()">
+          <div id="conteudo">Role dentro de mim!</div>
+        </div>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaf() {
+                var elemento = document.getElementById('meuDIV')
+                var x = elemento.scrollLeft
+                var y = elemento.scrollTop
+                document.getElementById ('demo').innerHTML = `Horizontalmente: ${x}px<br>Verticalmente: ${y}px`
+            }
+        </script>
+                
+    </body>
+</html>

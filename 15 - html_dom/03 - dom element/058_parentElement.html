@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>parentElement</title>
+
+        <style>
+            
+           
+        </style>
+    </head>
+
+    <body >
+        <!-- The parentElement property returns the parent element of the specified element.
+        The difference between parentElement and parentNode, is that parentElement returns null if the parent node is not 
+        an element node:
+        document.body.parentNode; // Returns the <html> element
+        document.body.parentElement; // Returns the <html> element
+        document.documentElement.parentNode; // Returns the Document node
+        document.documentElement.parentElement; // Returns null (<html> does not have a parent ELEMENT node) 
+            sintaxe: node.parentElement -->
+        <p>Lista Exemplo:</p>
+
+        <ul>
+          <li id="minhaLI">Chá</li>
+          <li>Gelatina</li>
+        </ul>
+        
+        <p>Clique no botão para acessar o nome node do elemento ascendente do elemento li na lista.</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaf() {
+                var x = document.getElementById('minhaLI').parentElement.nodeName
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.getElementById('minhaLI').parentElement)
+                console.log(document.getElementById('minhaLI').parentElement.nodeName)
+            }
+        </script>
+        
+    </body>
+</html>

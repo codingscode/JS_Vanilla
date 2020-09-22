@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelector</title>
+
+        <style>
+            #meuDIV {
+                border: 1px solid black;
+                padding-left: 10px;
+            }
+           
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+            <p>Isto é um elemento p num div.</p>
+            <p>Isto é tammbém um elemento p num div.</p>
+          </div>
+          
+          <p>Clique no botão para alterar o texto do 1º elemento p no div.</p>
+          <button onclick="minhaf()">Testar</button>
+          
+          <script>
+                function minhaf() {
+                    var x = document.getElementById('meuDIV')
+                    x.querySelector('p').innerHTML = 'Olá mundo!'
+                }
+          </script>
+ 
+    </body>
+</html>

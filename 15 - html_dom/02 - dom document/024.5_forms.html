@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>forms</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        <!-- Using the elements collection together with document.forms to get the value of each element in the form -->
+        
+        <form action="./computer.jpg">
+            Primeiro Nome: <input type="text" name="primeironome" value="Fulanis"><br>
+            Último Nome: <input type="text" name="ultimonome" value="Silva"><br>
+            Cidade: <input type="text" name="cidade" value="Fulanislandia"><br>
+            <input type="submit" value="Enviar"> <!-- /computer.jpg?primeironome=Fulanis&ultimonome=Silva&cidade=Fulanislandia -->
+        </form> 
+          
+        <p>Clique botao "testar" para mostrar o valor de cada elemento no form.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+          
+        <p id="demo"></p>
+          
+        <script>
+            function minhaFuncao() {
+                var x = document.forms[0]
+                var texto = ''
+                
+                for (var i = 0; i < x.length; i++) {
+                    texto += x.elements[i].value + '<br>'
+                }
+                document.getElementById('demo').innerHTML = texto
+                console.log(texto)
+                console.log(document.forms[0].elements[1])
+            }
+        </script>
+       
+    </body>
+</html>

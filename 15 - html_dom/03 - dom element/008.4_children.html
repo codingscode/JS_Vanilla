@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>children</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para alterar a cor de fundo de todos os elementos descendentes do body.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <h2>Eu sou um elemento h2 </h2>
+        <div>Eu sou um elemento div </div>
+        <span>Eu sou um elemento span </span>
+        
+        <script>
+            function minhaF() {
+                var c = document.body.children
+                
+                for (var i = 0; i < c.length; i++) {
+                    c[i].style.backgroundColor = 'lightgreen'
+                }
+            }
+        </script>
+        
+    </body>
+</html>

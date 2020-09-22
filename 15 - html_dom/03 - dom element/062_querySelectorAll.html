@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelectorAll</title>
+
+        <style>
+            #meuDIV {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }            
+           
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+        The querySelectorAll() method returns a collection of an element's child elements that match a specified 
+          CSS selector(s), as a static NodeList object.
+        The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. 
+          The index starts at 0.
+        Tip: You can use the length property of the NodeList object to determine the number of child nodes that matches the 
+        specified selector, then you can loop through all nodes and extract the info you want.   
+        sintaxe:  element.querySelectorAll(CSS selectors) 
+    -->  
+
+      <div id="meuDIV">
+        <h2 class="exemplo">Um cabeçalho com classe "exemplo" no div</h2>
+        <p class="exemplo">Um parágrafo com classe "exemplo" no div.</p> 
+      </div>
+      
+      <p>Clique no botão para adicionar uma cor de fund ao 1º elemento no div com classe "exemplo" (indice 0).</p>
+      <button onclick="minhaf()">Testar</button>
+      
+      <script>
+            function minhaf() {
+                var elementos = document.getElementById('meuDIV').querySelectorAll('.exemplo')
+                elementos[0].style.backgroundColor = 'lightgreen'
+
+                console.log(elementos)
+                console.log(elementos.length)
+            }
+      </script>
+      
+    </body>
+</html>

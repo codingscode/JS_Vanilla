@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientLeft</title>
+
+        <style>
+            #meuDiv {
+                height: 250px;
+                width: 400px;
+                padding: 12px;
+                margin: 14px;
+                border-top: 17px solid rgb(31, 131, 6);
+                border-left: 11px solid rgb(241, 158, 2);
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+
+    <body >
+       
+        <p>Clique no botão para acessar o width do border top e border esquerda do div, em pixels.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDiv">
+            <div>
+                height: 250px;<br>
+                width: 400px;<br>
+                padding: 12px;<br>
+                margin: 14px;<br>
+                border-top: 17px solid rgb(31, 131, 6);<br>
+                border-left: 11px solid rgb(241, 158, 2);<br>
+                background-color: lightgreen;<br>
+            </div>
+            <section></section>
+            <p id="demo"></p>
+        </div>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('meuDiv')
+                var texto = `Border top width: ${elemento.clientTop}px<br>`
+                texto += `Border left width: ${elemento.clientLeft}px`
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+        
+    </body>
+</html>

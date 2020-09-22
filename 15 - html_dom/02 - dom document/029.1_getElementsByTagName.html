@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByTagName</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para alterar o texto do parágrafo.</p>
+        <p>Isto é também um paragrafo.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                document.getElementsByTagName('p')[0].innerHTML = 'Olá mundo!!'
+            }
+        </script>
+      
+    </body>
+</html>

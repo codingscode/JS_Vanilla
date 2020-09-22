@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createComment</title>
+    </head>
+
+    <body>
+        <p>Clique no botao para criar, e adicionar, um comentario ao HTML document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaFuncao() {
+                var comentario = document.createComment('Meus comentario pessoais')
+                document.body.appendChild(comentario)
+                var x = document.getElementById('demo')
+                x.innerHTML = 'Um comentario foi adicionado a este document, mas como você sabe, comentarios são invisiveis.'
+            }
+        </script>    
+    </body>
+</html>

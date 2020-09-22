@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tabIndex</title>
+
+        <style>
+                
+               
+        </style>
+    </head>
+
+    <body > 
+        
+        <!-- 
+             
+         -->
+         <a href="https://www.w3schools.com/" tabindex="2">W3Schools</a><br>
+         <a href="http://www.google.com/" tabindex="1">Google</a><br>
+         <a href="http://www.microsoft.com/" tabindex="3">Microsoft</a>
+         
+         <p>Clique no botão para acessar a ordem tab do 1º link (indice 0) no document.</p>
+                  
+         <button onclick="minhaf()">Testar</button>
+         
+         <p id="demo"></p>
+         
+         <script>
+            function minhaf() {
+                var x = document.getElementsByTagName('A')[0].tabIndex
+                document.getElementById('demo').innerHTML = x
+            }
+         </script>
+                          
+    </body>
+</html>

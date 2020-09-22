@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementById</title>
+    </head>
+
+    <body>
+        <p id="demo">Clique no botao para alterar a cor deste paragrafo.</p>
+
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementById('demo')
+                x.style.color = 'white'
+                x.style.backgroundColor = 'black'
+            }
+        </script>        
+    </body>
+</html>

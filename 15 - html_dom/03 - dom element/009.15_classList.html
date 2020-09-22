@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-size: 28px;
+            }
+
+            .cabecalho {
+                background-color: #f1f1f1;
+                padding: 30px;
+                text-align: center;
+            }
+
+            #barra_navegacao {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            #barra_navegacao a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            #barra_navegacao a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            #barra_navegacao a.ativo {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .conteudo {
+                padding: 16px;
+            }
+
+            .fixo {
+                position: fixed;
+                top: 0;
+                width: 100%
+            }
+
+            .fixo + .conteudo {
+                padding-top: 60px;
+            }
+        </style>
+    </head>
+
+    <body onscroll="minhaF()">
+        
+          <div class="cabecalho">
+            <h2>Scroll Down</h2>
+            <p>Scroll down para ver o efeito fixo.</p>
+          </div>
+          
+          <div id="barra_navegacao">
+            <a class="ativo" href="javascript:void(0)">Início</a>
+            <a href="javascript:void(0)">Notícias</a>
+            <a href="javascript:void(0)">Contato</a>
+          </div>
+          
+          <div class="conteudo">
+            <h3>Exemplo de navageção fixa</h3>
+            <p>A barra de navegação irá fixar ao topo quando você alcançar sua posição de rolamento.</p>
+            <p>Algum texto para habilitar rolamento.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Algum texto para habilitar rolamento.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Algum texto para habilitar rolamento.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Algum texto para habilitar rolamento.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Algum texto para habilitar rolamento.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          </div>
+          
+          <script>
+                var barra_navegacao = document.getElementById('barra_navegacao')
+                var fixo = barra_navegacao.offsetTop  // offsetTop distancia disto ao topo
+                
+                function minhaF() {
+                    console.log(fixo)
+
+                    if (window.pageYOffset >= fixo) {  // pageYOffset quanto rolou na direção vertical
+                        barra_navegacao.classList.add('fixo')
+                        console.log('*1', barra_navegacao.classList)
+                    }
+                    else {
+                        barra_navegacao.classList.remove('fixo')
+                        console.log('*2', barra_navegacao.classList)
+                    }
+                }
+          </script>
+
+    </body>
+</html>

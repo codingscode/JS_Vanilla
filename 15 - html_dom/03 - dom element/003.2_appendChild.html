@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>appendChild</title>
+
+        <style>
+             #meuDiv {
+                border: 1px solid black;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+       
+        <p>Clique no botão para criar um elemento p com algum texto, e apenssa-lo ao div.</p>
+        
+        <div id="meuDiv">Um elemento div</div>
+        
+        <button onclick="minhaF()">Testar</button>
+        
+        <p><strong>Exemplo explicado:</strong><br>Primeiro crie um p node,<br>então crie um text node,<br> então apensse o text node ao p node.<br>Finalmente, acesse o elemento div com id "meuDiv", e apensse o p node ao div.</p>
+        
+        <script>
+            function minhaF() {
+                var paragrafo = document.createElement('p')
+                var texto = document.createTextNode('Isto é um parágrafo.')
+                paragrafo.appendChild(texto)
+                document.getElementById('meuDiv').appendChild(paragrafo)
+            }
+        </script>
+        
+    </body>
+</html>

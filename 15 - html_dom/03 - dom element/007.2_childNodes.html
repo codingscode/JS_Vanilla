@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>childNodes</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 9px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para adicionar uma cor de fundo ao 2º child node (indice 1) do div.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDiv">
+          <p>1º elemento p</p>
+          <p>2º elemento p</p>
+        </div>
+        
+        <p><strong>Note:</strong> Espaço branco dentro de elementos é considerado como texto, e texto é considerado como nodes.
+            Neste exemplo, indice 0, 2 e 4 em div são text nodes.</p>
+        
+        <script>
+            function minhaF() {
+                var c = document.getElementById('meuDiv').childNodes
+                c[1].style.backgroundColor = 'lightgreen'
+
+                console.log(c)
+            }
+        </script>
+                
+    </body>
+</html>

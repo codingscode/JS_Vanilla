@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lastChild</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 15px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        
+        <p>Clique no botão para acessar o nome node do último descendente node do div.</p>
+        <div id="meuDIV"><p>U elemento p - 1º descendente no div</p><span>Um elemento span - último descendente no div</span></div>
+
+        <button onclick="minhaF()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuDIV').lastChild.nodeName
+                document.getElementById('demo').innerHTML = x 
+            }
+        </script>
+
+    </body>
+</html>

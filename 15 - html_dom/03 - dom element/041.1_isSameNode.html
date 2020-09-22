@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>isSameNode</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para checar se o elemento ul com id "minhaLista" é o mesmo como o 1º elemento ul do document.</p>
+        
+        <button onclick="minhaF()">Testar</button>
+        
+        <ul id="minhaLista"><li>Chá</li><li>Gelatina</li></ul>
+        
+        <script>
+            function minhaF() {
+                var item1 = document.getElementById('minhaLista')
+                var item2 = document.getElementsByTagName('UL')[0]
+                
+                if (item1 === item2) { 
+                    alert('Eles são o mesmo!!')
+                } else {
+                    alert('Eles não são o mesmo.')
+                }
+            }
+        </script>
+
+
+    </body>
+</html>

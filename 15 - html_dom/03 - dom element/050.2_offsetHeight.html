@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>offsetHeight</title>
+
+        <style>
+            #meuDIV {
+                height: 250px;
+                width: 400px;
+                padding: 12px;
+                margin: 16px;
+                border: 7px solid rgb(40, 136, 11);
+                background-color: rgb(174, 250, 199);
+                overflow: auto;
+            }
+
+            #meuDIV2 {
+                height: 250px;
+                width: 400px;
+                padding: 12px;
+                margin: 16px;
+                border: 7px solid rgb(156, 87, 7);
+                background-color: rgb(255, 225, 125);
+            }
+
+            #conteudo {
+                height: 800px;
+                width: 2000px;
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+       
+            <p>Neste exemplo, o elemento descendente (#conteudo) dentro do 1º div é maior que o height e width do div 
+                (o descendente é 800x2500 enquanto seu ascendente é 250x400), então adicionamos um barra de rolagem.</p>
+            
+            <p>Clique no botão para acessar o clientHeight, offsetWidth, clientWidth e offsetWidth do div.</p>
+            
+            <button onclick="minhaF()">Testar</button>
+            
+            <p>Note como a barra de rolagem no 1º div "rouba" algum do padding right e bottom do div, o qual resulta em 
+                valor de retorno mais baixo para clientHeight e clientWidth neste div, comparado a outro. O offsetHeight
+                e offsetWidth não é afetado por isso.</p>
+            
+            <div id="meuDIV">
+              <div id="conteudo"></div>
+            </div>
+            
+            <div id="meuDIV2">
+              <div id="content2"></div>
+            </div>
+            
+            <script>
+                function minhaF() {
+                    var elemento = document.getElementById('meuDIV')
+                    var texto = ''
+                    texto += '<b>Informação sobre div1:</b><br>'
+                    texto += 'Height incluindo padding: ' + elemento.clientHeight + 'px<br>'
+                    texto += 'Height incluindo padding, border e scrollbar: ' + elemento.offsetHeight + 'px<br>'
+                    texto += 'Width incluindo padding: ' + elemento.clientWidth + 'px<br>'
+                    texto += 'Width incluindo padding, border e scrollbar: ' + elemento.offsetWidth + 'px'
+                    document.getElementById('conteudo').innerHTML = texto
+                    
+                    var elemento2 = document.getElementById('meuDIV2')
+                    var texto2 = ''
+                    texto2 += '<b>Informação sobre div2:</b><br>'
+                    texto2 += 'Height incluindo padding: ' + elemento2.clientHeight + 'px<br>'
+                    texto2 += 'Height incluindo padding e border: ' + elemento2.offsetHeight + 'px<br>'
+                    texto2 += 'Width incluindo padding: ' + elemento2.clientWidth + 'px<br>'
+                    texto2 += 'Width incluindo padding e border: ' + elemento2.offsetWidth + 'px'
+                    document.getElementById('content2').innerHTML = texto2
+                }
+            </script>
+
+    </body>
+</html>

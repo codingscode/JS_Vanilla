@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getAttributeNode</title>
+
+        <style>
+            
+            .classe1 {
+                height:200px;
+                width:300px;
+                overflow: auto;
+            }
+
+            .classe2 {
+                width:250px;
+                height:150px;
+                border:1px solid rgb(136, 248, 160);
+                padding: 5px;
+            }
+
+            .classe3 {
+                width:1000px;
+                height:1000px;
+                border:1px solid purple;
+                margin: 6px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+            <div class="classe1">
+                <div id="meuDiv" class="classe2">
+                   Retorne o canto top-left deste elemento relativo ao canto topo esquerdo do viewport com o botão abaixo.<br>
+                   Também tente usar as barras de rolagem para testar o método para posições diferentes.
+                </div>
+                <div class="classe3">classe3</div>
+            </div>
+            
+            <br>
+            <button onclick="minhaF()">Acesse canto top-left + largura e altura do elemento com borda verde</button>
+            <p id="resposta"></p>
+            
+            <script>
+                function minhaF() {
+                    var div = document.getElementById('meuDiv')
+                    var retangulo = div.getBoundingClientRect()
+                    var x = retangulo.left
+                    var y = retangulo.top
+                    var w = retangulo.width
+                    var h = retangulo.height
+                    //alert (`Esquerdo: ${x}, Topo: ${y}, Largura: ${w}, Altura: ${h}`)
+
+                    document.getElementById('resposta').innerHTML = `Esquerdo: ${x}, Topo: ${y}, Largura: ${w}, Altura: ${h}`
+                    console.log(retangulo)
+                }
+            </script>
+                          
+    </body>
+</html>

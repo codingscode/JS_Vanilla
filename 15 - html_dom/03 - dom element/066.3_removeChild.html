@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeChild</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <ul id="minhaLista"><li>Chá</li><li id="minhaLI">Gelatina</li><li>Água</li></ul>
+
+        <p>Clique botão para remover o elemento li com id "minhaLI" da lista.</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <script>
+            console.log('descendente:', document.getElementById('minhaLI'))
+            console.log('ascendente:', document.getElementById('minhaLI').parentNode)
+
+            function minhaf() {
+                var item = document.getElementById('minhaLI')
+                item.parentNode.removeChild(item)
+            }
+        </script>
+              
+    </body>
+</html>

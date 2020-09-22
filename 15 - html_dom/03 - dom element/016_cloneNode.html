@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cloneNode</title>
+
+        <style>
+            
+            
+        </style>
+    </head>
+
+    <body >
+       
+        <!-- The cloneNode() method creates a copy of a node, and returns the clone. The cloneNode() method clones all 
+            attributes and their values. 
+           sintaxe: node.cloneNode(deep)      -->
+        <ul id="lista1"><li>Chá</li><li>Cacau</li></ul>  <!-- só funciona assim -->
+        <ul id="lista2"><li>Água</li><li>Gelatina</li></ul>
+        
+        <p>Clique no botão para copiar um item de uma lista para outra.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p>Tente alterar o parametro <em>deep</em> para false, e somente um elemento li vazio será clonado.</p>
+        
+        <script>
+            function minhaF() {
+                var item = document.getElementById('lista2').lastChild
+                var clone = item.cloneNode(true)
+                document.getElementById('lista1').appendChild(clone)
+            }
+        </script>     
+        
+    </body>
+</html>

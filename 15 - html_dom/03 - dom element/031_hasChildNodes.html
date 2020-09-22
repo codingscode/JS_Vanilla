@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hasChildNodes</title>
+
+        <style>
+            
+ 
+        </style>
+    </head>
+
+    <body >
+        <!--  The hasChildNodes() method returns true if the specified node has any child nodes, otherwise false.
+            Note: Whitespace inside a node is considered as text nodes, so if you leave any white space or line feeds inside 
+            an element, that element still has child nodes. 
+            sintaxe: node.hasChildNodes()
+         -->
+          <ul id="minhaLista">
+            <li>Chá</li>
+            <li>Gelatina</li>
+          </ul>
+          
+          <p>Clique no botão para ver se o elemento ul possui alguns descendentes nodes.</p>
+          <button onclick="minhaF()">Testar</button>
+          <p>Tente remover os descendentes nodes do elemento list, e o resultado será falso invés de true.</p>
+          <p><strong>Note:</strong> Espaço em branco dentro de um node é considerado como text nodes, então se você
+            deixar algum espaço em branco ou linha comentada dentro de um elemento, aquele elemento ainda possui descendentes
+             nodes.</p>
+          
+          <p id="demo"></p>
+          
+          <script>
+                function minhaF() {
+                    var lista = document.getElementById('minhaLista').hasChildNodes()
+                    document.getElementById('demo').innerHTML = lista
+                }
+          </script>
+        
+
+    </body>
+</html>

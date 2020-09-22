@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>setNamedItem</title>
+
+        <style>
+             .classe1 {
+                color: rgb(231, 185, 84);
+             }     
+        </style>
+    </head>
+
+    <body>
+        <!-- The setNamedItem() method adds the specified node to the NamedNodeMap.
+        If the node already exists, it will be replaced, and the replaced node will be the return value, otherwise the 
+        return value will be null.
+        Tip: Instead of working with attribute nodes, you could use the element.setAttribute() method to add an attribute 
+        with a value to an element. -->
+        <h1>Olá Mundo</h1>
+        <p>Clique no botão para setar o atributo classe de h1 para 'classe1'.</p>
+        
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var doh1 = document.getElementsByTagName('h1')[0]
+                var tipo = document.createAttribute('class')
+                tipo.value = 'classe1'
+                doh1.attributes.setNamedItem(tipo)
+
+                console.log('1:', document.getElementsByTagName('h1')[0])
+                console.log('2:', document.getElementsByTagName('h1')[0].attributes)
+                console.log('3:', document.getElementsByTagName('h1')[0].attributes[0].value)
+            }
+        </script>
+        
+    </body>
+</html>

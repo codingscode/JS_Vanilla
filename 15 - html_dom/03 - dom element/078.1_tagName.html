@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tagName</title>
+
+        <style>
+            body {
+               border: 3px solid orange;
+            }
+               
+        </style>
+    </head>
+
+    <body onclick="minhaF(event)"> 
+        
+        <!-- 
+            
+         -->
+         <p>Clique em qualquer elementos neste document para encontrar qual elemento disparou o onclick event</p>
+         
+         <h1>Isto é um cabeçalho</h1>
+         
+         <button>Isto é um botão</button>
+         <span>Um elemento span</span>
+         
+         <p id="demo"></p>
+         
+         <script>
+            function minhaF(evento) { 
+                var elemento = evento.target
+
+                console.log('*evento:', evento)
+                console.log('*elemento:', elemento)
+                document.getElementById('demo').innerHTML = `Disparado por um elemento ${elemento.tagName}`
+            }
+         </script>
+                          
+    </body>
+</html>

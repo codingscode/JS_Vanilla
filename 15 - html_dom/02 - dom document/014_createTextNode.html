@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createTextNode</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <!-- The createTextNode() method creates a Text Node with the specified text.
+           Tip: Use the createElement() method to create an Element Node with the specified name.
+           Tip: After the Text Node is created, use the element.appendChild() or element.insertBefore() method 
+           to append it to an element. -->
+        
+        <p>Clique no botao para criar um Text Node.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <br><br>
+
+        <script>
+            function minhaFuncao() {
+                var texto = document.createTextNode('Olá Mundo! ')
+                document.body.appendChild(texto)
+            }
+        </script>
+        
+
+    </body>
+</html>

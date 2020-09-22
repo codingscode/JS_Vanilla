@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByName</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+
+        Primeiro Nome: <input name="primeironome" type="text" value="Michael"><br>
+        Primeiro Nome: <input name="primeironome" type="text" value="Doug">
+        
+        <p>Clique no botao para acessar o nome da tag do 1º elemento no document que possui o nome do atributo com 
+            o valor "primeironome".</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByName('primeironome')[0].tagName
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.getElementsByName('primeironome'))
+            }
+        </script>
+      
+    </body>
+</html>

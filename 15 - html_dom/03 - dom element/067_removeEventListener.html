@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeEventListener</title>
+
+        <style>
+            #meuDIV {
+                background-color: coral;
+                border: 1px solid;
+                padding: 50px;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            The removeEventListener() method removes an event handler that has been attached with the addEventListener() 
+            method.
+            Note: To remove event handlers, the function specified with the addEventListener() method must be an external 
+            function, like in the example above (myFunction).
+            Anonymous functions, like "element.removeEventListener("event", function(){ myScript });" will not work.
+         -->
+          <div id="meuDIV">Este elemento div possui um onmousemove event handler que mostra um número aleatório cada vez que 
+              você move seu mouse dentro deste campo laranja.
+            <p>Clique no botão para remover o event handler do div.</p>
+            <button onclick="removerTratador()" id="meuBotao">Testar</button>
+          </div>
+                    
+          <p id="demo"></p>
+          
+          <script>
+                document.getElementById('meuDIV').addEventListener('mousemove', minhaf)
+                
+                function minhaf() {
+                    document.getElementById('demo').innerHTML = Math.random()
+                }
+                
+                function removerTratador() {
+                    document.getElementById('meuDIV').removeEventListener('mousemove', minhaf)
+                }
+          </script>
+      
+    </body>
+</html>

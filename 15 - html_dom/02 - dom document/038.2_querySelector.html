@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>querySelector</title>
+        <style>
+        
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <h2 class="exemplo">Um Cabeçalho com classe "exemplo"</h2>
+        <p>Olá.</p> 
+        <p class="exemplo">Um parágrafo com classe "exemplo".</p> 
+        <p>Clique no botao para adicionar uma cor de fundo ao 2º elemento p no document com classe "exemplo".</p>
+        <button onclick="minhaFunc()">Testar</button>
+
+        <script>
+            function minhaFunc() {
+                document.querySelector('p.exemplo').style.backgroundColor = 'lightgreen'
+            }
+        </script>
+        
+    </body>
+</html>

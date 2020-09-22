@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getAttributeNode</title>
+
+        <style>
+            
+            .minhaclasse {
+                color: chartreuse;
+            }
+        </style>
+    </head>
+
+    <body >
+        <!-- The getAttributeNode() method returns the attribute node with the specified name of an element, as an Attr object.
+            Tip: Use the attribute.value property to return the value of the attribute node.
+            Tip: Use the getAttribute() method if you just want to return the attribute value.
+            sintaxe:  element.getAttributeNode(attributename) -->
+        <h1 class="minhaclasse">Olá Mundo</h1>
+        <p>Clique no botão para mostrar o valor do atributo node class do elemento h1.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementsByTagName('H1')[0]
+                var atributo = elemento.getAttributeNode('class').value
+                document.getElementById('demo').innerHTML = atributo
+            }
+        </script>
+                          
+    </body>
+</html>

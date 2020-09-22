@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>blur</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+        
+             <!-- blur 
+                
+                                -->
+            <form id="meuform">
+                   <input type="text" id="meuInput">
+            </form>
+                                  
+            <script>
+                 var elemento = document.getElementById('meuform')
+                 elemento.addEventListener('focus', minhafuncaoFoco, true)
+                 elemento.addEventListener('blur', minhafuncaoBlur, true)
+                                  
+                 function minhafuncaoFoco() {
+                     document.getElementById('meuInput').style.backgroundColor = 'lightgreen'  
+                 }
+                                  
+                 function minhafuncaoBlur() {
+                     document.getElementById('meuInput').style.backgroundColor = ''  
+                 }
+            </script>
+                                   
+    </body>
+</html>

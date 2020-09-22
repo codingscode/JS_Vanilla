@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            .meuestilo {
+                width: 300px;
+                height: 50px;
+                background-color: coral;
+                color: white;
+                font-size: 25px;
+                padding-left: 8px;
+            }
+
+            button {
+                margin-bottom: 12px;
+            } 
+        </style>
+    </head>
+
+    <body>
+        
+        <h2>Solução entre navegadores para classList.remove()</h2>
+        <p>Clique no botão para remover a classe "meuestilo" ao elemento div.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDiv" class="meuestilo">Eu sou um elemento div</div>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                
+                var elemento = document.getElementById('meuDiv')
+                
+                if (elemento.classList) { 
+                    elemento.classList.remove('meuestilo')
+                }
+                else {
+                    elemento.className = elemento.className.replace(/\bmeuestilo\b/g, '')
+                }
+            }
+        </script>
+
+    </body>
+</html>

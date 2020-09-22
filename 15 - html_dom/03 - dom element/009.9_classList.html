@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            .meuestilo {
+                width: 500px;
+                height: 50px;
+                border: 1px solid black;
+            }
+
+            .outraClasse {
+                background-color: lightblue;
+                padding: 25px;
+            }
+
+            .terceiraClasse {
+                text-align: center;
+                font-size: 25px;
+                color: black;
+                margin-bottom: 10px;
+            }
+
+            button {
+                margin-bottom: 12px;
+            } 
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para encontrar se o elemento div possui uma classe de "meuestilo". Se sim, remova "outraClasse"</p>
+        <div id="meuDiv" class="meuestilo outraClasse terceiraClasse">
+            Eu sou um elemento div 
+        </div>
+        
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuDiv')
+
+                if (x.classList.contains('meuestilo')) {
+                    x.classList.remove('outraClasse')
+                }
+                else {
+                    alert('Não pode encontrá-lo.')
+                }
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelectorAll</title>
+
+        <style>
+           span {
+               color: rgb(189, 127, 11);
+           }
+        </style>
+    </head>
+
+    <body >
+        
+        <h1>Um elemento h1</h1>
+        <h2>Um elemento h2</h2>
+        <div>Um elemento div</div>
+        <p>Um elemento p.</p>
+        <p>Um elemento p com um <span>element span</span> dentro.</p>
+        <p>Clique no botão para setar cor de fundo de todos os elementos h2, div e span.</p>
+        
+        <button onclick="minhaf()">Testar</button>
+        
+        <script>
+                function minhaf() {
+                    var elementos = document.querySelectorAll('h2, div, span')
+                    
+                    for (var i = 0; i < elementos.length; i++) {
+                        elementos[i].style.backgroundColor = 'lightgreen'
+                    }
+                }
+        </script>
+          
+    </body>
+</html>

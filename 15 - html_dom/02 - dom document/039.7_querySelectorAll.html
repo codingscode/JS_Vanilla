@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>querySelectorAll</title>
+        <style>
+            div {
+                border: 1px solid black;
+                margin-bottom: 10px;
+            }
+        </style>
+        
+    </head>
+
+    <body >
+        
+          <div>
+            <h3>Elemento h3</h3>
+            <p>Eu sou um elemento p, meu ascendente é um elemento div.</p>
+          </div>
+          
+          <div>
+            <h3>Elemento h3</h3>
+            <p>Eu sou um elemento p, meu ascendente é também um elemento div.</p>
+          </div>
+          
+          <p>Clique no botao para alterar a cor de fundo de cada elemento p onde o ascendente é um elemento div.</p>
+          
+          <button onclick="minhaFunc()">Testar</button>
+          
+          <script>
+                function minhaFunc() {
+                    var x = document.querySelectorAll('div > p')
+                    
+                    for (var i = 0; i < x.length; i++) {
+                        x[i].style.backgroundColor = 'lightgreen'
+                    }
+                }
+          </script>
+
+    </body>
+</html>

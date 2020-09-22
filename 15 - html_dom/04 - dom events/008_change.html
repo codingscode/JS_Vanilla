@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>change</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+        
+             <!-- change 
+                The onchange event occurs when the value of an element has been changed.
+                For radiobuttons and checkboxes, the onchange event occurs when the checked state has been changed.
+                Tip: This event is similar to the oninput event. The difference is that the oninput event occurs immediately after
+                the value of an element has changed, while onchange occurs when the element loses focus, after the content has 
+                been changed. The other difference is that the onchange event also works on <select> elements.
+                                                -->
+                <p>Selecione um carro da lista.</p>
+
+                <select id="meuSelect" onchange="minhaF()">
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Volvo">Volvo</option>
+                </select>
+                                                
+                <p>Quando você selecionar um carro novo, uma função é disparada que mostra o valor do carro selecionado.</p>
+                
+                <p id="demo"></p>
+                
+                <script>
+                    function minhaF() {
+                        var valor = document.getElementById('meuSelect').value
+                        document.getElementById('demo').innerHTML = `Você selecionou: ${valor}`
+                    }
+                </script>
+                                   
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollTop</title>
+
+        <style>
+                body {
+                    height: 3000px;
+                }
+
+                #meuSVG {
+                    position: fixed;
+                    top: 30%;
+                    width: 400px;
+                    height: 210px;
+                }
+        </style>
+    </head>
+
+    <body >
+        
+        <h1>Role para baixo esta página para desenhar um triangulo.</h1>
+        <p>Role novamente para cima para reverter o desenho.</p>
+        
+        <svg id="meuSVG">
+          <path fill="none" stroke="lightgreen" stroke-width="3" id="triangulo" d="M150 0 L75 200 L225 200 Z" />
+               Desculpa, seu browser não suporta inline SVG.
+        </svg>
+        
+        <script>
+                // Get the id of the <path> element and the length of <path>
+                var triangulo = document.getElementById('triangulo')
+                var comprimento = triangulo.getTotalLength()
+                
+                // The start position of the drawing
+                triangulo.style.strokeDasharray = comprimento
+                
+                // Hide the triangulo by offsetting dash. Remove this line to show the triangulo before scroll draw
+                triangulo.style.strokeDashoffset = comprimento
+                
+                // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+                window.addEventListener('scroll', minhaF)
+                
+                function minhaF() {
+                    var porcentagemRolagem = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+                    
+                    var desenhar = comprimento * porcentagemRolagem
+                    
+                    // Reverse the drawing (when scrolling upwards)
+                    triangulo.style.strokeDashoffset = comprimento - desenhar
+                }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>drag</title>
+        <style>
+            .soltaralvo {
+                float: left; 
+                width: 100px; 
+                height: 35px;
+                margin: 15px;
+                padding: 10px;
+                border: 1px solid #aaaaaa;
+                background-color: lightgreen;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- drag 
+           
+             -->
+             <p>Este exemplo usa o método addEventListener() para anexar eventos "dragstart", "drag", "dragover" e "drop" ao objeto document.</p>
+             <p>Arraste o elemento p ida e volta entre os dois retangulos:</p>
+             
+             <div class="soltaralvo">
+               <p draggable="true" id="dragtarget">Arraste me!</p>
+             </div>
+             
+             <div class="soltaralvo"></div>
+             <p id="demo" style="clear:both;"></p>
+             
+             <script>
+                    /* Events fired on the drag target */
+                    document.addEventListener('dragstart', function(evento) {
+                        evento.dataTransfer.setData('Text', evento.target.id)
+                    })
+                    
+                    document.addEventListener('drag', function(evento) {
+                        document.getElementById('demo').innerHTML = 'O elemento p está sendo arrastado'
+                    })
+                    
+                    /* Events fired on the drop target */
+                    document.addEventListener('dragover', function(evento) {
+                        evento.preventDefault()
+                    })
+                    
+                    document.addEventListener('drop', function(evento) {
+                        evento.preventDefault()
+                        if ( evento.target.className == 'soltaralvo' ) {
+                            var data = evento.dataTransfer.getData('Text')
+                            evento.target.appendChild(document.getElementById(data))
+                            document.getElementById('demo').innerHTML = 'O elemento p foi solto'
+                        }
+                    })
+             </script>    
+                                           
+    </body>
+</html>

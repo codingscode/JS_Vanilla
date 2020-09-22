@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeChild</title>
+
+        <style>
+            iframe {
+                height:400px;
+                width:650px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <iframe src="https://www.google.com.br/" ></iframe>
+
+        <div id="meuDIV">
+          <span id="meuSpan" style="font-size:35px;">Um elemento span</span>
+        </div>
+        
+        <p>Clique em um botão para remover o elemento span de seu ascendente. Cliqeue no outro botão para inserir
+            o elemento span removido em outo elemento h1(o novo ascendente) do document.</p>
+        
+        <button onclick="removerLi()">Remover span</button>
+        <button onclick="minhaf()">Inserir span</button>
+        
+        <script>
+            var descendente = document.getElementById('meuSpan')
+            
+            function removerLi() {
+                descendente.parentNode.removeChild(descendente)
+            }
+            
+            function minhaf() {
+                var frame = document.getElementsByTagName('IFRAME')[0]
+                var h = frame.contentWindow.document.getElementsByTagName('H1')[0]
+                var x = document.adoptNode(descendente)
+                h.appendChild(x)
+            }
+        </script>
+              
+    </body>
+</html>

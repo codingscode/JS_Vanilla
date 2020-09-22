@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <title>getElementsByTagName</title>
+    </head>
+
+    <body>
+        
+        <p>Uma lista não ordenada:</p>
+        <ul>
+            <li>Chá</li>
+            <li>Suco de uva</li>
+            <li>Cacau</li>
+        </ul>
+
+        <p>Clique no botao para mostrar o innerHTML do elemento UL (indice 4).</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByTagName('*')
+                document.getElementById('demo').innerHTML = x[4].innerHTML
+
+                console.log(x)
+            }
+        </script>
+        
+    </body>
+</html>

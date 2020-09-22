@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>normalize</title>
+
+        <style>
+            #cc {
+                font-size: 20px;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The normalize() method removes empty Text nodes, and joins adjacent Text nodes.
+        sintaxe: node.normalize() -->
+        <p id="demo">Clique um botão para adicionar texto a este paragrafo, clique o outro botão para normalizar o paragrafo.</p>
+        
+        <button onclick="adicionarTextNode()">Adicionar um Text Node</button>
+        <button onclick="normPara()">Normalize o paragrafo</button>
+        
+        <p>O paragrafo acima possui <span id="cc">1</span> child node(s).</p>
+        
+        <script>
+            function adicionarTextNode() {
+                var texto = document.createTextNode(' Clique novamente.')
+                var elemento = document.getElementById('demo')
+                elemento.appendChild(texto)
+                var texto2 = document.getElementById('cc')
+                texto2.innerHTML = elemento.childNodes.length
+            }
+            
+            function normPara() {
+                var elemento = document.getElementById('demo')  
+                elemento.normalize()
+                var elemento2 = document.getElementById('cc')
+                elemento2.innerHTML = elemento.childNodes.length
+            }
+        </script>
+
+    </body>
+</html>

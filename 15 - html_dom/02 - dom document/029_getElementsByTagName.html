@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByTagName</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <!-- document.getElementsByTagName(tagname) -->
+
+        <p>Uma lista não ordenada:</p>
+        <ul>
+          <li>Chá</li>
+          <li>Suco de uva</li>
+          <li>Cacau</li>
+        </ul>
+        
+        <p>Clique no botão para mostrar o innerHTML do 2º elemento li (indice 1).</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByTagName('li')
+                document.getElementById('demo').innerHTML = 'procurado: ' + x[1].innerHTML + '. numero elementos: ' + x.length
+
+                console.log(document.getElementsByTagName('li'))
+                console.log(document.getElementsByTagName('*'))
+            }
+        </script>
+      
+    </body>
+</html>

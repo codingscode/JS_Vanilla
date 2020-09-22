@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>firstElementChild</title>
+
+        <style>
+            
+        
+        </style>
+    </head>
+
+    <body >
+        <!-- The firstElementChild property returns the first child element of the specified element.
+        The difference between this property and firstChild, is that firstChild returns the first child node as an element 
+        node, a text node or a comment node (depending on which one's first), while firstElementChild returns the first child 
+        node as an element node (ignores text and comment nodes).
+           sintaxe: element.firstElementChild -->
+        <p>Lista Exemplo:</p>
+        <ul id="minhaLista">
+          <li>Chá</li>
+          <li>Gelatina</li>
+        </ul>
+        
+        <p>Clique no botão para acessar o conteúdo HTML do 1º elemento descendente da lista.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var lista = document.getElementById('minhaLista').firstElementChild.innerHTML
+                document.getElementById('demo').innerHTML = lista
+            }
+        </script>        
+                          
+    </body>
+</html>

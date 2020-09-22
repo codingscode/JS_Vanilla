@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>adoptNode</title>
+        <style>
+            .classe1 {
+                height:380px;
+                width:520px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Teste</h1>
+        <iframe src="./002.7_addEventListener.html" class="classe1"></iframe>
+
+        <p>Clique no botão "Testar" para adotar e mostrar o valor do 1º elemento h1 no iframe (outro document).</p>
+        
+        <button onclick="minhaf()">Testar</button>
+
+        <script>
+            function minhaf() {
+                var frame = document.getElementsByTagName('IFRAME')[0]
+                var h = frame.contentWindow.document.getElementsByTagName('H1')[0]
+                var x = document.adoptNode(h)
+                document.body.appendChild(x)
+            }
+
+            // funciona com live server
+        </script>
+                
+    </body>
+</html>

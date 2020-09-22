@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>replaceChild</title>
+
+        <style>
+
+        </style>
+    </head>
+
+    <body >
+        
+        <ul id="minhaLista"><li>Chá</li><li>Gelatina</li><li>Biscoito</li></ul>
+        <p>Clique no botão para substituir o 1º item na lista.</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <p>Primeiro crie um novo text node chamado Água. <br>Então nós apenssamos o text node ao li<br> Então substituimos
+             o 1º descendente node do 1º item do elemento ul, com o recente elemento li criado.</p>
+        
+        <p><strong>Note:</strong> Este exemplo substitui o elemento li inteiro.</p>
+       
+        <script>
+            function minhaf() {
+                var elemento = document.createElement('li')
+                var textonode = document.createTextNode('Água')
+                elemento.appendChild(textonode)
+
+                var item = document.getElementById('minhaLista')
+                item.replaceChild(elemento, item.childNodes[0])
+            }
+        </script>
+
+    </body>
+</html>

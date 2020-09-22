@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelectorAll</title>
+
+        <style>
+            #meuDIV {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }            
+           
+        </style>
+    </head>
+
+    <body >
+            
+      <div id="meuDIV">
+        <h2 class="exemplo">Um cabeçalho com classe "exemplo" no div</h2>
+        <p class="exemplo">Um parágrafo com classe "exemplo" no div.</p> 
+        <p class="exemplo">Outro paragrafo com classe "exemplo" no div.</p>
+        
+      </div>
+      
+      <p>Clique no botão para encontrar quantos elementos com classe "exemplo" há no div.</p>
+      <button onclick="minhaf()">Testar</button>
+      <p id="demo"></p>
+      
+      <script>
+            function minhaf() {
+                var x = document.getElementById('meuDIV').querySelectorAll('.exemplo')
+                document.getElementById('demo').innerHTML = x.length
+                
+            }
+      </script>
+      
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>childElementCount</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- The childElementCount property returns the number of child elements an element has.
+        Note: The returned value contains the number of child element nodes, not the number of all child nodes (like text
+         and comment nodes). -->
+        <p>Clique no botão para encontrar quantos elementos descendentes o elemento div abaixo possui.</p>
+        <button onclick="minhaF()">Testar</button>
+        <div id="meuDIV">
+          <p>1º elemento p</p>
+          <p>2º elemento p</p>
+        </div>
+                
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var contar = document.getElementById('meuDIV').childElementCount
+                document.getElementById('demo').innerHTML = contar
+            }
+        </script>
+        
+    </body>
+</html>

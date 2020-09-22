@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            .meuestilo {
+                width: 300px;
+                height: 50px;
+                background-color: coral;
+                color: white;
+                font-size: 25px;
+                padding-left: 10px;
+            }
+        
+            button {
+                margin-bottom: 12px;
+            } 
+        </style>
+    </head>
+
+    <body>
+        
+        <h2>Solução entre navegadores para classList.toggle()</h2>
+        <p>Neste exemplo, nós checamos se o browser suporta o método classList.toggle(). Se não, use a propriedade className junto com outras propriedades JS e métodos para alcançar o mesmo resultado (para IE9)</p>
+        <p>Clique no botão para alternar entre adicionar e remover a classe "meuestilo" do elemento div.</p>
+        
+        <button onclick="meuF()">Testar</button>
+        
+        <div id="meuDiv" class="meuestilo">
+            Eu sou um elemento div
+        </div>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function meuF() {
+                var x = document.getElementById('meuDiv')
+                
+                if (x.classList) { 
+                    x.classList.toggle('meuestilo')
+                }
+                else {
+                    var classes = x.className.split(' ')
+                    var i = classes.indexOf('meuestilo')
+
+                    if (i >= 0) {
+                        classes.splice(i, 1)
+                    }
+                    else {
+                        classes.push('meuestilo')
+                        x.className = classes.join(' ')
+                    } 
+                }
+            }
+        </script>
+
+    </body>
+</html>

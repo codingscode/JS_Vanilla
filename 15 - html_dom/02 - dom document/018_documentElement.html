@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>documentElement</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para mostrar o node name do documentElement.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.documentElement.nodeName
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.documentElement)
+                console.log(document.documentElement.childNodes)
+                console.log(document.documentElement.childNodes[0])
+                console.log(document.body)
+            }
+        </script>
+
+    </body>
+</html>

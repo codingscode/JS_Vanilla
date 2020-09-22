@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            .botaocaida {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .botaocaida:hover, .botaocaida:focus {
+                background-color: #3e8e41;
+            }
+
+            .menucaida {
+                position: relative;
+                display: inline-block;
+            }
+
+            .conteudo-menucaida {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+            .conteudo-menucaida a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .conteudo-menucaida a:hover {
+                background-color: #f1f1f1
+            }
+
+            .mostrar {
+                display: block;
+            }
+
+            button {
+                margin-bottom: 12px;
+            } 
+        </style>
+    </head>
+
+    <body>
+        
+        <h2>Menu Caida clicável</h2>
+        <p>Clique no botão para abrir o menu Suspenso.</p>
+        
+        <div class="menucaida">
+            <button id="meuBotao" class="botaocaida">Menu Suspenso</button>
+            <div id="meuMenuCaida" class="conteudo-menucaida">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+            </div>
+        </div>
+        
+        <script>
+            // Get the button, and when the user clicks on it, execute myFunction
+            document.getElementById('meuBotao').onclick = function() {minhaF()}
+            
+            /* myFunction toggles between adding and removing the mostrar class, which is used to hide and show the dropdown content */
+            function minhaF() {
+                document.getElementById('meuMenuCaida').classList.toggle('mostrar')
+            }
+        </script>
+
+    </body>
+</html>

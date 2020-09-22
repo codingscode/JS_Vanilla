@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            .meuestilo {
+                width: 300px;
+                height: 50px;
+                background-color: coral;
+                color: white;
+                font-size: 25px;
+                padding-left: 8px;
+            }
+
+            button {
+                margin-bottom: 12px;
+            } 
+        </style>
+    </head>
+
+    <body>
+        
+        <h2>Solução entre navegadores para classList.add()</h2>
+        <p>Clique no botão para adicionar a classe "meuestilo" ao elemento div.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDiv">Eu sou um elemento div</div>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var elemento, nome, vetor
+                elemento = document.getElementById('meuDiv')
+                
+                if (elemento.classList) {
+                    console.log('***', elemento.classList) 
+                    elemento.classList.add('meuestilo')
+                }
+                else {
+                    nome = 'meuestilo'
+                    vetor = elemento.className.split(' ')
+                    console.log('*1', vetor)
+
+                    if (vetor.indexOf(nome) == -1) {
+                        elemento.className += ` ${nome}`
+                        console.log('*2', elemento)
+                    }
+                }
+            }
+        </script>
+
+    </body>
+</html>

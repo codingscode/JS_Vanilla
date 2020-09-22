@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+    </head>
+
+    <body>
+        <!-- sintaxe: element.addEventListener(event, function, useCapture) o último parametro é opcional -->
+        <p>Este exemplo usa o método addEventListener para vincular um evento de clique a um botão.</p>
+        <button id="meuBotao">Testar</button>
+                
+        <p id="demo"></p>
+        
+        <script>
+            document.getElementById('meuBotao').addEventListener('click', function(){
+                document.getElementById('demo').innerHTML = 'Olá Mundo!'
+            })
+        </script>
+    </body>
+</html>

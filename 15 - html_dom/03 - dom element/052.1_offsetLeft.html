@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>offsetLeft</title>
+
+        <style>
+            #teste {
+                left: 100px;
+                top: 50px;
+                margin: 12px;
+                padding: 13px;
+                width: 300px;
+                position: relative;
+                border: 7px solid black
+            }
+
+        </style>
+    </head>
+
+    <body >
+        <!-- The offsetLeft property returns the left position (in pixels) relative to the left side the offsetParent element.
+         The returned value includes:
+         the left position, and margin of the element
+        the left padding, scrollbar and border of the offsetParent element
+        Note: The offsetParent element is the nearest ancestor that has a position other than static. 
+           sintaxe: object.offsetLeft  -->
+           <div id="teste">
+            <p>Clique no botão para acessar o offset left e offset top para o div teste.</p>
+            <p><button onclick="minhaf()">Testar</button></p>
+            <p id="demo">offsetLeft: <br>offsetTop: </p>
+          </div>
+          
+          <script>
+                function minhaf() {
+                    var testDiv = document.getElementById('teste')
+                    var demoDiv = document.getElementById('demo')
+                    demoDiv.innerHTML = 'offsetLeft: ' + testDiv.offsetLeft + '<br>offsetTop: ' + testDiv.offsetTop
+                }
+          </script>
+
+    </body>
+</html>

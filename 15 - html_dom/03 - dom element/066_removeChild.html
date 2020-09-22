@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeChild</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            The removeChild() method removes a specified child node of the specified element.
+            Returns the removed node as a Node object, or null if the node does not exist.
+            Note: The removed child node is no longer part of the DOM. However, with the reference returned by this method, 
+            it is possible to insert the removed child to an element at a later time  (See "More Examples").
+            sintaxe: node.removeChild(node)          -->
+            <!-- Note that the <li> elements inside <ul> are not indented (whitespaces). 
+            If they were, the first child node of <ul> would be a text node 
+            -->
+            <ul id="minhaLista"><li>Chá</li><li>Gelatina</li><li>Água</li></ul>
+
+            <p>Clique no botão para remover o 1º item da lista.</p>
+            <button onclick="minhaf()">Testar</button>
+
+            <script>
+                console.log(document.getElementById('minhaLista').childNodes[0])
+                console.log(document.getElementById('minhaLista').children[0])
+
+                function minhaf() {
+                    var lista = document.getElementById('minhaLista')
+                    lista.removeChild(lista.childNodes[0])
+                }
+            </script>
+      
+    </body>
+</html>

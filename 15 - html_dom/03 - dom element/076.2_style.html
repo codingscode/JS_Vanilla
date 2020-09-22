@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>style</title>
+
+        <style>
+                body {
+                    background-color: rgb(111, 189, 48); 
+                    color: rgb(252, 252, 252);
+                    font-size: 25px;
+                } 
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            
+         -->
+         <p>Clique no botão para mostrar as propriedades de style deste document.</p>
+         <button onclick="minhaf()">Testar</button>
+         
+         <p id="demo"></p>
+         
+         <script>
+                function minhaf() {
+                    var elemento = document.getElementsByTagName('STYLE')[0]
+                    document.getElementById('demo').innerHTML = elemento.innerHTML
+                }
+         </script>
+                  
+    </body>
+</html>

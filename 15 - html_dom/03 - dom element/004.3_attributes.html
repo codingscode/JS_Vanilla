@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>attributes</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <img id="minhaImagem" alt="Terra" src="../02 - dom document/terra.jpg" width="150" height="113">
+        <p>Clique no botão para mostrar cada nome do atributo e valor da imagem acima.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('minhaImagem')
+                var texto = ''
+                
+                for (var i = 0; i < x.attributes.length; i++) {
+                    texto += `${x.attributes[i].name} = ${x.attributes[i].value} <br>`
+                }
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+        
+    </body>
+</html>

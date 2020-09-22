@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+
+        <style>
+            .exemplo {
+                border: 1px solid black;
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="exemplo">Um elemento div com classe "exemplo"</div>
+        <div class="exemplo">Um outro elemento div com classe "exemplo"</div>
+        <p class="exemplo">Um elemento p com classe "exemplo"</p>
+            
+        <p>Isto é um elemento <span class="exemplo">span</span>com classe "exemplo" dentro de um outro elemento p.</p>
+        <p>Clique no botao para alterar a cor de fundo de todos os elementos com classe "exemplo".</p>
+            
+        <button class="exemplo" onclick="minhaFuncao()">Testar</button>
+            
+        <script>
+            function minhaFuncao() {
+                var x = document.getElementsByClassName('exemplo')
+                
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.backgroundColor = 'lightgreen'
+                }
+            }
+        </script>
+        
+      
+    </body>
+</html>

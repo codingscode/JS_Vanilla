@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeAttributeNode</title>
+
+        <style>
+            .classe {
+                color: rgb(198, 255, 190);
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The removeAttributeNode() method removes the specified attribute from an element, and returns the removed 
+            attribute, as an Attr Node object.
+          The difference between this method and the removeAttribute() method, is that the removeAttribute() method removes 
+          the attribute with the specified name, while this method removes the specified Attr object. The result will be 
+          the same. Also, the removeAttribute() method has no return value, while this method returns the removed attribute, 
+          as an Attr object.
+          Tip: Use the getAttributeNode() method to return an attribute node of an element.
+          Tip: Use the setAttributeNode() method to add an attribute node to an element. 
+            sintaxe:  element.removeAttributeNode(attributenode)   -->
+            <h1 class="classe">Olá Mundo</h1>
+
+            <p>Clique no botão para remover o atributo node class do elemento h1.</p>
+            <button onclick="minhaf()">Testar</button>
+            
+            <script>
+                console.log(document.getElementsByTagName('H1')[0])
+                function minhaf() {
+                    var elemento = document.getElementsByTagName('H1')[0]
+                    var atributo = elemento.getAttributeNode('class')
+
+                    console.log('atributo:', atributo, typeof atributo)
+                    console.log('elemento:', elemento)
+                    
+                    elemento.removeAttributeNode(atributo)
+                    
+                }
+            </script>
+              
+    </body>
+</html>

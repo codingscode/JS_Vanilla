@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>removeChild</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <ul id="minhaLista"><li>Chá</li><li>Gelatina</li><li>Água</li><li>Torrada</li></ul>
+
+        <p>Clique no botão para remover todos os descendentes node de ul</p>
+        <button onclick="minhaf()">Testar</button>
+        
+        <script>
+            console.log(document.getElementById('minhaLista').firstChild)
+            console.log(document.getElementById('minhaLista').lastChild)
+
+            function minhaf() {
+                var lista = document.getElementById('minhaLista')
+                
+                while (lista.hasChildNodes()) {
+                    lista.removeChild(lista.firstChild)
+                }
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollTop</title>
+
+        <style>
+            .teste {
+                background-color: rgb(213, 255, 185);
+            }
+
+            body {
+                height:1500px
+            }
+
+            #meuP {
+                position: fixed;
+                top: 60px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            
+         -->
+         <p>Role para baixo esta página</p>
+
+         <p id="meuP" class="classe1">
+             Quando você ter rolado 50 pixels do top desta página, adiciona a classe "teste" (cor de fundo verde) a este paragrafo.
+             Role para cima para remover a classe.
+         </p>
+                  
+         <script>
+            window.onscroll = function() {
+                minhaf()
+            }
+            
+            function minhaf() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById('meuP').className = 'teste'
+                }
+                else {
+                    document.getElementById('meuP').className = ''
+                }
+            }
+         </script>
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>querySelectorAll</title>
+        <style>
+            
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <h2 class="exemplo">Um título com classe "exemplo"</h2>
+        <p class="exemplo">Um parágrafo com classe "exemplo".</p> 
+        <p class="exemplo">Outro paragrafo com classe "exemplo"  Another paragraph with class="exemplo".</p> 
+        
+        <p>Clique no botao para adicionar uma cor de fundo ao 1º elemento p (indice 0) no document com classe "exemplo".</p>
+        
+        <button onclick="minhaFunc()">Testar</button>
+        
+        <script>
+            function minhaFunc() {
+                var x = document.querySelectorAll('p.exemplo')
+                x[0].style.backgroundColor = 'lightgreen'
+            }
+        </script>
+
+    </body>
+</html>

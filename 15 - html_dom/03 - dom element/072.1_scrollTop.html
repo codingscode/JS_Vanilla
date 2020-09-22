@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollTop</title>
+
+        <style>
+            #meuDIV {
+                height: 250px;
+                width: 250px;
+                overflow: auto;
+            }
+
+            #conteudo {
+                height: 800px;
+                width: 2000px;
+                background-color: coral;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            
+         -->
+        <p>Clique no botão para rolar os conteudos do div 50px horizontalmente e 10px verticalmente.</p>
+        
+               
+        <button onclick="minhaf()">Role conteudos do div</button><br><br>
+
+        <div id="meuDIV">
+            <div id="conteudo">
+                Algum texto dentro de um elemento div.<br><br>
+                Algum texto dentro de um elemento div.
+            </div>
+        </div>
+       
+        
+        <script>
+            function minhaf() {
+                var elemento = document.getElementById('meuDIV')
+                elemento.scrollLeft = 50
+                elemento.scrollTop = 10
+                
+            }
+        </script>        
+
+    </body>
+</html>

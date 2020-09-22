@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>childNodes</title>
+
+        <style>
+            select {
+                margin-bottom: 18px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para acessar o texto do 3º child node (indice 2) do elemento select.</p>
+        <select id="meuSelect" size="4">
+            <option>Audi</option>
+            <option>BMW</option>
+            <option>Saab</option>
+            <option>Volvo</option>
+        </select> <br>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var c = document.getElementById('meuSelect').childNodes
+                document.getElementById('demo').innerHTML = c[5].text
+
+                console.log(c)
+                console.log(document.getElementById('meuSelect').value)
+            }
+        </script>
+        
+    </body>
+</html>

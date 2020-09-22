@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>innerHTML</title>
+
+        <style>
+            
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p id="meuP">Eu sou um parágrafo.</p>
+        <p>Clique no botão para acessar o conteudo HTML do elemento p.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+                function minhaF() {
+                    var conteudo = document.getElementById('meuP').innerHTML
+                    document.getElementById('demo').innerHTML = conteudo
+                }
+        </script>
+
+    </body>
+</html>

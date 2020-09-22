@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>removeEventListener</title>
+        <style>
+           
+        </style>
+        
+    </head>
+
+    <body >
+        <!-- sintaxe : document.removeEventListener(event, function, useCapture) -->
+        <p>Este document possui um onmouse event handler que mostra um numero aleatorio cada vez que você move seu mouse neste documnet.</p>
+        <p>Clique neste botao para remover o event handler.</p>
+        <button onclick="removerHandler()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            document.addEventListener('mousemove', minhaFunc)
+            
+            function minhaFunc() {
+                document.getElementById('demo').innerHTML = Math.random()
+            }
+            
+            function removerHandler() {
+                document.removeEventListener('mousemove', minhaFunc)
+            }
+        </script>
+
+    </body>
+</html>

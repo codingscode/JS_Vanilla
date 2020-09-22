@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nodeName</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para acessar o nome node, tipo node e valor node do 1º descendente div.</p>
+        <div id="meuDIV">Isto é um elemento div.</div><br>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuDIV').firstChild
+                var texto = ''
+                texto += `O nome node: ${x.nodeName}<br>`
+                texto += `O valor node: ${x.nodeValue}<br>`
+                texto += `O tipo node: ${x.nodeType}`
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+
+    </body>
+</html>

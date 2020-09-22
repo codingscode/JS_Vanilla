@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>baseURI</title>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para mostrar o URI base do document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.baseURI
+                document.getElementById("demo").innerHTML = x
+            }
+        </script>
+                                
+    </body>
+</html>

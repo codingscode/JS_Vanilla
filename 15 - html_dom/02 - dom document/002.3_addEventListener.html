@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+
+        <style>
+            .aqui {
+                width: 300px;
+                padding: 7px;
+                background-color: darkgreen;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Este exemplo usa o método addEventListener para adicionar muitos events ao document.</p>
+        <p id="demo" class="aqui">aqui<br></p>
+
+        <script>
+            document.getElementById('demo').addEventListener('mouseover', minhaFuncao1) //  document.addEventListener('mouseover', minhaFuncao1)
+            document.getElementById('demo').addEventListener('click', minhaFuncao2)
+            document.getElementById('demo').addEventListener('mouseout', minhaFuncao3)
+
+            function minhaFuncao1() {
+                document.getElementById('demo').innerHTML += 'Cursor em cima!<br>'
+            }
+
+            function minhaFuncao2() {
+                document.getElementById('demo').innerHTML += 'Clicou!<br>'
+            }
+
+            function minhaFuncao3() {
+                document.getElementById('demo').innerHTML += 'Cursor saiu!<br>'
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createDocumentFragment</title>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para fazer mudanças ao list item, usando o método createDocumentFragment, então apenssando
+             o list item como o último child do list.</p>
+        <ul>
+            <li>Chá</li>
+            <li>Cacau</li>
+        </ul>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var d = document.createDocumentFragment()
+                d.appendChild(document.getElementsByTagName('li')[0])
+                d.childNodes[0].childNodes[0].nodeValue = 'Queijo'
+                document.getElementsByTagName('ul')[0].appendChild(d)
+            }
+        </script>   
+    </body>
+</html>

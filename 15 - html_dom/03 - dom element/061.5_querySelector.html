@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelector</title>
+
+        <style>
+            #meuDIV {
+                border: 1px solid black;
+            }
+           
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+                <h2>Um elemento h2 no div</h2>
+                <h3>Um elemento h3 no div</h3>
+          </div>
+          
+          <script>
+                var elemento = document.getElementById('meuDIV')
+                elemento.querySelector('h2, h3').style.backgroundColor = 'lightgreen'
+          </script>          
+ 
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>domain</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para mostrar o nome do dominio do servidor que carregou este document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.domain
+                document.getElementById("demo").innerHTML = x
+                console.log(x)
+            }
+        </script>
+
+    </body>
+</html>

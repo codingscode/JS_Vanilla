@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientHeight</title>
+
+        <style>
+            #meuDiv {
+                height: 250px;
+                width: 400px;
+                padding: 13px;
+                margin: 18px;
+                border: 4px solid rgb(21, 141, 17);
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+
+    <body >
+       
+        <p>Clique no botão para acessar o clientHeight, clientWidth, offsetHeight e offsetWidth do div.</p>
+        <button onclick="minhaF()">Testar</button>
+        
+        <div id="meuDiv">
+          <b>Informação sobre este div:</b><br>
+          Height: 250px<br>
+          Width: 400px<br>
+          padding: 13px<br>
+          margin: 18px<br>
+          border: 4px<br>
+          <p id="demo"></p>
+        </div>
+        
+        <script>
+            function minhaF() {
+                var elemento = document.getElementById('meuDiv')
+                var texto = ''
+                texto += `Height incluindo padding: ${elemento.clientHeight}px<br>`
+                texto += `Height incluindo padding e border: ${elemento.offsetHeight}px<br>`
+                texto += `Width incluindo padding: ${elemento.clientWidth}px<br>`
+                texto += `Width incluindo padding e border: ${elemento.offsetWidth}px`
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+        
+    </body>
+</html>

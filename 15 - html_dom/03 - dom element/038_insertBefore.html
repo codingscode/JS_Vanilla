@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertBefore</title>
+
+        <style>
+            span {
+                color: lightgreen;
+            }
+        </style>
+    </head>
+
+    <body >
+        <!-- The insertBefore() method inserts a node as a child, right before an existing child, which you specify.
+        Tip: If you want to create a new list item, with text, remember to create the text as a Text node which you append to
+          the <li> element, then insert <li> to the list. -->
+
+              <ul id="minhaLista">
+                <li>Chá</li>
+                <li>Gelatina</li>
+              </ul>
+              
+              <p>Clique no botão para inserir um item a lista.</p>
+              <button onclick="minhaF()">Testar</button>
+              <p>
+                  <strong>Exemplo explicado:</strong><br>
+                  Primeiro crie um li node,<br> então crie um text node,<br> e apensse o text node ao li
+                  node.<br>Finalmente insira o li node antes do 1º descendente node na lista.</p>
+              
+              <script>
+                    function minhaF() {
+                        var novoItem = document.createElement('LI')
+                        var textonode = document.createTextNode('Água')
+                        novoItem.appendChild(textonode)
+                    
+                        var lista = document.getElementById('minhaLista')
+                        lista.insertBefore(novoItem, lista.childNodes[0])
+                    }
+              </script>
+
+    </body>
+</html>

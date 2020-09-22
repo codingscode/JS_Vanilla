@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>blur</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <input type="text" id="meuTexto" value="Um campo de texto">
+
+        <p>Clique nos botões para dar foco e/ou remover foco de um campo texto.</p>
+        <button type="button" onclick="terfoco()">Ter foco</button>
+        <button type="button" onclick="perderfoco()">Tirar foco</button>
+        
+        <script>
+            function terfoco() {
+                document.getElementById('meuTexto').focus()
+            }
+            
+            function perderfoco() {
+                document.getElementById('meuTexto').blur()
+            }
+        </script>
+        
+    </body>
+</html>

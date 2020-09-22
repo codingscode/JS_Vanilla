@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+    </head>
+
+    <body >
+        <!-- The document.addEventListener() method attaches an event handler to the document.
+        Tip: Use the document.removeEventListener() method to remove an event handler that has been attached with the 
+        addEventListener() method.
+        Tip: Use the element.addEventListener() method to attach an event handler to a specified element.
+        sintaxe:
+           document.addEventListener(event, function, useCapture)     o 3º é opcional -->
+
+        <p>Este exemplo usa o método addEventListener para anexar um click event ao document.</p>
+        <p>Clique em qualquer lugar no document.</p>
+         
+        <p id="demo"></p>
+                   
+        <script>
+           document.addEventListener('click', function(){
+                    document.getElementById('demo').innerHTML = 'Olá mundo!'
+
+                    console.log('clicou.')
+           })
+        </script>
+
+    </body>
+</html>

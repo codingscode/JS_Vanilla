@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByTagName</title>
+
+        <style>
+            
+            
+        </style>
+    </head>
+
+    <body >
+        <!-- The getElementsByTagName() method returns a collection of an elements's child elements with the specified tag 
+            name, as a NodeList object.
+        The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.
+        sintaxe: element.getElementsByTagName(tagname) -->
+          <ul>
+            <li>Chá</li>
+            <li>Gelatina</li>
+          </ul>
+          
+          <p>Clique no botão para alterar o texto do 1º item da lista (indice 0).</p>
+          <button onclick="minhaF()">Testar</button>
+          
+          <script>
+                function minhaF() {
+                    var lista = document.getElementsByTagName('UL')[0]
+                    lista.getElementsByTagName('LI')[0].innerHTML = 'Cacau'
+                }
+          </script>
+
+    </body>
+</html>

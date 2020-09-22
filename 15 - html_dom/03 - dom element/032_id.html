@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>id</title>
+
+        <style>
+            .ancoras {
+                display: block;
+                padding: 5px;
+                background-color: black;
+                color: white;
+            }
+
+            #minhaAncora {
+                background-color: dodgerblue;
+            }
+
+        </style>
+    </head>
+
+    <body >
+        
+      <!-- The id property sets or returns the id of an element (the value of an element's id attribute).
+      An ID should be unique within a page, and is often used to return the element using the document.getElementById() method.
+      sintaxe: Return the id property:       HTMLElementObject.id
+               Set the id property:      HTMLElementObject.id = id -->
+               <a class="ancoras" id="minhaAncora" href="https://pt.wikipedia.org/wiki/HTML">HTML</a>
+               <a class="ancoras" href="https://pt.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>
+               <a class="ancoras" href="https://pt.wikipedia.org/wiki/JavaScript">JavaScript</a>
+               
+               <p>Clique no botão para mostrar o valor do atributo "id" do 1º link acima.</p>
+               <button onclick="minhaF()">Testar</button>
+               <p id="demo"></p>
+               
+               <script>
+                    function minhaF() {
+                        var nome_classes = document.getElementsByClassName('ancoras')[0]
+                        document.getElementById('demo').innerHTML = nome_classes.id
+
+                        console.log(document.getElementById('minhaAncora').className)
+                        console.log(nome_classes.id)
+                        console.log(nome_classes.href)
+                    }
+
+               </script>
+
+    </body>
+</html>

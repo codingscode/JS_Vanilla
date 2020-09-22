@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hasAttribute</title>
+
+        <style>
+            
+ 
+        </style>
+    </head>
+
+    <body >
+        <!-- The hasAttribute() method returns true if the specified attribute exists, otherwise it returns false.
+        Tip: Use setAttribute() to add a new attribute or change the value of an existing attribute on an element.
+        sintaxe: element.hasAttribute(attributename) -->
+        <p>Clique no botão para encontrar se o elemento button possui um atributo onclick.</p>
+        
+        <button id="meuBotao" onclick="minhaF()">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuBotao').hasAttribute('onclick')
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+
+    </body>
+</html>

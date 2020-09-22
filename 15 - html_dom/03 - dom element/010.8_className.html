@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>className</title>
+
+        <style>
+            body {
+                height: 1500px;
+            }
+
+            .teste {
+                background-color: lightgreen;
+            }
+
+            #meuP {
+                position: fixed;
+            }
+
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Role abaixo esta página</p>
+        <p id="meuP" >Quando você ter descido 50 pixels do topo desta página, adiciona a classe "teste" (cor de fundo verde) 
+            a este paragrafo. Suba novamente para remover a classe.</p>
+        
+        <script>
+            window.onscroll = function() {minhaF()}
+            console.log('base', document.documentElement)
+            
+            function minhaF() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById('meuP').className = 'teste'
+                    
+                    //console.log('maior', document.documentElement)
+                    console.log('*1', document.body.scrollTop)
+                    console.log('*2', document.documentElement.scrollTop)
+                }
+                else {
+                    document.getElementById('meuP').className = ''
+                    
+                    //console.log('menor', document.documentElement)
+                    console.log('*3', document.body.scrollTop)
+                    console.log('*4', document.documentElement.scrollTop)
+                }
+            }
+        </script>
+        
+    </body>
+</html>

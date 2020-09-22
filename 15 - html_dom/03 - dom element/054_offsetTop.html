@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>offsetTop</title>
+
+        <style>
+            
+            #teste {
+                left: 100px;
+                top: 50px;
+                margin: 10px;
+                padding: 10px;
+                width: 300px;
+                position: relative;
+                border: 5px solid black;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The offsetTop property returns the top position (in pixels) relative to the top of the offsetParent element.
+        The returned value includes:
+        the top position, and margin of the element
+        the top padding, scrollbar and border of the offsetParent element -->
+          <div id="teste">
+            <p>Clique no botão para acessar os offsets left e top para o div teste.</p>
+            <p><button onclick="minhaf()">Testar</button></p>
+            <p id="demo">offsetLeft: <br>offsetTop: </p>
+          </div>
+          
+          <script>
+                function minhaf() {
+                    var testDiv = document.getElementById('teste')
+                    var demoDiv = document.getElementById('demo')
+                    demoDiv.innerHTML = 'offsetLeft: ' + testDiv.offsetLeft + '<br>offsetTop: ' + testDiv.offsetTop
+                }
+          </script>
+
+    </body>
+</html>

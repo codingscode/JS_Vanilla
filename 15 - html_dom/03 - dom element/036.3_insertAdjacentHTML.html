@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertAdjacentHTML</title>
+
+        <style>
+            span {
+                color: lightgreen;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <h1>Método HTML DOM insertAdjacentHTML()</h1>
+        <p>Este método insere um texto específico como HTML, para dentro de uma posição específica no document.</p>
+        <h2 id="meuH2">Meu Cabeçalho</h2>
+        <p>Clique no botão para inserir um span dentro do cabeçalho:</p>
+        <button onclick="minhaF()">Inserir um span</button>
+        
+        <script>
+            function minhaF() {
+                var h = document.getElementById('meuH2')
+                h.insertAdjacentHTML('beforeend', '<span > Meu span</span>')
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>className</title>
+
+        <style>
+            .meuestilo {
+                width: 500px;
+                height: 50px;
+            }
+
+            .teste {
+                background-color: lightblue; 
+            }
+
+            .exemplo {
+                text-align: center;
+                font-size: 25px;
+                color: black;
+                margin-bottom: 10px;
+            }
+
+            button {
+                margin-top: 8px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para mostrar os nomes das classes do elemento div.</p>
+        <div id="meuDiv" class="meuestilo teste exemplo">Eu sou um elemento div com múltiplas classes</div>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuDiv').className
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+        
+    </body>
+</html>

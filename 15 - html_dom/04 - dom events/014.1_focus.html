@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>focus</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- focus 
+            
+             -->
+             <p>Este exemplo usa o HTML DOM para assinalar um evento "onfocus" a um elemento input.</p>
+
+             Digite seu nome: <input type="text" id="p_nome">
+             
+             <script>
+                document.getElementById('p_nome').onfocus = function() { minhaF() }
+                
+                function minhaF() {
+                    document.getElementById('p_nome').style.backgroundColor = 'lightgreen'
+                }
+             </script>
+             
+    </body>
+</html>

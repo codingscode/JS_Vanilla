@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+    </head>
+
+    <body>
+    
+        <p>Este exemplo usa o método addEventListener para executar uma função quando um usuário clica sobre o botão.</p>
+        
+        <button id="meuBotao">Testar</button>
+        
+        <p id="demo">
+        
+        <script>
+            document.getElementById('meuBotao').addEventListener('click', minhaFuncao)
+            
+            function minhaFuncao() {
+                document.getElementById('demo').innerHTML = 'Olá Mundo'
+            }
+        </script>
+    
+    </body>
+</html>

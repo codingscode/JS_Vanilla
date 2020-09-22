@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>execCommand</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body onkeydown="minhaFuncao(event)">
+        
+
+        <h1>Método Document executeCommand()</h1>
+        <p>O método executeCommand() executa um comando especifico em texto ou seção selecionado.</p>
+        <h2>Selecione texto ou pressione shift</h2>
+        <p>Selecione algum texto nesta pagina, e pressione o botao SHIFT para fazer o texto selecionado alternar 
+            entre negrito e normal.</p>
+        
+        <script>
+            document.designMode = 'on'
+
+            function minhaFuncao(evento) {
+                if (evento.keyCode == 16) {
+                    // Execute command if user presses the SHIFT button:
+                    document.execCommand('bold')
+                }
+            }
+        </script>
+
+        <!--  sintaxe: document.execCommand(command, showUI, value)
+            valores aceitaveis para command: "backColor", "bold", "createLink", "copy", "cut", "defaultParagraphSeparator",
+                "delete", "fontName", "fontSize", "foreColor", "formatBlock", "forwardDelete", "insertHorizontalRule",
+                "insertHTML", "insertImage", "insertLineBreak", "insertOrderedList", "insertParagraph", "insertText",
+                "insertUnorderedList", "justifyCenter", "justifyFull", "justifyLeft", "justifyRight", "outdent", "paste",
+                "redo", "selectAll", "strikethrough", "styleWithCss", "subscript", "superscript", "undo", "unlink", "useCSS"
+        -->
+
+    </body>
+</html>

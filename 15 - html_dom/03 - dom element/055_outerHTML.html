@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>outerHTML</title>
+
+        <style>
+            
+           
+        </style>
+    </head>
+
+    <body >
+        <!-- The outerHTML property sets or returns the HTML element and all it's content, including the start tag, it's 
+            attributes, and the end tag.
+            sintaxe:  Return the outerHTML property:        Element.outerHTML
+                    Set the outerHTML property:        Element.outerHTML = text -->
+                  <h1>outerHTML</h1>
+
+                  <p>Clique no botão para alterar o cabeçalho de h1 para um h3.</p>
+                  <button onclick="minhaf()">Alterar Cabeçalho</button>
+                  
+                  <script>
+                        function minhaf() {
+                            var x = document.getElementsByTagName('h1')[0]
+                            x.outerHTML = '<h3>Você alterou o elemento header inteiro e seu conteudo!</h3>'
+                        }
+                  </script>
+                  
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>copy</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- copy 
+            The oncopy event occurs when the user copies the content of an element.
+            Tip: The oncopy event also occurs when the user copies an element, for example, an image, created with the <img> element.
+            Tip: The oncopy event is mostly used on <input> elements with type="text".
+            Tip: There are three ways to copy an element/the content of an element:
+            Press CTRL + C
+            Select "Copy" from the Edit menu in your browser
+            Right click to display the context menu and select the "Copy" command.The oncopy event occurs when the user copies the 
+            content of an element.
+            Tip: The oncopy event also occurs when the user copies an element, for example, an image, created with the <img> element.
+            Tip: The oncopy event is mostly used on <input> elements with type="text".
+            Tip: There are three ways to copy an element/the content of an element:
+            Press CTRL + C
+            Select "Copy" from the Edit menu in your browser
+            Right click to display the context menu and select the "Copy" command.
+             -->
+             <input type="text" oncopy="minhaF()" value="Tente copiar este texto">
+             <p id="demo"></p>
+             
+             <script>
+                function minhaF() {
+                    document.getElementById('demo').innerHTML = 'Você copiou o texto!'
+                }
+             </script>
+                                           
+    </body>
+</html>

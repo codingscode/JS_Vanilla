@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertBefore</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The isContentEditable property returns whether the content of an element is editable or not.
+        This property is read-only.
+        Tip: Use the contentEditable property to change the editable state of an element.
+        sintaxe: HTMLElementObject.isContentEditable -->
+        <p id="meuP" contenteditable="true">Clique no botão para encontrar se sou editavel.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuP').isContentEditable
+                document.getElementById('demo').innerHTML = `${x} = O elemento p é editável. Para ver o efeito, tente 
+                        alterar seu texto.`
+            }
+        </script>
+
+    </body>
+</html>

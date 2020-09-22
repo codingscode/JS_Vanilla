@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nodeType</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para acessar os tipos node dos descendentes nodes do elemento body.</p>
+        
+        <button onclick="minhaF()">Testar</button>
+        
+        <p><strong>Note:</strong> Whitespace inside elements is considered as text, and text is considered as nodes.</p>
+        
+        <!-- My personal comment goes here..  -->
+        
+        <div><strong>Note:</strong> Comments in the document are considered as comment nodes.</div>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var c = document.body.childNodes
+                var texto = ''
+                
+                for (i = 0; i < c.length; i++) {
+                    texto += `${c[i].nodeType}<br>`
+                }
+                
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+
+    </body>
+</html>

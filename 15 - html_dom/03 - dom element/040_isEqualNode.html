@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>isEqualNode</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The isEqualNode() method checks if two nodes are equal.
+        Two nodes are equal if all the following conditions are true:
+        They have the same Node Type
+        They have the same nodeName, NodeValue, localName, nameSpaceURI and prefix
+        They have the same childNodes with all the descendants
+        They have the same attributes and attribute values (the attributes does not have be in the same order)
+        Tip: Use the isSameNode() method to determine if two nodes are the same node.
+        sintaxe: node.isEqualNode(node) -->
+        <p>Clique nos botões para comparar o <strong>primeiro item</strong> nas duas das listas.</p>
+        <button onclick="minhaF('minhaLista1', 'minhaLista2')">Compare Lista 1 e 2</button>
+        <button onclick="minhaF('minhaLista1', 'minhaLista3')">Compare Lista 1 e 3</button>
+        <br><br>
+        
+        Lista 1:   <!-- só funcionam assim -->
+        <ul id="minhaLista1"><li>Água</li><li>Gelatina</li></ul>
+        Lista 2:
+        <ul id="minhaLista2"><li>Chá</li><li>Cacau</li></ul>
+        Lista 3:
+        <ul id="minhaLista3"><li>Água</li><li>Abacaxi</li></ul>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF(x, y) {
+                var item1 = document.getElementById(x).firstChild
+                var item2 = document.getElementById(y).firstChild
+                var x = item1.isEqualNode(item2)
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+
+    </body>
+</html>

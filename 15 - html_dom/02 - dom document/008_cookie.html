@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>cookie</title>
+
+    </head>
+
+    <body>
+<!--    Sintaxe: -> Return the cookie property: document.cookie, Set the cookie property: document.cookie = newCookie  -->
+
+        <p>Clique no botao para acessar os cookies associados com o document atual.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.cookie
+                document.getElementById('demo').innerHTML = `Cookies associados com este document:  ${x}`
+                console.log(x)
+            }
+        </script>
+        
+    </body>
+</html>

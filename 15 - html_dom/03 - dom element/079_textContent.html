@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>textContent</title>
+
+        <style>
+                
+               
+        </style>
+    </head>
+
+    <body > 
+        
+        <!-- 
+            The textContent property sets or returns the text content of the specified node, and all its descendants.
+            If you set the textContent property, any child nodes are removed and replaced by a single Text node containing 
+            the specified string.
+            Note: This property is similar to the innerText property, however there are some differences:
+              -> textContent returns the text content of all elements, while innerText returns the content of all elements, 
+              except for <script> and <style> elements.
+              -> innerText will not return the text of elements that are hidden with CSS (textContent will). 
+            Tip: Sometimes this property can be used instead of the nodeValue property, but remember that this property 
+            returns the text of all child nodes as well.
+            Tip: To set or return the HTML content of an element, use the innerHTML property.
+            sintaxe:  Return the text content of a node:   node.textContent
+                      Set the text content of a node:      node.textContent = text
+         -->
+         <p>Clique no botão para acessar conteudo de texto do elemento button.</p>
+         <button onclick="minhaF()" id="meuBtn">Testar</button>
+         
+         <p id="demo"></p>
+         
+         <script>
+                function minhaF() {
+                    var conteudo = document.getElementById('meuBtn').textContent
+
+                    console.log('*', document.getElementById('meuBtn').textContent)
+                    console.log('*', document.getElementById('meuBtn').innerHTML)
+                    document.getElementById('demo').innerHTML = conteudo  
+                }
+         </script>
+                          
+    </body>
+</html>

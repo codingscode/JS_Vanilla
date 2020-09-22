@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>children</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para adicionar cor de fundo ao 2º elemento child (indice 1) do div.</p>
+        <button onclick="minhaF()">Testar</button>
+        <div id="meuDiv">
+          <p>1º elemento p</p>
+          <p>2º elemento p</p>
+        </div>
+        
+        <script>
+            function minhaF() {
+                var c = document.getElementById('meuDiv').children
+                c[1].style.backgroundColor = 'lightgreen'
+            }
+        </script>
+        
+    </body>
+</html>

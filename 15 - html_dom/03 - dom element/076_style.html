@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>style</title>
+
+        <style>
+                
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            The style property returns a CSSStyleDeclaration object, which represents an element's style attribute.
+           The style property is used to get or set a specific style of an element using different CSS properties.
+           Note: It is not possible to set styles by assigning a string to the style property, 
+           e.g. element.style = "color: red;". To set the style of an element, append a "CSS" property to style and 
+           specify a value, like this:---
+           sintaxe:  Return style properties: element.style.property
+                     Set style properties:    element.style.property = value
+         -->
+         <h1 id="meuH1">Como alterar o style de um cabeçalho</h1>
+
+         <p>Clique no botão para adicionar uma cor ao elemento h1.</p>
+         
+         <button onclick="minhaf()">Testar</button>
+         
+         <script>
+                function minhaf() {
+                    document.getElementById('meuH1').style.color = 'lightgreen'
+                }
+         </script>
+         
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>open</title>
+        <style>
+        
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <p>Clique no botao para abrir um fluxo de saída, adicionar algum texto, e fechar o fluxo de saída.</p>
+        <button onclick="minhaFunc()">Testar</button>
+        
+        <script>
+            function minhaFunc() {
+                var janela = window.open()
+                janela.document.open()
+                janela.document.write('<h1>Olá Mundo!</h1>')
+                janela.document.close()
+            }
+        </script>
+        
+    </body>
+</html>

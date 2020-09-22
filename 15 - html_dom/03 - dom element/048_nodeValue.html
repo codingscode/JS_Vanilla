@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nodeValue</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The nodeValue property sets or returns the node value of the specified node.
+        If the node is an element node, the nodeValue property will return null.
+        Note: If you want to return the text of an element, remember that text is always inside a Text node, and you will have 
+        to return the Text node's node value (element.childNodes[0].nodeValue).
+        For other node types, the nodeValue property will return different values for different node types.
+        Tip: An alternative to the nodeValue property can be the textContent property.
+        sintaxe:  Return the node value:    node.nodeValue
+                  Set the node value:       node.nodeValue = value -->
+            <p>Clique no botão para acessar o valor node do 1º elemento button no document.</p>
+            <button onclick="minhaF()">Testar</button>
+            <p><strong>Note:</strong> Text dentro de elementos são considerados para serem text nodes, então nós retornamos o 
+                valor node do 1º descendente (childNodes[0]) do elemento button.</p>
+            <p id="demo"></p>
+                  
+            <script>
+                function minhaF() {
+                    var elemento = document.getElementsByTagName('BUTTON')[0]
+                    var valor = elemento.childNodes[0].nodeValue  
+                    document.getElementById('demo').innerHTML = valor
+                }
+            </script>
+
+    </body>
+</html>

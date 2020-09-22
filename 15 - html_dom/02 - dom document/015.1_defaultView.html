@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>defaultView</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <h1>Propriedade Document defaultView</h1>
+        <p>A propriedade defaultView retorna o objeto window atual.</p>
+        <p>Retorne o width e o height do window:</p>
+        <button onclick="minhaFuncao()">Acesse o tamanho do window</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.defaultView
+                var largura = x.innerWidth
+                var altura = x.innerHeight
+                document.getElementById("demo").innerHTML = `Width: ${largura}<br>Height: ${altura}`
+            }
+        </script>
+
+    </body>
+</html>

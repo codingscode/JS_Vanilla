@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertAdjacentElement</title>
+
+        <style>
+            span {
+                color: lightgreen;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- The insertAdjacentElement() method inserts a the specified element into a specified position.
+        Legal position values are: "afterbegin", "afterend", "beforebegin", "beforeend"
+        sintaxe: node.insertAdjacentElement(position, element) -->
+        <h1>Método HTML DOM insertAdjacentElement()</h1>
+        <p>Este metodo insere um elemento específico, para dentro de uma posição especificada.</p>
+        <span >Meu span</span>
+        
+        <h2 id="meuH2">Meu Cabeçalho</h2>
+        <p>Clique no botão para inserir o span verde depois do Cabeçalho:</p>
+        <button onclick="minhaF()">Mover span</button>
+        
+        <script>
+            function minhaF() {
+                var o_span = document.getElementsByTagName('span')[0]
+                var o_h2 = document.getElementById('meuH2')
+                o_h2.insertAdjacentElement('afterend', o_span)
+            }
+        </script>
+
+    </body>
+</html>

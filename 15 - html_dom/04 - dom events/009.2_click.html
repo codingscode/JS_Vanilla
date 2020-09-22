@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>click</title>
+        <style>
+            p {
+                padding: 6px;
+                border: 3px solid orange;
+                width: 10%;
+                background-color: darkgreen;
+                color: white;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- click 
+                
+             -->
+             <p onclick="minhaF(this, 'lightgreen')">Clique me para alterar minha cor de texto.</p>
+
+             <script>
+                function minhaF(elemento, cor) {
+                    elemento.style.color = cor
+                }
+             </script>                       
+    </body>
+</html>

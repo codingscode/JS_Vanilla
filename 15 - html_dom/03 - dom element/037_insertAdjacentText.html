@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>insertAdjacentText</title>
+
+        <style>
+            span {
+                color: lightgreen;
+            }
+        </style>
+    </head>
+
+    <body >
+        <!-- The insertAdjacentText() method inserts a the specified element into a specified position.
+        Legal position values are: "afterbegin", "afterend", "beforebegin", "beforeend" 
+            node.insertAdjacentText(position, text)   -->
+        <h1>Método HTML DOM insertAdjacentText()</h1>
+        <p>Este método insere um texto específico, em uma posição específica.</p>
+        <h2 id="meuH2">Meu Cabeçalho</h2>
+        <p>Clique no botão para inserir algum texto depois do cabeçalho:</p>
+        <button onclick="minhaF()">Inserir texto</button>
+        
+        <script>
+            function minhaF() {
+                var h = document.getElementById('meuH2')
+                h.insertAdjacentText('afterend', 'Meu texto inserido')
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createElement</title>
+
+        <style>
+            button {
+                width: 80px;
+                height: 30px;
+                background-color: purple;
+                margin-right: 10px;
+                color: white;
+                font-size: larger;
+            }
+
+            .teste {
+                background-color: lime;
+                margin-bottom: 70px;
+                color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+            <p>Clique no botao para criar um elemento button.</p>
+            <button class="teste" onclick="minhaFuncao()">Testar</button> <br>
+            
+            <script>
+                function minhaFuncao() {
+                    var botao = document.createElement('button')
+                    botao.innerHTML = 'oi'
+                    document.body.appendChild(botao)
+                }
+            </script>
+            
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getAttribute</title>
+
+        <style>
+                       
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para mostrar o valor do atributo onclick do elemento button.</p>
+        <button id="meuBotao" onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuBotao').getAttribute('onclick')
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+                                         
+    </body>
+</html>

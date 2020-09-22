@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelector</title>
+
+        <style>
+            #meuDIV {
+                border: 1px solid black;
+                padding-left: 10px;
+            }
+           
+        </style>
+    </head>
+
+    <body >
+        <!-- The querySelector() method returns the first child element that matches a specified CSS selector(s) of an element.
+        Note: The querySelector() method only returns the first element that matches the specified selectors. To return all 
+        the matches, use the querySelectorAll() method instead. 
+            sintaxe: element.querySelector(CSS selectors)  -->
+          <div id="meuDIV">
+            <h2 class="exemplo">Um cabeçalho com classe "exemplo" no div</h2>
+            <p class="exemplo">Um paragrafo com classe "exemplo" no div.</p> 
+          </div>
+          
+          <p>Clique no botão para alterar o texto do 1º elemento com classe "exemplo" no div.</p>
+          <button onclick="minhaf()">Testar</button>
+          
+          <script>
+                function minhaf() {
+                    var elemento = document.getElementById('meuDIV')
+                    elemento.querySelector('.exemplo').innerHTML = 'Olá mundo!'
+                }
+          </script>
+ 
+    </body>
+</html>

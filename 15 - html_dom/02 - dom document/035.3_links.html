@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>links</title>
+        <style>
+            area {
+                border: 1px solid yellow;
+                
+            }
+
+            img {
+                width: 500px;
+                height: 400px;
+            }
+
+            map {
+                background-color: chartreuse;
+            }
+
+            area {
+                background-color: blue;
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <img src ="./sistsolar.jpg" alt="Planets" usemap ="#mapplaneta">
+
+        <map name="mapplaneta">
+            <area shape="rect" coords="0, 240, 80, 397" href="./sol.jpg" alt="Sun">
+            <area shape="circle" coords="196, 275, 44px" href="./terra.jpg" alt="Terra" id="meuLink">
+            <area shape="circle" coords="196, 158, 35px" href="./marte.jpg" alt="Marte">
+        </map>
+
+        <p>
+            <a href="https://pt.wikipedia.org/wiki/HTML">HTML</a><br>
+            <a href="https://pt.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>
+        </p>
+
+        <p>Clique no botao para mostrar a URL de cada link no document.</p>
+        <button onclick="minhaFunc()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFunc() {
+                var x = document.links
+                var texto = ''
+                
+                for (var i = 0; i < x.length; i++) {
+                    texto += x[i].href + '<br><br>'
+                }
+                document.getElementById('demo').innerHTML = texto
+            }
+
+        </script>
+        
+    </body>
+</html>

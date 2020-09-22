@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>blur</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+        
+             <!-- blur 
+                
+                                -->
+                
+                <p>Quando você digita no campo input, uma função é disparada que seta a cor de fundo para verde. Quando você
+                   deixa o campo input, uma função é disparada que seta cor de fundo laranja.
+                </p>
+                Digite seu nome: <input type="text" id="minhaEntrada" onfocus="funcaoFoco()" onblur="funcaoBlur()">
+                                
+                <script>
+                    function funcaoFoco() {
+                        // Focus = Changes the background color of input to lightgreen
+                        document.getElementById('minhaEntrada').style.background = 'lightgreen'
+                    }
+                                    
+                    function funcaoBlur() {
+                        // No focus = Changes the background color of input to orange
+                        document.getElementById('minhaEntrada').style.background = 'orange'
+                    }
+                </script>
+                                   
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+    </head>
+
+    <body>
+    
+        <p>Este exemplo usa o método addEventListener para adicionar muitos eventos sobre o mesmo botão.</p>
+        
+        <button id="meuBotao">Testar</button>
+        
+        <p id="demo"></p>
+        
+        <script>
+            var x = document.getElementById('meuBotao')
+            x.addEventListener('mouseover', minhaFuncao)
+            x.addEventListener('click', minha2Funcao)
+            x.addEventListener('mouseout', minha3Funcao)
+            
+            function minhaFuncao() {
+                document.getElementById('demo').innerHTML += 'Mouse sobre!<br>'
+            }
+            
+            function minha2Funcao() {
+                document.getElementById('demo').innerHTML += 'Clicou!<br>'
+            }
+            
+            function minha3Funcao() {
+                document.getElementById('demo').innerHTML += 'Mouse tirado!<br>'
+            }
+        </script>
+    
+    </body>
+</html>

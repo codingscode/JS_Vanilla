@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>focus</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- focus 
+            The onfocus event occurs when an element gets focus.
+            The onfocus event is most often used with <input>, <select>, and <a>.
+            Tip: The onfocus event is the opposite of the onblur event.
+             -->
+             Digite seu nome: <input type="text" onfocus="minhaF(this)">
+
+             <p>Quando o campo input estiver em foco, uma função é disparada que altera a cor de fundo.</p>
+             
+             <script>
+                function minhaF(objeto) {
+                    objeto.style.background = 'lightgreen'
+                }
+             </script>
+             
+    </body>
+</html>

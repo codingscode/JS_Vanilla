@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollWidth</title>
+
+        <style>
+            
+            #conteudo {
+                height: 100px;
+                width: 100px;
+                background-color: coral;
+                padding: 15px;
+                border: 10px solid black;
+                margin: 10px;
+                overflow: scroll;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <!-- 
+            
+         -->
+         <p>Clique no 1º botão para retornar o scrollHeight e scrollWidth do div. Clique no 2º botão para setar o width e 
+             height do div aos valores retornados do scrollHeight e scrollWidth</p>
+         
+         <button onclick="funcaoAcessar()">Acessar scrollHeight e scrollWidth</button>
+         <button onclick="funcaoSetar()">Setar height e width</button>
+         
+         <div id="conteudo">Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..
+              Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..
+              Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..
+              Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..
+              Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..
+              Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..Algum conteudo..</div>
+         
+         <p id="demo"></p>
+         
+         <script>
+            var elemento = document.getElementById('conteudo')
+            
+            function funcaoAcessar() {
+                document.getElementById('demo').innerHTML = `Height: ${elemento.scrollHeight}px<br>Width: ${elemento.scrollWidth}px`
+                
+            }
+            
+            function funcaoSetar() {
+                elemento.style.height = `${elemento.scrollHeight}px`
+                elemento.style.width = `${elemento.scrollWidth}px`
+            }
+         </script>
+
+    </body>
+</html>

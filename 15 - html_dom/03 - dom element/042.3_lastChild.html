@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lastChild</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para acessar o texto do último descendente node do elemento select.</p>
+        <select id="meuSelect" size="4"><option>Audi</option><option>BMW</option><option>Saab</option><option>Volvo</option></select><br><br>
+
+        <button onclick="minhaF()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuSelect').lastChild.text
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            .meuestilo {
+                width: 300px;
+                height: 50px;
+                background-color: coral;
+                color: white;
+                font-size: 25px;
+            }
+
+            button {
+                margin-bottom: 9px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- The classList property returns the class name(s) of an element, as a DOMTokenList object.
+              This property is useful to add, remove and toggle CSS classes on an element.
+             The classList property is read-only, however, you can modify it by using the add() and remove() methods.
+         sintaxe:  elemento.classList    -->
+        <p>Clique no botão para adicionar a classe "meuestilo" ao div.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+                
+        <div id="meuDiv">Eu sou um elemento div</div>
+        
+        <script>
+            function minhaFuncao() {
+                console.log(document.getElementById('meuDiv').classList)
+
+                document.getElementById('meuDiv').classList.add('meuestilo')
+
+                console.log(document.getElementById('meuDiv').classList)
+            }
+        </script>
+        
+    </body>
+</html>

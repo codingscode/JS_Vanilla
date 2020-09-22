@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>contentEditable</title>
+
+        <style>
+            
+ 
+        </style>
+    </head>
+
+    <body >
+         
+        <p id="meuP" contenteditable="true">Tente mudar este texto.</p>
+        <button onclick="minhaF(this)">Desabilitar conteudo de p para ser editável!</button>
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF(botao) {
+                var elemento = document.getElementById('meuP')
+                if (elemento.contentEditable == 'true') {
+                    elemento.contentEditable = 'false'
+                    botao.innerHTML = 'Habilitar conteudo de p para ser editavel!'
+                } 
+                else {
+                    elemento.contentEditable = 'true'
+                    botao.innerHTML = 'Desabilitar conteudo de p para ser editavel!'
+                }
+            }
+        </script>
+                  
+    </body>
+</html>

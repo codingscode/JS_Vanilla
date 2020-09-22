@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>contentEditable</title>
+
+        <style>
+            
+ 
+        </style>
+    </head>
+
+    <body >
+        <!-- Return the contentEditable property:  HTMLElementObject.contentEditable
+             Set the contentEditable property:  HTMLElementObject.contentEditable = true|false -->
+        <p id="meuP">Isto é um paragrafo. Clique no botão para fazer me editável ou não editável.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p id="demo"></p>
+        
+        <script>
+            var valor = false
+
+            function minhaF() {
+                valor = !valor
+
+                document.getElementById('meuP').contentEditable = valor
+                document.getElementById('demo').innerHTML = 'O elemento p acima é agora editável. Tente mudar seu texto.'
+            }
+        </script>
+                  
+    </body>
+</html>

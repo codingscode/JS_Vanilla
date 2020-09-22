@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>exitFullscreen</title>
+
+        <style>
+            
+ 
+        </style>
+    </head>
+
+    <body >
+        
+        <h2>Tela cheia com JavaScript</h2>
+        <p>Clique no botão "Abrir tela inteira" para abrir esta página em modo tela cheia. Feche a por também clicando
+            a tecla "Esc" no seu teclado, ou com o botão "Fechar tela inteira"
+        </p>
+                
+        <button onclick="abrirTelaInteira();">Abrir tela inteira</button>
+        <button onclick="fecharTelaInteira();">Fechar tela inteira</button>
+        
+        <script>
+            var elem = document.documentElement;
+            function abrirTelaInteira() {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                }
+                else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                }
+                else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    elem.webkitRequestFullscreen();
+                }
+                else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            }
+            
+            function fecharTelaInteira() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+                else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                }
+                else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+                else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        </script>
+                                  
+    </body>
+</html>

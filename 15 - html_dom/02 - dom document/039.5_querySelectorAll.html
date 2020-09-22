@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>querySelectorAll</title>
+        <style>
+             .exemplo {
+                border: 1px solid black;
+                margin: 5px;
+             }
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <h1>Um elemento h1</h1>
+        <div>Um elemento div</div>
+        <p>Um elemento p</p>
+        <p>Outro elemento p</p>
+        <div class="exemplo">
+          <p>Um elemento p dentro de um elemento div</p>
+        </div>
+        <p>Clique no botao para alterar a cor de fundo de todos os elementos p no document.</p>
+        <button onclick="minhaFunc()">Testar</button>
+        
+        
+        <script>
+            function minhaFunc() {
+                var x = document.querySelectorAll('p')
+                
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.backgroundColor = 'lightgreen'
+                }
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>nodeName</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique no botão para acessar os nomes node dos descendentes node do elemento body.</p>
+        <button onclick="minhaF()">Testar</button>
+        <p><strong>Note:</strong> Espaço em branco dentro de elementos é considerado como #text, e texto é considerado como 
+            nodes.</p>
+
+        <!-- My personal comment goes here..  -->
+
+        <div><strong>Note:</strong> Comentarios no document são considerados como #comments, e comentarios são também 
+            considerados como nodes.</div>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaF() {
+                var c = document.body.childNodes
+                var texto = ''
+                
+                for (var i = 0; i < c.length; i++) {
+                    texto += c[i].nodeName + '<br>'
+                }
+
+                document.getElementById('demo').innerHTML = texto
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>getElementsByClassName</title>
+
+        <style>
+            
+            div {
+                border: 1px solid black;
+                margin: 5px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+          <div id="meuDIV">
+            <p class="filho">Um elemento p com classe "filho" em um div.</p>
+            <p class="filho">Outro elemento p com classe "filho" em um div.</p>
+            <p>Um elemento p dentro de div com um <span class="filho">elemento span com classe "filho"</span> dentro disto.</p>
+          </div>
+          
+          <p>Clique no botão para adicionar uma cor de fundo para todos os elementos com classe "filho" dentro do elemento div 
+              com id "meuDIV".</p>
+                    
+          <button onclick="minhaF()">Testar</button>
+          
+          <script>
+                function minhaF() {
+                    var elemento = document.getElementById('meuDIV')
+                    var elementos_classe = elemento.getElementsByClassName('filho')
+                    
+                    for (var i = 0; i < elementos_classe.length; i++) {
+                        elementos_classe[i].style.backgroundColor = 'lightgreen'
+                    }
+                }
+          </script>
+
+    </body>
+</html>

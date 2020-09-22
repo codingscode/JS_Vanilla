@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+    </head>
+
+    <body>
+    
+        <p>Clique no botão para alterar sua cor de fundo.</p>
+        <button id="meuBotao">Testar</button>
+        
+        <script>
+            document.getElementById('meuBotao').addEventListener('click', function(){
+                this.style.backgroundColor = 'lightgreen'
+            })
+        </script>
+        
+    </body>
+</html>

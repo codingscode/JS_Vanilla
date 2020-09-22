@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>anchors</title>
+    </head>
+
+    <body>
+        
+        <a name="html">Tutorial HTML</a><br>
+        <a name="css">Tutorial CSS</a><br>
+        <a name="xml">Tutorial XML</a><br>
+
+        <p>Clique no botao para mostrar o conteudo HTML do 1º anchor no document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.anchors[0].innerHTML
+                document.getElementById("demo").innerHTML = x
+
+                console.log('1:', document.anchors[0])
+                console.log('2:', document.anchors[0].innerHTML)
+                console.log('3:', document.anchors[1].innerHTML)
+                console.log('4:', document.anchors[2].innerHTML)
+            }
+        </script>
+                        
+    </body>
+</html>

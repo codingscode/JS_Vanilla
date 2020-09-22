@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>click</title>
+        <style>
+            #demo {
+                padding: 6px;
+                border: 3px solid orange;
+                width: 10%;
+            }
+        </style>
+    </head> 
+
+    <body >
+        
+             <!-- click 
+                
+             -->
+             <p>Este exemplo usa o método addEventListener para anexar um evento 'click' ao elemento p.</p>
+             <p id="demo">Clique me.</p>
+             
+             <script>
+                document.getElementById('demo').addEventListener('click', minhaF)
+                
+                function minhaF() {
+                    document.getElementById('demo').innerHTML = 'Você me clicou!'
+                }
+             </script>     
+                                   
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>embeds</title>
+
+        <style>
+            embed {
+                width: 80px;
+                height: 80px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <embed src="./books.png">
+        <embed src="./computer.jpg">
+        <p>Clique no botao para mostrar o numero de elementos embed que estão neste document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+            
+        <script>
+            function minhaFuncao() {
+               var x = document.embeds.length
+               document.getElementById('demo').innerHTML = x
+            }
+        </script>
+
+    </body>
+</html>

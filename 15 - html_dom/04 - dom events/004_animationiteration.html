@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>animationiteration</title>
+        <style>
+            #meuDIV {
+                margin: 25px;
+                width: 550px;
+                height: 100px;
+                background: orange;
+                position: relative;
+                font-size: 20px;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes meu_movimento {
+                from { top: 0px; }
+                to { top: 200px; }
+            }
+
+            @keyframes meu_movimento {
+                from { top: 0px; }
+                to { top: 200px; }
+            }
+        </style>
+    </head> 
+
+    <body>
+        
+             <!-- animationiteration 
+                 The animationiteration event occurs when a CSS animation is repeated.
+                 If the CSS animation-iteration-count property is set to "1", meaning that the animation will only be played
+                  one time, the animationiteration event does not occur. The animation needs to run more than once for this
+                   event to fire.  
+                  sintaxe: object.addEventListener("webkitAnimationIteration", myScript);  // Code for Chrome, Safari and Opera
+                       object.addEventListener("animationiteration", myScript);        // Standard syntax-->
+                 <p>Este exemplo usa o método  addEventListener() para anexar um evento "animationstart",
+                   "animationiteration" e "animationend" a um elemento DIV.</p>
+                 
+                 <div id="meuDIV" onclick="minhaF()">Clique para iniciar a animação.</div>
+                 
+                 <script>
+                 var elemento = document.getElementById('meuDIV')
+                 
+                 // Start the animation with JavaScript
+                 function minhaF() {
+                   elemento.style.WebkitAnimation = 'meu_movimento 4s 2' // Code for Chrome, Safari and Opera
+                   elemento.style.animation = 'meu_movimento 4s 2'     // Standard syntax
+                 }
+                 
+                 // Code for Chrome, Safari and Opera
+                 elemento.addEventListener('webkitAnimationStart', minhaFuncIniciar)
+                 elemento.addEventListener('webkitAnimationIteration', minhaFuncRepetir)
+                 elemento.addEventListener('webkitAnimationEnd', minhaFuncTerminar)
+                 
+                 // Standard syntax
+                 elemento.addEventListener('animationstart', minhaFuncIniciar)
+                 elemento.addEventListener('animationiteration', minhaFuncRepetir)
+                 elemento.addEventListener('animationend', minhaFuncTerminar)
+                 
+                 function minhaFuncIniciar() {
+                    this.innerHTML = 'evento animationstart ocorreu - a animação iniciou'
+                    this.style.backgroundColor = 'pink'
+                 }
+                 
+                 function minhaFuncRepetir() {
+                    this.innerHTML = 'evento animationiteration ocorreu - a animação foi reproduzida novamente'
+                    this.style.backgroundColor = 'lightblue'
+                 }
+                 
+                 function minhaFuncTerminar() {
+                    this.innerHTML = 'evento animationend ocorreu - a animação completou'
+                    this.style.backgroundColor = 'lightgray'
+                 }
+                 </script>
+                 
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>body</title>
+
+        <style>
+            body, p {
+                margin: 15px;
+                padding: 15px;
+                border: 2px solid purple;
+            }
+
+            p {
+                border: 2px solid orange;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para criar um elemento P com algum texto, e apensá-lo ao body do document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var elemento = document.createElement('p')
+                var texto = document.createTextNode('Isto é um paragráfo.')
+                elemento.appendChild(texto)
+                document.body.appendChild(elemento)
+            }
+        </script>
+        
+    </body>
+</html>

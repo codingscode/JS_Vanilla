@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>accessKey</title>
+    </head>
+
+    <body>
+        <!-- sintaxe: Return the accessKey property: HTMLElementObject.accessKey
+                 Set the accessKey property: HTMLElementObject.accessKey = character -->
+
+        <a id="w3s" href="http://www.guiadosquadrinhos.com/" target="_blank">Guia dos Quadrinhos</a><br>
+
+        <p>O atributo accessKey especifica uma tecla de atalho para ativar/focar um elemento.</p>
+        <p>Neste exemplo, a tecla "w" é para Guia dos Quadrinhos.com.</p>
+        <p><strong>Note:</strong> O atalho varia de diferentes browsers:</p>
+        
+        <ul>
+            <li>IE, Chrome, Safari, Opera 15+: [ALT] + <em>tecla de acesso</em></li>
+            <li>Opera prior version 15: [SHIFT] [ESC] + <em>tecla de acesso</em></li>
+            <li>Firefox: [ALT] [SHIFT] + <em>tecla de acesso</em></li>
+        </ul>
+        
+        <script>
+            document.getElementById('w3s').accessKey = 'w'
+        </script>
+    </body>
+</html>

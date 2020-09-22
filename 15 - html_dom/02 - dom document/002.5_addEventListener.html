@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Clique em qualquer lugar no document para alterar sua cor de fundo.</p>
+
+        <script>
+            document.addEventListener('click', function(){
+                document.body.style.backgroundColor = 'lightgreen'
+                document.body.style.color = 'white'
+
+                console.log(document)
+                console.log(document.body)
+            })
+        </script>
+    </body>
+</html>

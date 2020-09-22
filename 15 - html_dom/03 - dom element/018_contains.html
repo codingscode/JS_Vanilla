@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>contains</title>
+
+        <style>
+            
+            #meuDIV {
+                border: 1px solid black;
+                padding-left: 10px;
+            } 
+        </style>
+    </head>
+
+    <body >
+            <!-- The contains() method returns a Boolean value indicating whether a node is a descendant of a specified node.
+              A descendant can be a child, grandchild, great-grandchild, and so on. 
+                sintaxe: node.contains(node)    -->
+          <div id="meuDIV">
+            <p>Eu sou um elemento p dentro de div, e tenho um elemento <span id="meuSPAN"><b>span</b></span> dentro de mim.</p>
+          </div>
+          
+          <p>Clique no botão para encontrar se o elemento div contém um elemento span.</p>
+          <button onclick="minhaF()">Testar</button>
+          <p id="demo"></p>
+          
+          <script>
+                function minhaF() {
+                    var span = document.getElementById('meuSPAN')
+                    var div = document.getElementById('meuDIV').contains(span)
+                    document.getElementById('demo').innerHTML = div
+                }
+          </script>
+                  
+    </body>
+</html>

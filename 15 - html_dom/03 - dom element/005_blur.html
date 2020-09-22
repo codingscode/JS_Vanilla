@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>blur</title>
+
+        <style>
+            a:focus, a:active {
+                color: green;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <a id="minhaAncora" href="http://www.comix.com.br/quadrinhos.html">Visite comix.com.br</a>
+
+        <p>Clique nos botões para dar foco e/ou remover foco do link acima.</p>
+        
+        <input type="button" onclick="terfoco()" value="Ter focus">
+        <input type="button" onclick="perderfoco()" value="Tirar focus">
+        
+        <script>
+            function terfoco() {
+                document.getElementById('minhaAncora').focus()
+            }
+            
+            function perderfoco() {
+                document.getElementById('minhaAncora').blur()
+            }
+        </script>
+        
+    </body>
+</html>

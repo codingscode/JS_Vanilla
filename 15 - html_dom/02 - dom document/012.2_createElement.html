@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>createElement</title>
+
+        <style>
+            .classparadiv {
+               border: 1px solid black;
+               margin-bottom: 10px;
+               padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Clique no botão para criar um elemento p com algum texto, e apenssá-lo ao div.</p>
+        <div class="classparadiv" id="meudiv">um elemento div</div>
+
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <script>
+            function minhaFuncao() {
+                var paragrafo = document.createElement('p')
+                paragrafo.innerHTML = 'Este é um paragrafo.'
+                document.getElementById('meudiv').appendChild(paragrafo)
+            }
+        </script>
+                    
+    </body>
+</html>

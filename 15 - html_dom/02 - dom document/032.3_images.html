@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>images</title>
+    </head>
+
+    <body>
+        
+        <img src="./computer.jpg" alt="cmputer" width="150" height="113">
+        <img src="./satelite.jpg" alt="satelite" width="152" height="128">
+        <img id="minhaImagem" src="./books.png" alt="livros" width="100" height="100">
+        
+        <p>Clique no botao para mostrar a URL do elemento imagem com id="minhaImagem".</p>
+        <button onclick="minhaFuncao()">Testar</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.images.namedItem('minhaImagem').src
+                document.getElementById('demo').innerHTML = x
+
+                console.log(document.images.namedItem('minhaImagem'))
+                console.log(document.images.namedItem('minhaImagem').alt)
+            }
+        </script>
+        
+    </body>
+</html>

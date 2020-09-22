@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>lastChild</title>
+
+        <style>
+            div {
+                border: 1px solid black;
+                margin: 15px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body >
+                
+        <p>Clique no botão para acessar o nome node do último descendente node do div.</p>
+        <div id="meuDIV">
+          <p>Um elemento p - 2º descendente no div</p>
+          <span>Um elemento span - 4º descendente no div</span>
+        </div>
+
+        <div id="meuDIV2"><p>Um elemento p - 1º descendente no div</p><span>Um elemento span - 2º descendente no div</span></div>
+        
+        <button onclick="minhaF()">Testar</button>
+        <p><strong>Note:</strong> Espaço em branco dentro de elementos é considerado texto, e texto é considerado como nodes.
+             Portanto, neste exemplo, o 1º, 3º e 5º descendente do elemento div é um #text node.</p>
+        
+        <p id="demo"></p>
+        
+        <script>
+            function minhaF() {
+                var x = document.getElementById('meuDIV').lastChild.nodeName
+                var y = document.getElementById('meuDIV2').lastChild.nodeName
+
+                document.getElementById('demo').innerHTML = `${x} | ${y}`
+            }
+        </script>
+
+    </body>
+</html>

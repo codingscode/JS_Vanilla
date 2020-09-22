@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html >
+    <head id="meuHead">
+        <title>head</title>
+    </head>
+
+    <body>
+        
+        <p>Clique no botao para mostrar o id do elemento head no document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+        <p id="demo"></p>
+
+        <script>
+            function minhaFuncao() {
+                var x = document.head.id
+                document.getElementById('demo').innerHTML = x
+            }
+        </script>
+        
+    </body>
+</html>

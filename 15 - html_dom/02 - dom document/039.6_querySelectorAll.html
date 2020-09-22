@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+    <head >
+        <title>querySelectorAll</title>
+        <style>
+            a[target] {
+                background-color: lightgreen;
+            }
+        </style>
+        
+    </head>
+
+    <body >
+        
+        <p>O seletor CSS a[target] certifica que todos os links com um atributo "target" recebem um fundo verde:</p>>
+
+        <a href="https://www.w3schools.com">w3schools.com</a>
+        <a href="http://www.disney.com" target="_blank">disney.com</a>
+        <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+        
+        <p>Clique no botao para adicionar uma borda escura a todos os links no document com um atributo "target".</p>
+        <button onclick="minhaFunc()">Testar</button>
+        
+        <script>
+            function minhaFunc() {
+                var x = document.querySelectorAll('a[target]')
+                
+                for (var i = 0; i < x.length; i++) {
+                    x[i].style.border = '10px solid rgb(9, 97, 9)'
+                }
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>forms</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+
+        <!-- sintaxe: document.forms -->
+        <form id="meuCarroForm">
+            Carro Favorito: <input type="text" name="carrofav" value="Volvo">
+        </form>
+          
+        <form id="minhaCorForm">
+            Cor Favorita: <input type="text" name="corfav" value="Blue">
+        </form>
+          
+        <p>Clique no botao para mostrar o id do 1º elemento form (index 0) no document.</p>
+        <button onclick="minhaFuncao()">Testar</button>
+          
+        <p id="demo"></p>
+          
+        <script>
+           function minhaFuncao() {
+                var x = document.forms[0].id
+                document.getElementById('demo').innerHTML = x
+           }
+        </script>
+       
+
+    </body>
+</html>
