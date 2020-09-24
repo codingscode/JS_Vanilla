@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hashchange</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body onhashchange="minhaF()">
+             <!-- hashchange 
+            
+             -->
+             <p>Este exemplo usa o HTML DOM para assinalar um evento "onhashchange" a um elemento body.</p>
+             <p>Clique no botão para alterar a parte ancora da url atual para #part5</p>
+             <button onclick="alterarParte()">Testar</button>
+             
+             <p id="demo"></p>
+             
+             <script>
+                    // Using the location.hash property to change the anchor part
+                    // ou object.addEventListener("hashchange", myScript); ou window.onhashchange = myFunction;
+                    function alterarParte() {
+                        location.hash = 'part5'
+                        var x = location.hash
+                        document.getElementById('demo').innerHTML = `A parte ancora agora é : ${x}`
+                    }
+                    
+                    document.getElementsByTagName('BODY')[0].onhashchange = function() { minhaF() }
+                    
+                    function minhaF() {
+                        alert('A parte ancora mudou!')
+                    }
+             </script>
+             
+    </body>
+</html>

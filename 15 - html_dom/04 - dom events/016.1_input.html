@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>input</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- input 
+             
+
+             -->
+             <p>Este exemplo usa HTML DOM para assinalar um evento"oninput" a um elemento input.</p>
+             <p>Escreva algo no campo de texto para disparar um função.</p>
+             Digite o nome: <input type="text" id="meuInput" value="Bob">
+             
+             <script>
+                document.getElementById('meuInput').oninput = function() { minhaF() }
+                
+                function minhaF() {
+                    alert('O valor do campo input foi alterado.')
+                }
+             </script>
+             
+    </body>
+</html>

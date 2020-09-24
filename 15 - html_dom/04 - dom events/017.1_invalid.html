@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>invalid</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- invalid 
+             
+             -->
+             <form action="./ieie.jpg" method="get">
+                    Nome: <input type="text" id="meuInput" name="pri_nome" required>
+                    <input type="submit" value="Enviar">
+             </form>
+              
+             <p>Se você clicar em Enviar, sem preencher o campo texto, um mensagem de alerta ocorrerá.</p>
+             <!-- ieie.jpg?pri_nome=valor -->
+
+             <script>
+                // ou object.addEventListener("invalid", myScript);
+                document.getElementById('meuInput').oninvalid = function() { minhaF() }
+                
+                function minhaF() {
+                  alert('Você deve preencher o formulário!')
+                }
+             </script>
+    </body>
+</html>

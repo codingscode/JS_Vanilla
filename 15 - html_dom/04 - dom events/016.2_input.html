@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>input</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- input 
+             
+
+             -->
+             <p>Este exemplo demonstra como dinamicamente atualizar um valo slider com oninput.</p>
+
+             <input type="range" oninput="minhaF(this.value)">                             
+             <p id="demo"></p>
+             
+             <script>
+                    function minhaF(valor) {
+                        document.getElementById('demo').innerHTML = valor
+                    }
+             </script>
+             
+    </body>
+</html>

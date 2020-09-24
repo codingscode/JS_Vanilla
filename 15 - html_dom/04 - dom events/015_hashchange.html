@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hashchange</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body onhashchange="minhaF()">
+             <!-- hashchange 
+            The onhashchange event occurs when there has been changes to the anchor part (begins with a '#' symbol) of the current URL.
+            An example of what an anchor part actually is: Assume that the current URL is
+            http://www.example.com/test.htm#part2 - The anchor part of this URL would be #part2.
+             -->
+             <p>Clique no botão para alterar a parte ancora da url atual para #part5</p>
+             <button onclick="alterarParte()">Testar</button>
+             <p id="demo"></p>
+             
+             <script>
+                // Using the location.hash property to change the anchor part
+                function alterarParte() {
+                    location.hash = 'part5'
+                    console.log(location)
+                    var x = location.hash
+                    document.getElementById('demo').innerHTML = `A parte ancora agora é: ${x}`
+                }
+                
+                // Alert some text if there has been changes to the anchor part
+                function minhaF() {
+                    alert('A parte ancora mudou!')
+                }
+             </script>
+             
+    </body>
+</html>
