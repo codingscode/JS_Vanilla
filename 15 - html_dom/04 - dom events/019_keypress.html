@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keypress</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- keypress 
+            The onkeypress event occurs when the user presses a key (on the keyboard).
+            Tip: The order of events related to the onkeypress event: onkeydown, onkeypress, onkeyup
+            Note: The onkeypress event is not fired for all keys (e.g. ALT, CTRL, SHIFT, ESC) in all browsers. To detect only 
+            whether the user has pressed a key, use the onkeydown event instead, because it works for all keys.
+            -->
+            <p>Uma função é disparada quando o usuário está pressionando uma tecla no campo input.</p>
+
+            <input type="text" onkeypress="minhaF()">
+            
+            <script>
+                function minhaF() {
+                    console.log('Você pressionou uma tecla dentro do campo input')
+                }
+            </script>
+                         
+    </body>
+</html>

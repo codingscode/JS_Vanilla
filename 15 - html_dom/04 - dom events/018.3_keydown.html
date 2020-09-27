@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keydown</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- keydown 
+             
+            -->
+            
+            <p>Este exemplo usa o método addEventListener() para anexar um evento "keydown" a um elemento input.</p>
+            <p>Pressione uma tecla dentro do campo de texto para setar uma cor de fundo verde.</p>
+
+            <input type="text" id="demo">
+
+            <script>
+                document.getElementById('demo').addEventListener('keydown', minhaF)
+
+                function minhaF() {
+                    document.getElementById('demo').style.backgroundColor = 'lightgreen'
+                }
+            </script>
+                         
+    </body>
+</html>

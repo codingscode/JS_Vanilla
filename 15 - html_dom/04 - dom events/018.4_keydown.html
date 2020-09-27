@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keydown</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- keydown 
+             
+            -->
+            
+            <p>Pressione e segure uma tecla dento do campo de texto para setar uma cor de fundo verde. Solte a tecla para setar uma cor de fundo laranja.</p>
+            <input type="text" id="demo" onkeydown="funcaoPressionar()" onkeyup="funcaoSoltar()">
+            
+            <script>
+                function funcaoPressionar() {
+                    document.getElementById('demo').style.backgroundColor = 'lightgreen'
+                }
+                
+                function funcaoSoltar() {
+                    document.getElementById('demo').style.backgroundColor = 'orange'
+                }
+            </script>
+                         
+    </body>
+</html>
