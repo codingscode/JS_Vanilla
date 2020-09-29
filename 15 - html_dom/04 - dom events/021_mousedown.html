@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mousedown</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- mousedown 
+            The onmousedown event occurs when a user presses a mouse button over an element.
+            Tip: The order of events related to the onmousedown event (for the left/middle mouse button): 
+                  onmousedown, onmouseup, onclick, 
+            The order of events related to the onmousedown event (for the right mouse button):
+            onmousedown, onmouseup, oncontextmenu,  -->
+            <p id="meuP" onmousedown="mousePressionado()" onmouseup="mouseSolto()">
+                Clique no Texto ! a função mousePressionado() é disparada quando o botão mouse é pressionado sobre este paragrafo,
+                e seta a cor do texto para verde. A função mouseSolto() é disparada quando o mouse é solto, e seta a cor de laranja.
+            </p>
+
+            <script>
+                function mousePressionado() {
+                    document.getElementById('meuP').style.color = 'lightgreen'
+                }
+
+                function mouseSolto() {
+                    document.getElementById('meuP').style.color = 'orange'
+                }
+            </script>
+                         
+    </body>
+</html>

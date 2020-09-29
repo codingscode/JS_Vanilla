@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keyup</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- keyup 
+            
+            -->
+            <p>Pressione e segure uma tecla dentro do campo de texto para setar uma cor de fundo verde. Solte a tecla para setar 
+                uma cor de fundo laranja.</p>
+
+            <input type="text" id="demo" onkeydown="funcaoTeclaPressionada()" onkeyup="funcaoTeclaSolta()">
+            
+            <script>
+                function funcaoTeclaPressionada() {
+                    document.getElementById('demo').style.backgroundColor = 'lightgreen'
+                }
+                
+                function funcaoTeclaSolta() {
+                    document.getElementById('demo').style.backgroundColor = 'orange'
+                }
+            </script>
+                         
+    </body>
+</html>

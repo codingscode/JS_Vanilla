@@ -11,14 +11,16 @@
 
     <body >
              <!-- keyup 
-            The onkeyup event occurs when the user releases a key (on the keyboard).
-            Tip: The order of events related to the onkeyup event: onkeydown, onkeypress, onkeyup, -->
-            <p>Este exemplo demonstra como atribuir um evento "onkeyup" a um elemento input.</p>
-            <p>Uma função é disparada quando o usuário solta uma tecla no campo input. A função transforma o caractere
-                para maiusculo.</p>
-            Digite seu nome: <input type="text" id="pri_nome" onkeyup="minhaF()">
+            
+            -->
+            <p>Este exemplo usa o HTML DOM para atribuir um evento "onkeyup" a um elemento input.</p>
+            <p>Pressione uma tecla dentro do campo de texto e solte para setar o texto para maiusculo.</p>
+            
+            Digite seu nome: <input type="text" id="pri_nome">
             
             <script>
+                document.getElementById('pri_nome').onkeyup = function() { minhaF() }
+                
                 function minhaF() {
                     var elemento = document.getElementById('pri_nome')
                     elemento.value = elemento.value.toUpperCase()

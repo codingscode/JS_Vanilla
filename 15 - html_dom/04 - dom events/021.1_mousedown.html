@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mousedown</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- mousedown 
+            
+             -->
+             <p>Este exemplo demonstra como atribuir um evento "onmousedown" e "onmouseup" a um elemento p.</p>
+
+             <p id="demo" onmousedown="mousePressionado()" onmouseup="mouseSolto()">Clique me.</p>
+             
+             <script>
+                function mousePressionado() {
+                    document.getElementById('demo').innerHTML = 'O botão mouse está pressionado.'
+                }
+                
+                function mouseSolto() {
+                    document.getElementById('demo').innerHTML = 'Você soltou o botão mouse.'
+                }
+             </script>
+                         
+    </body>
+</html>
