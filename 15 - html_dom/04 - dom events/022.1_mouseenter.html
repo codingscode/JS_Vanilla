@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseenter</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- mouseenter 
+            
+             -->
+             <p>Este exemplo demonstra como atribuir um evento "onmouseenter" e "onmouseleave" a um elemento h1.</p>
+
+             <h1 id="demo" onmouseenter="mouseSobre()" onmouseleave="mouseSaiu()">Mouse sobre mim</h1>
+             
+             <script>
+                function mouseSobre() {
+                    document.getElementById('demo').style.color = 'lightgreen'
+                }
+                
+                function mouseSaiu() {
+                    document.getElementById('demo').style.color = 'black'
+                }
+             </script>
+                         
+    </body>
+</html>

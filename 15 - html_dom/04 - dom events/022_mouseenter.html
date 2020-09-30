@@ -11,9 +11,29 @@
 
     <body >
              <!-- mouseenter 
-            
+            The onmouseenter event occurs when the mouse pointer is moved onto an element.
+            Tip: This event is often used together with the onmouseleave event, which occurs when the mouse pointer is moved out of 
+            an element.
+            Tip: The onmouseenter event is similar to the onmouseover event. The only difference is that the onmouseenter event 
+            does not bubble (does not propagate up the document hierarchy). See "More Examples" at the bottom of this page to 
+            better understand the differences.
              -->
+             <img onmouseenter="imagemGrande(this)" onmouseleave="imagemNormal(this)" border="0" src="./smiley.gif" alt="Smiley" width="32" height="32">
 
+             <p>A função imagemGrande() é disparada quando o usuário move o ponteiro do mouse sobre a imagem.</p>
+             <p>A função imagemNormal() é disparada quando o ponteiro do mouse saiu da imagem.</p>
+             
+             <script>
+                function imagemGrande(elemento) {
+                    elemento.style.height = '64px'
+                    elemento.style.width = '64px'
+                }
+                
+                function imagemNormal(elemento) {
+                    elemento.style.height = '32px'
+                    elemento.style.width = '32px'
+                }
+             </script>
                          
     </body>
 </html>
