@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>paste</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- paste 
+            
+             -->
+                                          
+             <p>Este exemplo usa o HTML DOM para atribuir um evento "onpaste" a um elemento input.</p>
+
+             <input type="text" id="meuinput" value="Tente colar algo aqui" size="40">
+             <p id="demo"></p>
+                             
+             <script>
+                // ou document.getElementById("myInput").addEventListener("paste", myFunction);
+                document.getElementById('meuinput').onpaste = function() { minhaF() }
+                                
+                function minhaF() {
+                    document.getElementById('demo').innerHTML = 'Você colou texto!'
+                }
+             </script>
+    </body>
+</html>

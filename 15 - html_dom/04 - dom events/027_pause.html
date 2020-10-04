@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pause</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- pause 
+            
+             -->
+                                          
+             <p>Este exemplo demonstra como atribuir um evento "onpause" a um elemento video.</p>
+
+             <p>Reproduza e pause o video.</p>
+             
+             <video width="320" height="240" controls onpause="minhaF()">
+                <source src="./movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Seu browser não suporta esta tag.
+             </video>
+             
+             <script>
+                function minhaF() {
+                   console.log('O video foi pausado')
+                }
+             </script>
+    </body>
+</html>
