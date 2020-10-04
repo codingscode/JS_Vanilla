@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseout</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 3px solid rgb(91, 233, 91);
+                background-color: aliceblue;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- mouseout 
+            The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children.
+            Tip: This event is often used together with the onmouseover event, which occurs when the pointer is moved onto an 
+            element, or onto one of its children.
+             -->
+             <img onmouseover="imagemGrande(this)" onmouseout="imagemNormal(this)" src="./smiley.gif" alt="Smiley" width="32" height="32">
+
+             <p>A função imagemGrande() é disparada quando o usuário move o ponteiro do mouse sobre a imagem.</p>
+             <p>A função imagemNormal() é disparada quando o ponteiro do mouse é tirado da imagem.</p>
+             
+             <script>
+                function imagemGrande(objeto) {
+                    objeto.style.height = '64px'
+                    objeto.style.width = '64px'
+                }
+                
+                function imagemNormal(objeto) {
+                    objeto.style.height = '32px'
+                    objeto.style.width = '32px'
+                }
+             </script>             
+                                      
+    </body>
+</html>

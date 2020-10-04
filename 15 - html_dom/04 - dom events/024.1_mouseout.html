@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseout</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 3px solid rgb(91, 233, 91);
+                background-color: aliceblue;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- mouseout 
+            
+             em js: object.onmouseout = function(){myScript}; ou object.addEventListener("mouseout", myScript);
+
+             -->
+             
+             <p>Este exemplo demonstra como atribuir um evento "onmouseover" e "onmouseout" a um elemento h1.</p>
+
+             <h1 id="demo" onmouseover="mouseSobre()" onmouseout="mouseFora()">Mouse sobre mim</h1>
+             
+             <script>
+                function mouseSobre() {
+                    document.getElementById('demo').style.color = 'lightgreen'
+                }
+                
+                function mouseFora() {
+                    document.getElementById('demo').style.color = 'orange'
+                }
+             </script>
+                                      
+    </body>
+</html>
