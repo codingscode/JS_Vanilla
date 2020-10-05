@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>playing</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- playing 
+            
+             -->
+                                          
+             <p>Este exemplo usa HTML DOM para atribuir um evento "onplaying" a um elemento video.</p>
+             <p>Reproduza, pause e então reproduza novamente.</p>
+             
+             <video controls id="meuVideo">
+                <source src="./coelho.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+             </video>
+             
+             <script>
+                // ou document.getElementById("myVideo").addEventListener("playing", myFunction);
+                document.getElementById('meuVideo').onplaying = function() { minhaF() }
+
+                function minhaF() {
+                    console.log('O video está reproduzindo agora')
+                }
+             </script>
+
+    </body>
+</html>

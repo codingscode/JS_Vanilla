@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>play</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- play 
+            The onplay event occurs when the audio/video has been started or is no longer paused.
+            Tip: The onpause event occurs when the audio/video has been paused.
+             -->
+                                          
+             <p>Este exemplo demonstra como atribuir um evento "onplay" a um elemento video.</p>
+             <p>Pressione play.</p>
+             
+             <video controls onplay="minhaF()">
+                <source src="./coelho.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+             </video>
+                          
+             <script>
+                function minhaF() {
+                    console.log('O video começo a reproduzir')
+                }
+             </script>
+
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>play</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- play 
+            
+             -->
+                                          
+             <p>Este exemplo usa o HTML DOM para atribuir um evento "onplay" a um elemento video.</p>
+             <p>Pressione play.</p>
+             
+             <video controls id="meuVideo">
+                <source src="./coelho.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+             </video>
+                          
+             <script>
+                // object.addEventListener("play", myScript);
+                document.getElementById('meuVideo').onplay = function() { minhaF() }
+
+                function minhaF() {
+                    console.log('O video começo a reproduzir')
+                }
+             </script>
+            
+    </body>
+</html>
