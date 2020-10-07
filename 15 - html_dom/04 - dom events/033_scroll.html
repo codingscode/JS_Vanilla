@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scroll</title>
+        <style>
+            div {
+                border: 1px solid black;
+                width: 200px;
+                height: 100px;
+                overflow: scroll;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- scroll 
+                The onscroll event occurs when an element's scrollbar is being scrolled.
+                Tip: use the CSS overflow style property to create a scrollbar for an element.
+             -->
+             <p>Experimente a barra de rolagem no div.</p>
+
+             <div onscroll="minhaF()">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illo amet explicabo autem molestias! Non blanditiis labore nisi delectus dignissimos eaque, libero placeat molestias minus itaque, repudiandae vitae sapiente quos.
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni explicabo id iure minima possimus! Autem nisi, delectus quisquam quos ut saepe libero, quia, ea consectetur optio tempora. Dolorum, excepturi non!
+            </div>
+             
+             <p>Rolou <span id="demo">0</span> vezes.</p>
+             
+             <script>
+                var x = 0
+
+                function minhaF() {
+                    document.getElementById('demo').innerHTML = x += 1
+                }
+             </script>                
+
+    </body>
+</html>

@@ -11,22 +11,26 @@
 
     <body >
              <!-- reset 
-                The onreset event occurs when a form is reset.
+                
              -->
                                           
-             <p>Quando você ressetar o formulário, uma função é disparada algum texto é mostrado no console.</p>
+             <p>Este exemplo usa o HTML DOM para atribuir um evento "onreset" a um elemento form.</p>
 
-             <form onreset="minhaf()">
-                Digite seu nome: <input type="text">
+             <p>Quando você ressetar o formulário, uma função é disparada que mostra algum texto.</p>
+             
+             <form id="meuForm">
+                Seu nome: <input type="text">
                 <input type="reset">
              </form>
-
+             
              <p id="demo"></p>
              
              <script>
-                function minhaf() {
+                // ou object.addEventListener("reset", myScript);
+                document.getElementById('meuForm').onreset = function() { minhaF() }
+                
+                function minhaF() {
                     document.getElementById('demo').innerHTML = 'O formulário foi ressetado'
-                    console.log('O formulário foi ressetado')
                 }
              </script>
 
