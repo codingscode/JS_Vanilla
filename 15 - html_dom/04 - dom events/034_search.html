@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>search</title>
+        <style>
+                
+
+        </style>
+    </head> 
+
+    <body style="height:1500px">
+             <!-- search 
+                The onsearch event occurs when a user presses the "ENTER" key or clicks the "x" button in an <input> element 
+                with type="search".
+             -->
+             <p>Escreva algo no campo de procura e pressione "ENTER".</p>
+
+             <input type="search" id="meuInput" onsearch="minhaF()">
+                          
+             <p id="demo"></p>
+             
+             <script>
+                    function minhaF() {
+                        var elemento = document.getElementById('meuInput')
+                        document.getElementById('demo').innerHTML = `Você está procurando por: ${elemento.value}`
+                    }
+             </script>
+                                  
+    </body>
+</html>

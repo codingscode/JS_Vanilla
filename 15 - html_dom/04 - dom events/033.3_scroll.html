@@ -5,15 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>scroll</title>
         <style>
-                .slideUp {
-                    animation-name: slideUp;
-                    -webkit-animation-name: slideUp;
+                .slideParaCima {
+                    animation-name: slideParaCima;
+                    -webkit-animation-name: slideParaCima;
                     animation-duration: 1s;
                     -webkit-animation-duration: 1s;
                     visibility: visible;
                 }
 
-                @keyframes slideUp {
+                @keyframes slideParaCima {
                     0% {
                         opacity: 0;
                         -webkit-transform: translateY(70%);
@@ -24,7 +24,7 @@
                     }
                 }
 
-                @-webkit-keyframes slideUp {
+                @-webkit-keyframes slideParaCima {
                     0% {
                         opacity: 0;
                         -webkit-transform: translateY(70%);
@@ -49,7 +49,9 @@
                 }
 
                 img {
-                    width:180px;height:100px;visibility:hidden;
+                    width:180px;
+                    height:100px;
+                    visibility:hidden;
                 }
 
                 hr {
@@ -63,24 +65,24 @@
              <!-- scroll 
                 
              -->
-             <p>Scroll down this page.</p>
-             <p>When you have scrolled 350px from the top, an image will slide in.</p>
+             <p>Role para baixo esta página.</p>
+             <p>Quando você rolar 350px do topo, uma imagem deslizará dentro.</p>
              
              <hr>
              <div class="col-1">
-               <img id="myImg" src="./ieie.jpg" width="304" height="228">
+               <img id="minhaImg" src="./ieie.jpg" width="304" height="228">
              </div> 
              
              <div class="col-2">
-               Just some text..
+                Apenas algum texto...
              </div>
              
              <script>
-                window.onscroll = function() { myFunction() };
+                window.onscroll = function() { minhaF() }
                 
-                function myFunction() {
+                function minhaF() {
                     if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-                        document.getElementById("myImg").className = "slideUp";
+                        document.getElementById('minhaImg').className = 'slideParaCima'
                     }
                 }
              </script>
