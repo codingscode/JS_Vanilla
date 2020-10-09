@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>volumechange</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- volumechange 
+            
+             -->
+             <p>Este exemplo usa o HTML DOM para atribuir um evento "onvolumechange" a um elemento video.</p>
+
+             <p>Tente alterar o volume no canto direito de baixo.</p>
+             
+             <video controls id="meuVideo">
+                <source src="./coelho.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+             </video>
+             
+             <script>
+                // ou object.addEventListener("volumechange", myScript)
+                document.getElementById('meuVideo').onvolumechange = function() { minhaF() }
+
+                function minhaF() {
+                    console.log('O volume alterou!')
+                }
+             </script>
+            
+    </body>
+</html>
