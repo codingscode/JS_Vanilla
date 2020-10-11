@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>charCode</title>
+        <style>
+           
+        </style>
+    </head> 
+
+    <body >
+             <!-- charCode 
+            
+             -->
+             
+              <p>Pressione uma tecla no teclado no campo input para acessar o numero e caractere da tecla pressionada.</p>
+
+              <input type="text" size="40" onkeypress="minhaF(event)">
+
+              <p id="demo"></p>
+
+              <script>
+                  function minhaF(evento) {
+                    var numero = evento.charCode || evento.keyCode  // Get the Unicode value
+                    var caractere = String.fromCharCode(numero)       // Convert the value into a character
+                    document.getElementById('demo').innerHTML = `Numero:  ${numero}  = Caractere:  ${caractere}`
+                  }
+              </script>
+                            
+    </body>
+</html>
