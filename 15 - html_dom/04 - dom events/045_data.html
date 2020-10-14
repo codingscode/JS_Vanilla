@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>data</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- data 
+                The data property returns the character that was inserted with the event.
+                Note: This property is read-only.
+             -->
+             <h1>Propriedade InputEvent data</h1>
+             <p>A propriedade data retorna o caractere que foi inserido com o evento.</p>
+             <p>Escreva algo no campo de texto para disparar uma função.</p>
+             
+             <input type="text" id="meuInput" oninput="minhaF(event)">
+             
+             <p>O caractere inserido: <span id="demo"></span></p>
+             
+             <script>
+                function minhaF(evento) {
+                    document.getElementById('demo').innerHTML = evento.data
+                }
+             </script>
+                                                                              
+    </body>
+</html>

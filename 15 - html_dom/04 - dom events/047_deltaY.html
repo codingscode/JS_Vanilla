@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>deltaY</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body onwheel="myFunction(event)">
+             <!-- deltaY 
+                The deltaY property returns a positive value when scrolling down, and a negative value when scrolling up, 
+                otherwise 0.
+             -->
+             <h1>WheelEvent deltaY Property</h1>
+
+             <p>Scroll this page to see the value of the deltaY property.</p>
+             
+             <p id="demo"></p>
+             
+             <script>
+                function myFunction(event) {
+                    var y = event.deltaY;
+                    document.getElementById("demo").innerHTML = y;
+                }
+             </script>
+                                                                              
+    </body>
+</html>

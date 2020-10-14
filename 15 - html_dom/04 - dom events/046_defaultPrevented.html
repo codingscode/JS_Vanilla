@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>defaultPrevented</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- defaultPrevented 
+                The defaultPrevented event property checks whether the preventDefault() method was called for the event.
+             -->
+             <a id="minhaAnchor" href="https://google.com/">Go to google.com</a>
+
+             <p>O método preventDefault() prevenirá o link acima de seguir a URL.</p>
+             <p>Clique no link e verifique se a default action está prevenida.</p>
+             
+             <script>
+                document.getElementById('minhaAnchor').addEventListener('click', function(evento){
+                    evento.preventDefault()
+                    console.log(`O preventDefault() foi chamado: ${evento.defaultPrevented}`)
+                })
+             </script>
+                                                                              
+    </body>
+</html>

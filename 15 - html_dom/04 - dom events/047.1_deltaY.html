@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>deltaY</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- deltaY 
+                
+             -->
+             <h1>Propriedade WheelEvent deltaY</h1>
+             <p>Redimensione o elemento div rolando (barra de rolagem) dentro disso:</p>
+             
+             <div onwheel="minhaF(event)" style="width:100px;height:100px;background-color:lightgreen"></div>
+             
+             <script>
+                function minhaF(evento) {
+                    var vertical = evento.deltaY
+                    var tamanhoAtual = evento.target.style.width
+                    if (vertical > 0) {
+                        novoTamanho = parseInt(tamanhoAtual) + 10
+                    }
+                    else {
+                        novoTamanho = parseInt(tamanhoAtual) - 10
+                    }
+                    evento.target.style.width = `${novoTamanho}px`
+                    evento.target.style.height = `${novoTamanho}px`
+                }
+             </script>
+                       
+                                                                              
+    </body>
+</html>

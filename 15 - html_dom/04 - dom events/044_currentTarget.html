@@ -9,11 +9,20 @@
         </style>
     </head> 
 
-    <body >
+    <body onclick="minhaF(event)">
              <!-- currentTarget 
-                
+                The currentTarget event property returns the element whose event listeners triggered the event.
+                This is particularly useful during capturing and bubbling.
+                The currentTarget property always refers to the element whose event listener triggered the event, opposed to the target property, which returns the element that triggered the event.
              -->
+             <p>Clique em um paragrafo. Uma caixa de alerta alertará o elemento cujo eventlistener disparou o elemento.</p>
+             <p><strong>Note:</strong> A propriedade currentTarget não necessariamente retorna o elemento que foi clicado, mas o elemento cujo eventlistener disparou o evento.</p>
              
+             <script>
+                function minhaF(evento) { 
+                    console.log(evento.currentTarget.nodeName)
+                }
+             </script>
                                                                               
     </body>
 </html>
