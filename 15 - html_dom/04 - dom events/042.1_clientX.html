@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientX e clientY</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- clientX e clientY 
+                
+             -->
+             <div onmousemove="mostrarCoordenadas(event)" onmouseout="limparCoordenadas()"></div>
+             <p>Coloque o mouse sobre o retangulo acima para acessar as coordenadas horizontal e vertical do ponteiro de seu mouse.</p>
+             
+             <p id="demo"></p>
+             
+             <script>
+                function mostrarCoordenadas(evento) {
+                    var horizontal = evento.clientX
+                    var vertical = evento.clientY
+                    var coordenadas = `coordenada X: ${horizontal}, coordenada Y: ${vertical}`
+                    document.getElementById('demo').innerHTML = coordenadas
+                }
+                
+                function limparCoordenadas() {
+                    document.getElementById('demo').innerHTML = ''
+                }
+             </script>
+                                                                    
+    </body>
+</html>

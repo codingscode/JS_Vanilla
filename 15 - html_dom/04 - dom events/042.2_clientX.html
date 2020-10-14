@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientX e clientY</title>
+        <style>
+            div {
+                width: 500px;
+                height: 300px;
+                border: 1px solid black;
+                text-align: center;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- clientX e clientY 
+                
+             -->
+             <p>Clique no elemento div abaixo para acessar as coordenadas x (horizontal) e y (vertical) do ponteiro do mouse, quando isso é for clicado.</p>
+             <div onclick="mostrarCoordenadas(event)"><p id="demo"></p></div>
+             
+             <p><strong>Dica:</strong> Experimente clicar em diferentes locais no div.</p>
+             
+             <script>
+                function mostrarCoordenadas(evento) {
+                    var horizontal = evento.clientX
+                    var tela_horizontal = evento.screenX
+                    var vertical = evento.clientY
+                    var tela_vertical = evento.screenY
+                    var coords1 = `client - X: ${horizontal}, coordenadas Y : ${vertical}`
+                    var coords2 = `tela - X: ${tela_horizontal}, coordenadas Y: ${tela_vertical}`
+                    document.getElementById('demo').innerHTML = `${coords1} <br> ${coords2}`
+                }
+             </script>
+                                                                              
+    </body>
+</html>
