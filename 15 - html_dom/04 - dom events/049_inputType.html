@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>inputType</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- inputType 
+                The inputType property returns the type of change that was done by the event.
+            Possible values:
+            "insertText", "insertReplacementText", "insertLineBreak", "insertParagraph", "insertOrderedList", "insertUnorderedList", 
+            "insertHorizontalRule", "insertFromYank", "insertFromDrop", "insertFromPaste", "insertTranspose", "insertCompositionText", 
+            "insertFromComposition", "insertLink", "deleteByComposition", "deleteCompositionText", "deleteWordBackward", "deleteWordForward", 
+            "deleteSoftLineBackward", "deleteSoftLineForward", "deleteEntireSoftLine", "deleteHardLineBackward", "deleteHardLineForward", 
+            "deleteByDrag", "deleteByCut", "deleteByContent", "deleteContentBackward", "deleteContentForward", "historyUndo", "historyRedo", 
+            "formatBold", "formatItalic", "formatUnderline", "formatStrikethrough", "formatSuperscript", "formatSubscript", 
+            "formatJustifyFull", "formatJustifyCenter", "formatJustifyRight", "formatJustifyLeft"
+            "formatIndent", "formatOutdent", "formatRemove", "formatSetBlockTextDirection", "formatSetInlineTextDirection", "formatBackColor", 
+            "formatFontColor", "formatFontName"
+-->
+            <h1>InputEvent inputType Property</h1>
+            <p>The inputType property returns the type of change that was done with the event.</p>
+            <p>Write something, or delete something, in the text field to trigger a function.</p>
+            <input type="text" id="myInput" oninput="myFunction(event)">
+            <p>The type of action:<span id="demo"></span></p>
+            
+            <script>
+                function myFunction(event) {
+                    document.getElementById("demo").innerHTML = event.inputType;
+                }
+            </script>
+                                                                              
+    </body>
+</html>
