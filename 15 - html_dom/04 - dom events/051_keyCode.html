@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keyCode</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- keyCode 
+                The keyCode property returns the Unicode character code of the key that triggered the onkeypress event, or the 
+                    Unicode key code of the key that triggered the onkeydown or onkeyup event.
+                The difference between the two code types:
+                Character codes - A number which represents an ASCII character
+                Key codes - A number which represents an actual key on the keyboard
+                These types do not always mean the same thing; for example, a lower case "w" and an upper case "W" have the same 
+                    keyboard code, because the key that is pressed on the keyboard is the same (just "W" = the number "87"), but a 
+                    different character code because the resulting character is different (either "w" or "W", which is "119" or "87") 
+                    - See "More Examples" below to better understand it.
+                Tip: To find out if the user is pressing a printable key (e.g. "a" or "5"), it is recommended to use this property on the 
+                     onkeypress event. To find out if the user is pressing a function key (e.g. "F1", "CAPS LOCK" or "Home") use 
+                     the onkeydown or onkeyup event.
+                Note: In Firefox, the keyCode property does not work on the onkeypress event (will only return 0). For a 
+                    cross-browser solution, use the which property together with keyCode, e.g:
+                var x = event.which || event.keyCode;  // Use either which or keyCode, depending on browser support
+                Tip: For a list of all Unicode characters, please study our Complete Unicode Reference.
+                Tip: If you want to convert the returned Unicode value into a character, use the fromCharCode() method.
+                Note: This property is read-only.
+                Note: Both the keyCode and which property is provided for compatibility only. The latest version of the DOM Events 
+                   Specification recommend using the key property instead (if available).
+                Tip: If you want to find out whether the "ALT", "CTRL", "META" or "SHIFT" key was pressed when a key event occured, 
+                   use the altKey, ctrlKey, metaKey or shiftKey property.
+             -->
+             <p>Pressione uma tecla no tecla no campo input para acessar Unicode character code da tecla pressionada.</p>
+             <input type="text" size="40" onkeypress="minhaF(event)">
+             <p id="demo"></p>
+             
+             <script>
+                /* In this example, we use a cross-browser solution, because the keyCode property does not work on the onkeypress 
+                event in Firefox. However, the which property does.
+                Explanation of the first line in the function below: if the browser supports event.which, then use event.which, 
+                otherwise use event.keyCode */
+                
+                function minhaF(evento) {
+                    var unicode_caractere = evento.which || evento.keyCode
+                    document.getElementById('demo').innerHTML = `O valor Unicode é : ${unicode_caractere}`
+                }
+             </script>
+                                                                              
+    </body>
+</html>

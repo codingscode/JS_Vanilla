@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>elapsedTime</title>
         <style>
-            #myDIV {
+            #meuDIV {
                 margin: 25px;
                 width: 550px;
                 height: 100px;
@@ -37,28 +37,25 @@
                 Note: For the animationstart event, this property always returns "0".
                 This property is read-only.
              -->
-             <p>This example uses the addEventListener() method to attach an "animationstart" and "animationiteration" event to a DIV element.</p>
-
-             <p>When the animation is repeated, the background color of DIV will be light blue.</p>
+             <p>Este exemplo usa o método addEventListener() para anexar um evento "animationstart" e "animationiteration" a um 
+                 elemento div.</p>
+             <p>Quando a animação é repetida, a cor de fundo do div será azul.</p>
+             <p>Neste exemplo, a propriedade elapsedTime retorna o numero de segundos que a <b> animação repetida</b> tem estado executando:</p>
              
-             <p>In this example, the elapsedTime property returns the number of seconds the <b>repeated animation</b> has been running:</p>
-             
-             <p><strong>Note:</strong> The elapsedTime property is not supported in IE9 and earlier versions.</p>
-             
-             <div id="myDIV">The animation has started</div>
+             <div id="meuDIV">A animação iniciou</div>
              
              <script>
-                var x = document.getElementById("myDIV");
+                var elemento = document.getElementById('meuDIV')
                 
                 // Code for Chrome, Safari and Opera
-                x.addEventListener("webkitAnimationIteration", myRepeatFunction);
+                elemento.addEventListener('webkitAnimationIteration', minhaFuncRepetir)
                 
                 // Standard syntax
-                x.addEventListener("animationiteration", myRepeatFunction);
+                elemento.addEventListener('animationiteration', minhaFuncRepetir)
                 
-                function myRepeatFunction(event) {
-                    this.style.backgroundColor = "lightblue";
-                    this.innerHTML = "Elapsed time: " + event.elapsedTime + " seconds";
+                function minhaFuncRepetir(evento) {
+                    this.style.backgroundColor = 'lightblue'
+                    this.innerHTML = `Tempo decorrido: ${evento.elapsedTime} segundos`
                 }
              </script>
                                                                               
