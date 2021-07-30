@@ -34,6 +34,42 @@
              <p>O evento onmouseout ocorre quando o ponteiro do mouse é tirado do elemento div, e quando isso deixa seus elementos 
                  descendentes (p e span).</p>
              
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseout</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+                padding: 30px;
+                text-align: center;
+                background-color: rgb(155, 236, 152);
+            }
+
+            p {
+                background-color: white;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- mouseout 
+                         
+             -->
+             
+             <h3>Este exemplo demonstra a diferença entre onmousemove, onmouseleave e onmouseout.</h3>
+
+             <p>O evento onmousemove ocorre cada vez que o ponteiro do mouse é movido sobre o elemento div.</p>
+             <p>O evento mouseleave somente ocorre quando o ponteiro do mouse é tirado do elemento div.</p>
+             <p>O evento onmouseout ocorre quando o ponteiro do mouse é tirado do elemento div, e quando isso deixa seus elementos 
+                 descendentes (p e span).</p>
+             
              <div onmousemove="minhaFMover()">
                <p>onmousemove: <br> <span id="demo">Mouse sobre e deixe me!</span></p>
              </div>

@@ -10,6 +10,18 @@ start - Optional. Default 0. At which position in the array to start the search
 
 
 
+const frutas = ['goiaba', 'manga', 'melao', 'uva', 'laranja', 'jaca', 'ta// includes() - determines whether an array contains a specified element.
+/* 
+This method returns true if the array contains the element, and false if not.
+
+Note: The includes() method is case sensitive.
+array.includes(element, start)
+element	- Required. The element to search for
+start - Optional. Default 0. At which position in the array to start the search
+*/
+
+
+
 const frutas = ['goiaba', 'manga', 'melao', 'uva', 'laranja', 'jaca', 'tanja']
 
 const palavra = 'caracol'

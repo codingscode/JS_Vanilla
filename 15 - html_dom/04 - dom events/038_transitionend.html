@@ -31,6 +31,39 @@
              <div id="meuDIV"></div>
              
              <script>
+        <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>transitionend</title>
+        <style>
+            #meuDIV {
+                width: 100px;
+                height: 100px;
+                padding: 6px;
+                background: lightgreen;
+                -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+                transition: width 2s;
+            }
+
+            #meuDIV:hover {
+                width: 400px;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- transitionend 
+                The transitionend event occurs when a CSS transition has completed.
+                Note: If the transition is removed before completion, e.g. if the CSS transition-property property is removed, the
+                 transitionend event will not fire.
+             -->
+             <p>Passe o cursor sobre o elemento abaixo, e espere pelo efeito transition terminar.</p>
+
+             <div id="meuDIV"></div>
+             
+             <script>
                 // Code for Safari 3.1 to 6.0
                 document.getElementById('meuDIV').addEventListener('webkitTransitionEnd', minhaF)
                 

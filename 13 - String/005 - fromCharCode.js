@@ -14,6 +14,22 @@ var resultado_04 = String.fromCharCode(65)
 var resultado_05 = String.fromCharCode(70)
 var resultado_06 = String.fromCharCode(71)
 var resultado_07 = String.fromCharCode(80)
+var resultado_08 = String.from/*
+String.fromCharCode(n1, n2, ..., nX)
+
+The fromCharCode() method converts Unicode values into characters.
+Note: This is a static method of the String object, and the syntax is always String.fromCharCode().
+Tip: For a list of all Unicode values, please study our Complete Unicode Reference.
+
+*/
+
+var resultado_01 = String.fromCharCode(2)
+var resultado_02 = String.fromCharCode(3)
+var resultado_03 = String.fromCharCode(64)
+var resultado_04 = String.fromCharCode(65)
+var resultado_05 = String.fromCharCode(70)
+var resultado_06 = String.fromCharCode(71)
+var resultado_07 = String.fromCharCode(80)
 var resultado_08 = String.fromCharCode(84)
 var resultado_09 = String.fromCharCode(95)
 var resultado_10 = String.fromCharCode(96)

@@ -12,6 +12,20 @@ Note: Prototype is a global object constructor which is available for all JavaSc
 
 Mais:
 Métodos
+Boolean.prototype.t// booleanprototypeconstructor -   Boolean.prototype.nome = valor
+/*
+The prototype constructor allows you to add new properties and methods to JavaScript booleans.
+
+When constructing a property, ALL booleans will be given the property, and its value, as default.
+
+When constructing a method, ALL booleans will have this method available.
+
+Note: Boolean.prototype does not refer to a single boolean, but to the Boolean() object itself.
+
+Note: Prototype is a global object constructor which is available for all JavaScript objects.
+
+Mais:
+Métodos
 Boolean.prototype.toSource() 
 Retorna a string contendo o codigo do objeto Boolean ;  pode-se usar esta string para criar um objeto equivalente. 
 Sobreescreve o método Object.prototype.toSource().

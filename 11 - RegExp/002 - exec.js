@@ -2,6 +2,10 @@
 /*
 The exec() method tests for a match in a string.
 
+This method returns the matched text if it finds a match, otherwise it returns nu// RegExpObject.exec(string)
+/*
+The exec() method tests for a match in a string.
+
 This method returns the matched text if it finds a match, otherwise it returns null.
 
 

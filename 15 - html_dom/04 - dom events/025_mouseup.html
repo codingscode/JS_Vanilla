@@ -27,6 +27,35 @@
                     function mouseClicado() {
                         document.getElementById('meuP').style.color = 'orange'
                     }
+              <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseup</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- mouseup 
+                The onmouseup event occurs when a user releases a mouse button over an element.
+                Tip: The order of events related to the onmouseup event (for the left/middle mouse button):
+                        onmousedown, onmouseup, onclick, 
+                The order of events related to the onmouseup event (for the right mouse button):
+                onmousedown, onmouseup, oncontextmenu       
+             -->
+                <p id="meuP" onmousedown="mouseClicado()" onmouseup="mouseSolto()">
+                    Clique no texto! A função mouseClicado() é disparada quando o botão do mouse é pressionado sobre este 
+                    parágrafo, e seta cor de texto para laranja. A função mouseSolto() function é disparada quando o botão do mouse
+                    é solto, e seta cor do texto para verde.
+                </p>
+                
+                <script>
+                    function mouseClicado() {
+                        document.getElementById('meuP').style.color = 'orange'
+                    }
                     
                     function mouseSolto() {
                         document.getElementById('meuP').style.color = 'lightgreen'

@@ -4,6 +4,12 @@
 Function arguments:
           currentValue - Required. The value of the current element
           index	- Optional. The array index of the current element
+          arr -	Optional. The arra// every(function) - verifica se todos os elementos de um array satisfazem a condição de uma função
+
+/* function(currentValue, index, arr) -> Required. A function to be run for each element in the array.
+Function arguments:
+          currentValue - Required. The value of the current element
+          index	- Optional. The array index of the current element
           arr -	Optional. The array object the current element belongs to
 
 */

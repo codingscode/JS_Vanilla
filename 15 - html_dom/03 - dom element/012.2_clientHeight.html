@@ -41,6 +41,49 @@
             <button onclick="minhaF()">Testar</button>
             
             <p>Note como a barra de rolagem no 1º div "rouba" alguns do padding direito e fundo do div, o que resulta num valor
+                de retorno mais baixo p<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientHeight</title>
+
+        <style>
+            #meuDiv {
+                height: 250px;
+                width: 400px;
+                padding: 10px;
+                margin: 15px;
+                border: 5px solid rgb(12, 133, 42);
+                background-color: rgb(170, 247, 170);
+                overflow: auto;
+            }
+
+            #meuDiv2 {
+                height: 250px;
+                width: 400px;
+                padding: 10px;
+                margin: 15px;
+                border: 5px solid rgb(168, 110, 2);
+                background-color: rgb(253, 201, 105);
+            }
+
+            #conteudo {
+                height: 800px;
+                width: 2000px;
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+
+    <body >
+       
+            <p>Neste exemplo, o elemento descendente (#conteudo) dentro do 1º div é maior que o height e width do div 
+                (o descendente é 800x2500 enquanto seu ascendente é 250x400), então nós adicionamos uma barra de rolagem.</p>
+            <p>Clique no botão para acessar o clientHeight, offsetHeight, clientWidth e offsetWidth do div.</p>
+            <button onclick="minhaF()">Testar</button>
+            
+            <p>Note como a barra de rolagem no 1º div "rouba" alguns do padding direito e fundo do div, o que resulta num valor
                 de retorno mais baixo para clientWidth e clientWidth nesta div, comparado a outros. o offfsetHeight e 
                 offsetWidth não é afetado por isso .</p>
         

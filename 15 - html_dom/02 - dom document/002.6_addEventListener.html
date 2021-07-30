@@ -22,6 +22,30 @@
         <script>
             document.addEventListener('mousemove', minhaFuncao)
 
+            functio<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+
+        <style>
+            
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Este document possui um onmousemove event handler que mostra um número randomico cada vez que você move seu mouse neste document.</p>
+        <p>Clique no botao para remover o event handler.</p>
+
+        <button onclick="removerManipulador()">Testar</button>
+
+        <p id="demo">Aparece aqui: </p>
+
+        <script>
+            document.addEventListener('mousemove', minhaFuncao)
+
             function minhaFuncao() {
                 document.getElementById('demo').innerHTML = Math.random()
             }

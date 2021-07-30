@@ -22,6 +22,30 @@ For more information about classes, read our JavaScript Classes Tutorial.
 
 class Produto {
     constructor(tipo) {
+   /*
+class nome_da_classe {
+  // corpo da classe...
+}
+
+
+A class is a type of function, but instead of using the keyword function to initiate it, we use the 
+keyword class, and the properties are assigned inside a constructor() method.
+
+The constructor() method is called each time the class object is initialized.
+
+Note: Unlike functions, and other JavaScript declarations, class declarations are not hoisted (you must declare
+a class before you can use it).
+
+Note: The syntax in classes must be written in "strict mode".
+
+For more information about classes, read our JavaScript Classes Tutorial.
+
+
+
+*/
+
+class Produto {
+    constructor(tipo) {
         this.tipoproduto = tipo
     }
 }

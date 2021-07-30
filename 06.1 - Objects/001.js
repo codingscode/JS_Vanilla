@@ -13,6 +13,21 @@ let usuario2 = {}   // forma 2  "object literal" syntax
 var pessoa1 = {nome: 'Simon', idade: 18, estudante: true}
 
 console.log(pessoa1, `seu tipo é ${typeof pessoa1}`)
+console.log('----------// https://javascript.info/
+// https://javascript.info/object
+// https://javascript.info/types
+
+/* objetos 'chave: valor',   chave é string , e valor é qualquer coisa
+
+*/
+
+// formas de criar objeto
+let usuario1 = new Object()    // forma 1: "object constructor" syntax
+let usuario2 = {}   // forma 2  "object literal" syntax
+
+var pessoa1 = {nome: 'Simon', idade: 18, estudante: true}
+
+console.log(pessoa1, `seu tipo é ${typeof pessoa1}`)
 console.log('------------------------------')
 
 // acessando propriedade  -> nomeobjeto.nomepropriedade

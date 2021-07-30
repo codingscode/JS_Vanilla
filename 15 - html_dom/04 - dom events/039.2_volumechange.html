@@ -30,6 +30,38 @@
                     // Get the video element with id="meuVideo"
                     var elemento = document.getElementById('meuVideo')
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>volumechange</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- volumechange 
+            
+             -->
+        
+                <video id="meuVideo" width="320" height="240" controls>
+                    <source src="./coelho.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p>Altere o volume tanto clicando os botões quanto ajustando o volume no canto direito em baixo.</p>
+
+                <button onclick="setarMeioVolume()" type="button">Setar volume para 0.2</button>
+                <button onclick="setarVolumeTodo()" type="button">Setar volume para 1.0</button>
+
+                <p id="demo"></p>
+
+                <script>
+                    // Get the video element with id="meuVideo"
+                    var elemento = document.getElementById('meuVideo')
+
                     // Attach a 'volumechange' event to the video
                     elemento.addEventListener('volumechange', acessarVolume)
 

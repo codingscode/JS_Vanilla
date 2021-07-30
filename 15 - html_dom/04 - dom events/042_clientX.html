@@ -34,6 +34,42 @@
                     document.getElementById('demo').innerHTML = coordenadas
                 }
              </script>
+             <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clientX e clientY</title>
+        <style>
+            h2 {
+                border: 3px solid lightgreen;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- clientX  idem clientY
+                The clientX property returns the horizontal coordinate (according to the client area) of the mouse pointer when a 
+                    mouse event was triggered.
+                The client area is the current window.
+                Tip: To get the vertical coordinate (according to the client area) of the mouse pointer, use the clientY property.
+                Note: This property is read-only.
+             -->
+             <h2 onclick="mostrarCoordenadas(event)">Clique neste cabeçalho para acessar as coordenadas x (horizontal) e y 
+                (vertical) do ponteiro do mouse quando isso for clicado.</h2>
+
+             <p><strong>Dica:</strong> Experimente clicar locais diferentes no cabeçalho.</p>
+             
+             <p id="demo"></p>
+             
+             <script>
+                function mostrarCoordenadas(evento) {
+                    var horizontal = evento.clientX
+                    var vertical = evento.clientY
+                    var coordenadas = `coordenada X: ${horizontal}, coordenada Y: ${vertical}`
+                    document.getElementById('demo').innerHTML = coordenadas
+                }
+             </script>
                                                        
     </body>
 </html>

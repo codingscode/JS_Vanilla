@@ -71,6 +71,79 @@
             <a href="javascript:void(0)">Contato</a>
           </div>
           
+          <div class="co<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>classList</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-size: 28px;
+            }
+
+            .cabecalho {
+                background-color: #f1f1f1;
+                padding: 30px;
+                text-align: center;
+            }
+
+            #barra_navegacao {
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            #barra_navegacao a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            #barra_navegacao a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            #barra_navegacao a.ativo {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            .conteudo {
+                padding: 16px;
+            }
+
+            .fixo {
+                position: fixed;
+                top: 0;
+                width: 100%
+            }
+
+            .fixo + .conteudo {
+                padding-top: 60px;
+            }
+        </style>
+    </head>
+
+    <body onscroll="minhaF()">
+        
+          <div class="cabecalho">
+            <h2>Scroll Down</h2>
+            <p>Scroll down para ver o efeito fixo.</p>
+          </div>
+          
+          <div id="barra_navegacao">
+            <a class="ativo" href="javascript:void(0)">Início</a>
+            <a href="javascript:void(0)">Notícias</a>
+            <a href="javascript:void(0)">Contato</a>
+          </div>
+          
           <div class="conteudo">
             <h3>Exemplo de navageção fixa</h3>
             <p>A barra de navegação irá fixar ao topo quando você alcançar sua posição de rolamento.</p>

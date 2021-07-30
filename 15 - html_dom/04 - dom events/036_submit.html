@@ -29,6 +29,37 @@
                 }
                 // ... /ieie.jpg?pri_nome=valordigitado
              </script>
+                      <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>submit</title>
+        <style>
+                
+
+        </style>
+    </head> 
+
+    <body style="height:1500px">
+             <!-- submit 
+                The onseeked event occurs when the user is finished moving/skipping to a new position in the audio/video
+                Tip: The onseeked event is the opposite of the onseeking event.
+                Tip: Use the currentTime property of the Audio/Video Object to get the current playback position.
+             -->
+             <p>Quando você enviar o formulário, uma função é disparada que imprimi algum texto no console.</p>
+
+             <form action="./ieie.jpg" onsubmit="minhaF()">
+                Seu nome: <input type="text" name="pri_nome">
+                <input type="submit" value="Enviar">
+             </form>
+             
+             <script>
+                function minhaF() {
+                    console.log('O formulário foi enviado')
+                }
+                // ... /ieie.jpg?pri_nome=valordigitado
+             </script>
                                               
     </body>
 </html>

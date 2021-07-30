@@ -6,6 +6,14 @@ The LN2 property returns the natural logarithm of 2, approximately 0.693.
 */
 
 var logaritmo_natural_de2 = Math.LN2
+console.log(logaritmo_natural_de//  Math.LN2
+/*
+The LN2 property returns the natural logarithm of 2, approximately 0.693.
+
+
+*/
+
+var logaritmo_natural_de2 = Math.LN2
 console.log(logaritmo_natural_de2)
 console.log('------------------------')
 

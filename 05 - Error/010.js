@@ -4,6 +4,12 @@ let json = `{ "nome": "John", "idade": 30 }`
 // The "pseudocode" for the built-in Error class defined by JavaScript itself
 class Erro {
     constructor(mensagem) {
+      this.mensagem = me// https://javascript.info/custom-errors
+let json = `{ "nome": "John", "idade": 30 }`
+
+// The "pseudocode" for the built-in Error class defined by JavaScript itself
+class Erro {
+    constructor(mensagem) {
       this.mensagem = mensagem
       this.nome = "Erro" // (different names for different built-in error classes)
       //this.stack = <call stack/> // non-standard, but most environments support it

@@ -11,6 +11,19 @@ console.log('-------------------\n')
 
 var mensagem, x
 mensagem = ''
+x = 'xe//
+
+try {
+   console.log(sem_referencia)
+}
+catch (erro) {
+   console.log(erro.message)
+}
+
+console.log('-------------------\n')
+
+var mensagem, x
+mensagem = ''
 x = 'xexéba'
   
 try {

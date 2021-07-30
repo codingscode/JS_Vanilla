@@ -21,6 +21,29 @@ var numero3 = 3
 numero3 *= 2
 numero3 *= 4
 
+console.log('numero3//
+/*
+
+
+*/
+
+
+var numero1 = 8
+numero1 += 2
+numero1 += 2
+
+console.log('numero1 : ' + numero1)
+
+var numero2 = 20
+numero2 -= 1
+numero2 -= 1
+
+console.log('numero2 : ' + numero2)
+
+var numero3 = 3
+numero3 *= 2
+numero3 *= 4
+
 console.log('numero3 : ' + numero3)
 
 

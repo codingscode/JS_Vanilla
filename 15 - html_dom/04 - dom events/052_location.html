@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <p>Press any key on the keyboard in the input field to get the location of the key.</p>
+
+        <input type="text" size="40" onkeydown="myFunction(event)">
+
+        <p>Possible return values:</p>
+
+        <ul>
+            <li>0 represents a standard key (like "A")</li>
+            <li>1 represents a left key (like the left CTRL key)</li>
+            <li>2 represents a right key (like the right CTRL key)</li>
+            <li>3 represents a key on the numeric keypad (like the number "2" on the right keyboard side)</li>
+        </ul>
+
+        <p><strong>Note:</strong> The location property is not supported in Safari or IE 8 and earlier versions.</p>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction(event) {
+                var x = event.location;
+                document.getElementById("demo").innerHTML = "Key location: " + x;
+            }
+        </script>
+
+    </body>
+</html>
+
+
+
+

@@ -9,6 +9,17 @@ The default language depends on the locale setup on your computer.
 var uma_data = new Date()
 console.log(uma_data)
 console.log(typeof uma_data)
+console.log('-------------------')/*
+Date.toLocaleString(locales, options)        os 2 são opcionais
+
+The toLocaleString() method converts a Date object to a string, using locale settings.
+The default language depends on the locale setup on your computer.
+
+*/
+
+var uma_data = new Date()
+console.log(uma_data)
+console.log(typeof uma_data)
 console.log('-------------------')
 
 var n = uma_data.toLocaleString()

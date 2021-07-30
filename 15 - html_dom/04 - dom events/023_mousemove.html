@@ -32,6 +32,40 @@
                     var horizontal = evento.clientX
                     var vertical = evento.clientY
                     var coordenadas = `Coordenadas: ( ${horizontal} , ${vertical} )`
+                    document.getElementById('demo').innerHTM<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mousemove</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 3px solid rgb(91, 233, 91);
+                background-color: aliceblue;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- mousemove 
+            The onmousemove event occurs when the pointer is moving while it is over an element.
+             -->
+             <div onmousemove="minhaF(event)" onmouseout="limparCoordenadas()"></div>
+
+             <p>Coloque o mouse sobre o retangulo acima, e acesse as coordenadas do ponteiro de seu mouse.</p>
+             
+             <p>Quando o mouse sair do div, o elemento p mostrará a coordenada horizontal e vertical de seu ponteiro mouse,
+                 cujos valores são retornados das propriedades clientX e clientY no objeto MouseEvent.</p>
+             
+             <p id="demo"></p>
+             
+             <script>
+                function minhaF(evento) {
+                    var horizontal = evento.clientX
+                    var vertical = evento.clientY
+                    var coordenadas = `Coordenadas: ( ${horizontal} , ${vertical} )`
                     document.getElementById('demo').innerHTML = coordenadas
                 }
                 

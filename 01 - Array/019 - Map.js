@@ -9,6 +9,17 @@
 
 const numeros = [1, 3, 10, 6, 4, -20, 13, 16]
 
+var divpor2 = numeros.map((p) => { return p % 2// map() - array.map(function(currentValue, index, arr), thisValue)
+/*
+1 - creates a new array with the results of calling a function for every array element.
+2 - calls the provided function once for each element in an array, in order.
+3 - does not execute the function for array elements without values
+4 - this method does not change the original array
+
+*/
+
+const numeros = [1, 3, 10, 6, 4, -20, 13, 16]
+
 var divpor2 = numeros.map((p) => { return p % 2 == 0})
 console.log(divpor2)
 

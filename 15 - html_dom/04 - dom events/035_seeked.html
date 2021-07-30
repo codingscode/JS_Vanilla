@@ -26,6 +26,34 @@
              </video>
              
              <script>
+                fun<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>seeked</title>
+        <style>
+                
+
+        </style>
+    </head> 
+
+    <body style="height:1500px">
+             <!-- seeked 
+                The onseeked event occurs when the user is finished moving/skipping to a new position in the audio/video
+                Tip: The onseeked event is the opposite of the onseeking event.
+                Tip: Use the currentTime property of the Audio/Video Object to get the current playback position.
+             -->
+             <p>Este exemplo demonstra como atribuir um evento "onseeked" a um elemento video.</p>
+
+             <p>Mover a uma nova posição no video.</p>
+             
+             <video controls onseeked="minhaF()">
+                <source src="./coelho.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+             </video>
+             
+             <script>
                 function minhaF() {
                     console.log('Operação Seek completa!')
                 }

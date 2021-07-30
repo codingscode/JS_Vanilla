@@ -15,6 +15,23 @@ var verificar_2 = uma_string.indexOf('e', 5)   //-1 significa falso
 var verificar_3 = uma_string.indexOf('ultra', 0)  
 var verificar_4 = uma_string.indexOf('o', 0)  
 var verificar_5 = uma_string.indexOf('o', 8)  
+var verificar_6 = u/*
+string.indexOf(searchvalue, start)   // o 1º requerido, o 2º opcional
+
+The indexOf() method returns the position of the first occurrence of a specified value in a string.
+This method returns -1 if the value to search for never occurs.
+Note: The indexOf() method is case sensitive.
+Tip: Also look at the lastIndexOf() method.
+
+*/
+
+var uma_string = 'Pnmeumoultramicroscópico'
+
+var verificar_1 = uma_string.indexOf('e')
+var verificar_2 = uma_string.indexOf('e', 5)   //-1 significa falso
+var verificar_3 = uma_string.indexOf('ultra', 0)  
+var verificar_4 = uma_string.indexOf('o', 0)  
+var verificar_5 = uma_string.indexOf('o', 8)  
 var verificar_6 = uma_string.indexOf('micro', 4)  
 var verificar_7 = uma_string.indexOf('microt', 4)  
 

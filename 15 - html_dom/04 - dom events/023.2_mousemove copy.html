@@ -37,5 +37,44 @@
                 }
              </script>
                                       
+    </body<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseout</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 3px solid rgb(91, 233, 91);
+                background-color: aliceblue;
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- mouseout 
+            
+             -->
+             
+             <p>Este exemplo usa o método addEventListener() para anexar um evento "mousemove" a um elemento div.</p>
+
+             <div id="meuDIV"></div>
+             <p>Coloque o mouse sobre o retangulo acima, e acesse as coordenadas do ponteiro de seu mouse.</p>
+             
+             <p id="demo"></p>
+             
+             <script>
+                document.getElementById('meuDIV').addEventListener('mousemove', function(event) { minhaF(event) })
+                
+                function minhaF(evento) {
+                    var horizontal = evento.clientX
+                    var vertical = evento.clientY
+                    var coordenas = `Coordenadas: ( ${horizontal} , ${vertical} )`
+                    document.getElementById('demo').innerHTML = coordenas
+                }
+             </script>
+                                      
     </body>
 </html>

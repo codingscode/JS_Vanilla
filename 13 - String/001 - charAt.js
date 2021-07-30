@@ -1,4 +1,8 @@
 /*
+Propriedades de String: constructor, length, prototype
+
+*/
+/*
 string.charAt(index)
 
 The charAt() method returns the character at the specified index in a string.

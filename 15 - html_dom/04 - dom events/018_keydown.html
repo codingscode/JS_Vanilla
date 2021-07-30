@@ -25,6 +25,33 @@
                     console.log('Você pressionou uma tecla dentro do campo input')
                     console.log(valor.value)
                     alert('Você pressionou uma tecla dentro do campo input')
+     <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keydown</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- keydown 
+             The onkeydown event occurs when the user is pressing a key (on the keyboard).
+            Tip: The order of events related to the onkeydown event: onkeydown, onkeypress, onkeyup -->
+            <p>Uma função é disparada quando o usuário pressiona uma tecla no campo input.</p>
+
+            <input type="text" onkeydown="minhaF()">
+            
+            <script>
+                var valor = document.getElementsByTagName('input')[0]
+                
+                function minhaF() {
+
+                    console.log('Você pressionou uma tecla dentro do campo input')
+                    console.log(valor.value)
+                    alert('Você pressionou uma tecla dentro do campo input')
                 }
             </script>
                          

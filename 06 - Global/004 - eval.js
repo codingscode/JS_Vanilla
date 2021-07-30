@@ -1,5 +1,7 @@
 // eval(string)   :    string -	A JavaScript expression, variable, statement, or sequence of statements
 /*
+The eval() funct// eval(string)   :    string -	A JavaScript expression, variable, statement, or sequence of statements
+/*
 The eval() function evaluates or executes an argument.
 
 If the argument is an expression, eval() evaluates the expression. 

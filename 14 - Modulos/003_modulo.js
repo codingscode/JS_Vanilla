@@ -3,6 +3,11 @@
 let months = ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // export a constant
+const MODULES_BECAME_STANDARD_YEAR = 2015
+// export an array
+let months = ['Jan', 'Feb', 'Mar','Apr', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// export a constant
 const MODULES_BECAME_STANDARD_YEAR = 2015;
 
 // export a class

@@ -16,6 +16,24 @@
                 The currentTarget property always refers to the element whose event listener triggered the event, opposed to the target property, which returns the element that triggered the event.
              -->
              <p>Clique em um paragrafo. Uma caixa de alerta alertará o elemento cujo eventlistener disparou o elemento.</p>
+             <p><strong>Note:</strong> A propriedade currentTarget não necessariamente retorna o elemento que foi clicado, mas o elemento cujo eventlistener dis<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>currentTarget</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body onclick="minhaF(event)">
+             <!-- currentTarget 
+                The currentTarget event property returns the element whose event listeners triggered the event.
+                This is particularly useful during capturing and bubbling.
+                The currentTarget property always refers to the element whose event listener triggered the event, opposed to the target property, which returns the element that triggered the event.
+             -->
+             <p>Clique em um paragrafo. Uma caixa de alerta alertará o elemento cujo eventlistener disparou o elemento.</p>
              <p><strong>Note:</strong> A propriedade currentTarget não necessariamente retorna o elemento que foi clicado, mas o elemento cujo eventlistener disparou o evento.</p>
              
              <script>

@@ -16,6 +16,24 @@ var x1 = parseFloat('10')
 var x2 = parseFloat('10.00')
 var x3 = parseFloat('10.33')
 var x4 = parseFloat('34 45 66')
+var x5 = parseFloat(' // parseFloat() - parseFloat(string)
+/*
+The parseFloat() function parses a string and returns a floating point number.
+
+This function determines if the first character in the specified string is a number. If it is, it parses the string until it 
+reaches the end of the number, and returns the number as a number, not as a string.
+
+Note: Only the first number in the string is returned!
+
+Note: Leading and trailing spaces are allowed.
+
+Note: If the first character cannot be converted to a number, parseFloat() returns NaN.
+*/
+
+var x1 = parseFloat('10')
+var x2 = parseFloat('10.00')
+var x3 = parseFloat('10.33')
+var x4 = parseFloat('34 45 66')
 var x5 = parseFloat(' 60 ')
 var x6 = parseFloat('40 anos')
 var x7 = parseFloat('ele tinha 40')

@@ -2,6 +2,10 @@
 /* Optional. The separator to be used. If omitted, the elements are separated with a comma */
 
 
+var frase = ['a', 'rua', 'é', 'tranquil// join() - array.join(separator);    Convert the elements of an array into a string
+/* Optional. The separator to be used. If omitted, the elements are separated with a comma */
+
+
 var frase = ['a', 'rua', 'é', 'tranquila', 'à', 'tarde']
 var junto = frase.join(' ')
 

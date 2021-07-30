@@ -20,6 +20,28 @@ console.log('2:', para_str2, typeof para_str2)
 console.log('3:', para_str3, typeof para_str3)
 console.log('4:', para_str4, typeof para_str4)
 console.log('5:', para_str5, typeof para_str5)
+console.log('-------------------\n')/*
+string.toString()
+
+The toString() method returns the value of a String object.
+
+*/
+
+const valor_1 = 'isto é uma frase'
+const valor_2 = 18
+const valor_3 = false
+
+const para_str = valor_1.toString()
+const para_str2 = valor_2.toString()
+const para_str3 = valor_2.toString(2)  // de decimal para binario
+const para_str4 = parseInt(valor_2.toString(2)) // em converte string para numero-inteiro(default: decimal)
+const para_str5 = valor_3.toString()
+
+console.log(para_str)
+console.log('2:', para_str2, typeof para_str2)
+console.log('3:', para_str3, typeof para_str3)
+console.log('4:', para_str4, typeof para_str4)
+console.log('5:', para_str5, typeof para_str5)
 console.log('-------------------\n')
 
 const valor_decimal1 = 3

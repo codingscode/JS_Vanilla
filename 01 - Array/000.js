@@ -3,6 +3,11 @@
 var matriz = [2, 4, 0, -3, 10, 21]
 
 //length
+console// PROPRIEDADES
+
+var matriz = [2, 4, 0, -3, 10, 21]
+
+//length
 console.log(matriz.length)
 
 // prototype  - permite adicionar propriedades e metodos a um array objeto

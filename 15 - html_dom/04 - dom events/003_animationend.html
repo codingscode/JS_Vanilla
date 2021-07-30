@@ -31,6 +31,39 @@
         
              <!-- animationend 
                  The animationend event occurs when a CSS animation has completed. 
+                sintaxe object.addEventListener("webk<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>animationend</title>
+        <style>
+            #meuDIV {
+                margin: 25px;
+                width: 550px;
+                height: 100px;
+                background: orange;
+                position: relative;
+                font-size: 20px;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes meu_movimento {
+                from { top: 0px; }
+                to { top: 200px; }
+            }
+
+            @keyframes meu_movimento {
+                from { top: 0px; }
+                to { top: 200px; }
+            }
+        </style>
+    </head> 
+
+    <body>
+        
+             <!-- animationend 
+                 The animationend event occurs when a CSS animation has completed. 
                 sintaxe object.addEventListener("webkitAnimationEnd", myScript);  // Code for Chrome, Safari and Opera
                      object.addEventListener("animationend", myScript);        // Standard syntax  -->
                  <p>Este exemplo usa o método  addEventListener() para anexar um evento "animationstart",

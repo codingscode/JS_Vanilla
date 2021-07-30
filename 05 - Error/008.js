@@ -4,6 +4,12 @@ let diferenca, resultado
 
 function fib(n) {
    if (n < 0 || Math.trunc(n) != n) {  // Math.trunc só considera a parte inteira
+      throw let numero = 4  //  8, 10, 20, 34, 40
+let diferenca, resultado
+
+
+function fib(n) {
+   if (n < 0 || Math.trunc(n) != n) {  // Math.trunc só considera a parte inteira
       throw new Error('Deve ser não negativo, e também um inteiro')
    }
    return n <= 1 ? n : fib(n-1) + fib(n - 2)

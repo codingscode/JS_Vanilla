@@ -18,6 +18,26 @@
             Note: If this property is used on onkeydown or onkeyup events, the returned value is always "0".
             Note: This property is read-only.
             Note: The charCode property is not supported in IE8 and earlier. However, for these browser versions, you can use the 
+              keyCode propert<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>charCode</title>
+        <style>
+           
+        </style>
+    </head> 
+
+    <body >
+             <!-- charCode 
+            The charCode property returns the Unicode character code of the key that triggered the onkeypress event.
+            The Unicode character code is the number of a character (e.g. the number "97" represents the letter "a").
+            Tip: For a list of all Unicode characters, please study our Complete Unicode Reference.
+            Tip: If you want to convert the Unicode value into a character, use the fromCharCode() method.
+            Note: If this property is used on onkeydown or onkeyup events, the returned value is always "0".
+            Note: This property is read-only.
+            Note: The charCode property is not supported in IE8 and earlier. However, for these browser versions, you can use the 
               keyCode property. Or, for a cross-browser solution, you could use the following code:
             var x = event.charCode || event.keyCode; // Use either charCode or keyCode, depending on browser support
             Tip: You can also use the keyCode property to detect special keys (e.g. "caps lock" or arrow keys). However, both the 

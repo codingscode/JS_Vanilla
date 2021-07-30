@@ -18,6 +18,26 @@ Note: This method changes the original array.
 
 var frutas = ['manga', 'melao', 'uva', 'laranja', 'pera', 'melancia', 'jaca', 'caju', 'graviola', 'maçã']
 var numeros = [10, 2, 100, 40, 30, 15, 60, 0, 31]
+var // sort() - array.sort(compareFunction)
+/*
+The sort() method sorts the items of an array.
+
+The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+
+By default, the sort() method sorts the values as strings in alphabetical and ascending order.
+
+This works well for strings ("Apple" comes before "Banana"). However, if numbers are sorted as strings, "25" is 
+bigger than "100", because "2" is bigger than "1".
+
+Because of this, the sort() method will produce an incorrect result when sorting numbers.
+
+You can fix this by providing a "compare function" (See "Parameter Values" below).
+
+Note: This method changes the original array.
+*/
+
+var frutas = ['manga', 'melao', 'uva', 'laranja', 'pera', 'melancia', 'jaca', 'caju', 'graviola', 'maçã']
+var numeros = [10, 2, 100, 40, 30, 15, 60, 0, 31]
 var misturado = [10, 'lua', 'chapeu', 80, 15, 8, 'pen drive']
 
 console.log('nao ordenado : ' + frutas)

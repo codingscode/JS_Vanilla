@@ -7,6 +7,15 @@ Number	        An integer that specifies the character position immediately
 
 The lastIndex property specifies the index at which to start the next match.
 Note: This property only works if the "g" modifier is set.
+This property returns an integer that specifies the character position immediately after the last match found by exec/*
+RegExpObject.lastIndex
+
+type         description
+Number	        An integer that specifies the character position immediately 
+                after the last match found by exec( ) or test( ) methods
+
+The lastIndex property specifies the index at which to start the next match.
+Note: This property only works if the "g" modifier is set.
 This property returns an integer that specifies the character position immediately after the last match found by exec( ) or 
 test( ) methods.
 Note: exec( ) and test( ) reset lastIndex to 0 if they do not get a match.

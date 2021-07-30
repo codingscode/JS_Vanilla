@@ -31,5 +31,38 @@
                 }
              </script>
 
+    </body><!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pause</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- pause 
+            
+             -->
+                                          
+             <p>Este exemplo usa o HTML DOM para atribuir um evento "onpause" a um elemento video.</p>
+             <p>Reproduza e pause o video.</p>
+             
+             <video controls id="meuVideo">
+                  <source src="./coelho.mp4" type="video/mp4">
+                  Seu browser não suporta video HTML5.
+             </video>
+             
+             <script>
+                // ou  document.getElementById("myVideo").addEventListener("pause", myFunction)
+                document.getElementById('meuVideo').onpause = function() { minhaF() }
+
+                function minhaF() {
+                   console.log('O video foi pausado')
+                }
+             </script>
+
     </body>
 </html>

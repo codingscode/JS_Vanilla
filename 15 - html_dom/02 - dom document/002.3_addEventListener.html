@@ -23,6 +23,31 @@
         <p id="demo" class="aqui">aqui<br></p>
 
         <script>
+            document.getElementById('demo').addEventListener('mouseover', minhaFuncao1) //  document.addEventListen<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>addEventListener</title>
+
+        <style>
+            .aqui {
+                width: 300px;
+                padding: 7px;
+                background-color: darkgreen;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+
+    <body >
+        
+        <p>Este exemplo usa o método addEventListener para adicionar muitos events ao document.</p>
+        <p id="demo" class="aqui">aqui<br></p>
+
+        <script>
             document.getElementById('demo').addEventListener('mouseover', minhaFuncao1) //  document.addEventListener('mouseover', minhaFuncao1)
             document.getElementById('demo').addEventListener('click', minhaFuncao2)
             document.getElementById('demo').addEventListener('mouseout', minhaFuncao3)

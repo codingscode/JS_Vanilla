@@ -6,6 +6,14 @@ The constructor() method is called automatically when a class is initiated, and 
  "constructor", in fact, if you do not have a constructor method, JavaScript will add an invisible and empty 
  constructor method.
 
+Note: A clas// constructor() -  constructor(parameters)
+/*
+The constructor() method is a special method for creating and initializing objects created within a class.
+
+The constructor() method is called automatically when a class is initiated, and it has to have the exact name 
+ "constructor", in fact, if you do not have a constructor method, JavaScript will add an invisible and empty 
+ constructor method.
+
 Note: A class cannot have more than one constructor() method. This will throw a SyntaxError.
 
 You can use the super() method to call the constructor of a parent class (see "More Examples" below).

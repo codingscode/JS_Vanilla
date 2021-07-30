@@ -32,6 +32,40 @@
 
     <body >
              <!-- elapsedTime 
+                The elaps<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>elapsedTime</title>
+        <style>
+            #meuDIV {
+                margin: 25px;
+                width: 550px;
+                height: 100px;
+                background: orange;
+                position: relative;
+                font-size: 20px;
+                text-align: center;
+                -webkit-animation: mymove 4s infinite; /* Chrome, Safari, Opera */
+                animation: mymove 4s infinite;
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes mymove {
+                from {top: 0px;}
+                to {top: 200px;}
+            }
+
+            @keyframes mymove {
+                from {top: 0px;}
+                to {top: 200px;}
+            }
+        </style>
+    </head> 
+
+    <body >
+             <!-- elapsedTime 
                 The elapsedTime property returns the number of seconds an animation has been running, when an animation event occurs.
                 Note: The return value is not affected if the animation is paused (by using the animation-delay CSS property).
                 Note: For the animationstart event, this property always returns "0".

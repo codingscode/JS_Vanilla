@@ -41,6 +41,49 @@
                 }
 
                 .col-1 {
+       <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scrollTop</title>
+
+        <style>
+                .deslizarparaCima {
+                    animation-name: deslizarparaCima;
+                    -webkit-animation-name: deslizarparaCima;
+                    animation-duration: 1.5s;
+                    -webkit-animation-duration: 1.5s;
+                    visibility: visible;
+                }
+
+                @keyframes deslizarparaCima {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: translateY(70%);
+                    } 
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: translateY(0%);
+                    }
+                }
+
+                /* @-webkit-keyframes deslizarparaCima {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: translateY(70%);
+                    } 
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: translateY(0%);
+                    }
+                } */
+
+                body {
+                    height:1500px;
+                }
+
+                .col-1 {
                     float:left
                 }
                 

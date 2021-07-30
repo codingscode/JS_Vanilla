@@ -45,6 +45,53 @@ let objeto2 = { 0: 'teste'}  // mesmo que "0": "teste"
   
 // both alerts access the same property (the number 0 is converted to string "0")
 console.log( objeto2['0'] ) // teste
+console.log( objeto2[0] )// https://javascript.info/object
+// propriedades computadas
+
+let oque = 'fruta'
+
+let sacola = {[oque]: 'maça'}
+
+console.log(oque)
+console.log(sacola)
+console.log(sacola.oque)
+console.log(sacola.fruta)
+console.log('--------------------')
+
+let material = 'caneta'
+let aquisicao = {}
+
+aquisicao[material] = 3
+
+console.log(aquisicao)
+console.log('---------------')
+
+// atalho valor propriedade
+function criarUsuario(nome, idade) {
+    return {nome: nome, idade: idade}  // ou só {nome, idade}
+}
+
+let usuario = criarUsuario('Simon', 21)
+console.log(usuario.nome)
+console.log('---------------')
+
+// limitações de nomes de propriedades -> palavras reservados n tem problema como propriedades
+let objeto1 = {for: 1, let: 2, return: 3}
+
+console.log(objeto1.for + objeto1.let + objeto1.return)
+console.log('---------------')
+
+//
+let verificar1 = {nome: 'Bob', idade: 15}
+let verificar2 = {nome: 'Bob', idade: 15}
+
+console.log(verificar1 == verificar2)
+console.log('--------------------------')
+
+let objeto2 = { 0: 'teste'}  // mesmo que "0": "teste"
+  
+// both alerts access the same property (the number 0 is converted to string "0")
+console.log( objeto2['0'] ) // teste
 console.log( objeto2[0] ) // teste (same property)
 
 console.log('---------------------')

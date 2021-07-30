@@ -25,6 +25,33 @@
                     var elemento = document.getElementById('pri_nome')
                     elemento.value = elemento.value.toUpperCase()
                     elemento.style.backgroundColor = 'lightgreen' 
+      <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>keyup</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- keyup 
+            
+            -->
+            <p>Este exemplo usa o método addEventListener() para anexar um evento "keyup" a um elemento input.</p>
+            <p>Pressione um tecla dentro do campo de texto e solte a para setar uma cor de fundo verde.</p>
+            
+            Digite seu nome: <input type="text" id="pri_nome">
+            
+            <script>
+                document.getElementById('pri_nome').addEventListener('keyup', minhaF)
+                
+                function minhaF() {
+                    var elemento = document.getElementById('pri_nome')
+                    elemento.value = elemento.value.toUpperCase()
+                    elemento.style.backgroundColor = 'lightgreen' 
                 }
             </script>
                          

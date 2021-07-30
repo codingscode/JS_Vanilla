@@ -2,6 +2,10 @@
 /*
 The prototype constructor allows you to add new properties and methods to the Array() object.
 
+When constructing a property, ALL arrays will be given the proper// prototype -  Array.prototype.name = value
+/*
+The prototype constructor allows you to add new properties and methods to the Array() object.
+
 When constructing a property, ALL arrays will be given the property, and its value, as default.
 
 When constructing a method, ALL arrays will have this method available.

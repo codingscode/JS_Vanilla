@@ -45,6 +45,53 @@ usuario3.nome = 'Amélia'
 console.log(usuario3)
 console.log('-------------------------')
 
+let usuario// https://javascript.info/property-descriptors
+
+// Property flags and descriptors
+
+// property flags -> writable, enumerable, configurable
+
+let usuario1 = {nome: 'Mário', idade: 16, massa: 70}
+
+let descritor = Object.getOwnPropertyDescriptor(usuario1, 'nome')
+
+console.log(JSON.stringify(descritor, null, 2))
+
+usuario1.nome = 'Paulo'
+
+let descritor1_2 = Object.getOwnPropertyDescriptor(usuario1, 'nome')
+
+console.log(usuario1)
+
+console.log(JSON.stringify(descritor1_2, null, 2))
+
+console.log('------------------------------')
+
+// Object.defineProperty(obj, propertyName, descriptor)
+
+let usuario2 = {}
+
+Object.defineProperty(usuario2, 'nome', {value: 'Sofia'})
+
+let descritor2 = Object.getOwnPropertyDescriptor(usuario2, 'nome')
+
+
+console.log(JSON.stringify(descritor2, null, 2))
+console.log(usuario2)
+
+console.log('------------------------------')
+
+let usuario3 = {nome: 'Simon'}
+
+Object.defineProperty(usuario3, 'nome', {
+    writable: false // experimentar true
+})
+
+usuario3.nome = 'Amélia'
+
+console.log(usuario3)
+console.log('-------------------------')
+
 let usuario4 = {}
 
 Object.defineProperty(usuario4, 'nome', {

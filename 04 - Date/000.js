@@ -1,3 +1,12 @@
+/*
+  ver mais
+*/
+
+
+
+
+
+
 //Date Object  -  new Date(year, month, day, hours, minutes, seconds, milliseconds)
 /*
 

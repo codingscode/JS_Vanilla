@@ -1,3 +1,7 @@
+//
+/* 
+
+*/
 //   Number.isFinite(value)
 /*
   The Number.isFinite() method determines whether a value is a finite number.

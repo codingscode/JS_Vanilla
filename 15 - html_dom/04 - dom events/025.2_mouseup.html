@@ -25,6 +25,33 @@
                    document.getElementById("demo").addEventListener("mouseup", mouseUp); */
 
                 function mousePressionado() {
+                    document.getElementById('demo').innerHTML = 'O botão do mouse está pres<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseup</title>
+        <style>
+            
+        </style>
+    </head> 
+
+    <body >
+             <!-- mouseup 
+                     
+             -->
+             <p>Este exemplo usa o HTML DOM para atribuir um evento "onmousedown" e "onmouseup" a um elemento p.</p>
+
+             <p id="demo" >Clique me.</p>
+             
+             <script>
+                document.getElementById('demo').onmousedown = function() { mousePressionado() }
+                document.getElementById('demo').onmouseup = function() { mouseDespressionado() }
+
+                /* document.getElementById("demo").addEventListener("mousedown", mouseDown);
+                   document.getElementById("demo").addEventListener("mouseup", mouseUp); */
+
+                function mousePressionado() {
                     document.getElementById('demo').innerHTML = 'O botão do mouse está pressionado.'
                 }
                 

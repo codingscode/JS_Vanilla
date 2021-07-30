@@ -9,6 +9,17 @@ console.log(maior1)
 var valores1 = [10, -4, 8, 15, 0]
 
 var maior2 = valores1.reduce((anterior, atual) => {
+    return Math.max(anterior, a// Math.max(n1, n2, n3, ..., nX)
+/*
+The max() method returns the number with the highest value.
+*/
+
+var maior1 = Math.max(2, 1, 10, 6)
+console.log(maior1)
+
+var valores1 = [10, -4, 8, 15, 0]
+
+var maior2 = valores1.reduce((anterior, atual) => {
     return Math.max(anterior, atual)
 })
 

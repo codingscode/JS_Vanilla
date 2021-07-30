@@ -13,6 +13,21 @@ try {
 }
 catch(erro) {
   if (erro.name == "SyntaxError") {
+    consolet meu_json = '{ "idade": 30}' // dado imcompleto
+try {
+  let usuario = JSON.parse(meu_json)
+
+  if (!usuario.nome) {
+    throw new SyntaxError("Dado imcompleto: sem nome")
+  }
+
+  blabla() // unexpected error
+
+  console.log( usuario.nome )
+
+}
+catch(erro) {
+  if (erro.name == "SyntaxError") {
     console.log( "Erro JSON: " + erro.message )
   } 
   else {

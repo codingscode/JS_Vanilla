@@ -5,6 +5,13 @@ Date.prototype.nome = valor
 The prototype constructor allows you to add new properties and methods to the Date() object.
 When constructing a property, ALL date objects will be given the property, and its value, as default.
 When constructing a method, ALL date objects will have this method available.
+Note: Date.prototype does not refer to a single date object, but to the Dat/*
+Date.prototype.nome = valor
+
+
+The prototype constructor allows you to add new properties and methods to the Date() object.
+When constructing a property, ALL date objects will be given the property, and its value, as default.
+When constructing a method, ALL date objects will have this method available.
 Note: Date.prototype does not refer to a single date object, but to the Date() object itself.
 Note: Prototype is a global object constructor which is available for all JavaScript objects.
 

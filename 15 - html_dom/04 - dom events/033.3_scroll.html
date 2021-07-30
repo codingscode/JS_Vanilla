@@ -38,6 +38,46 @@
                 body {
                     height:1500px;
                 }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>scroll</title>
+        <style>
+                .slideParaCima {
+                    animation-name: slideParaCima;
+                    -webkit-animation-name: slideParaCima;
+                    animation-duration: 1s;
+                    -webkit-animation-duration: 1s;
+                    visibility: visible;
+                }
+
+                @keyframes slideParaCima {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: translateY(70%);
+                    } 
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: translateY(0%);
+                    }
+                }
+
+                @-webkit-keyframes slideParaCima {
+                    0% {
+                        opacity: 0;
+                        -webkit-transform: translateY(70%);
+                    } 
+                    100% {
+                        opacity: 1;
+                        -webkit-transform: translateY(0%);
+                    }
+                }
+
+                body {
+                    height:1500px;
+                }
 
                 .col-1 {
                     float:left;
